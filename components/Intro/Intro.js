@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 // import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -11,7 +12,7 @@ import useStore from 'hooks';
 
 const Intro = ({ ...props }) => {
 	// const theme = useTheme();
-	const { lang, showIntro, setShowIntro } = useStore();
+	const { locale, showIntro, setShowIntro } = useStore();
 
 	const onClose = () => {
 		setShowIntro(false)
@@ -38,15 +39,16 @@ const Intro = ({ ...props }) => {
 					bgcolor: 'orange.main'
 				}}>
 
+				
 				<Image
 					width={737}
 					height={427}
-					src='svg/title.svg'
+					src='images/fyw-logo.svg'
 					alt='Follow Your Waste logo' />
 
 				<Typography
 					align='center'>
-					{getText(lang,'system','tagline')}
+					{getText(locale,'system','tagline')}
 				</Typography>
 
 				<Image
@@ -58,7 +60,7 @@ const Intro = ({ ...props }) => {
 				<Button
 					variant='contained'
 					onClick={onClose}>
-					{getText(lang,'system','get_started')}
+					{getText(locale,'system','get_started')}
 				</Button>
 
 			</Stack>

@@ -15,7 +15,7 @@ import SortBin from './SortBin'
 const Packery = async () => (await import('packery')).then((m) => m.default)
 
 const Sort = ({ ...props }) => {
-	const { lang, sorted, addSorted, setDragging, setOpening } = useStore()
+	const { locale, sorted, addSorted, setDragging, setOpening } = useStore()
 	const items = getItems()
 	const bins = getBins()
 	const packeryRef = useRef(null)

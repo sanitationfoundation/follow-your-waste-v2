@@ -13,7 +13,6 @@ export const TEXT = {
 	es: ES_TEXT,
 	zh: ZH_TEXT
 }
-
 export const BINS = [
 	{ slug: 'mgp', streams: ['metal', 'glass', 'plastic'] },
 	{ slug: 'paper', streams: ['paper'] },

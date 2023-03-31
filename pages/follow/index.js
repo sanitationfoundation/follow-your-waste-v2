@@ -8,7 +8,7 @@ import useStore from 'hooks'
 import { getText, getStreams } from 'selectors'
 
 const Follow = ({ ...props }) => {
-	const { lang } = useStore()
+	const { locale } = useStore()
  	const streams = getStreams()
 
  	// const handleClick = e => {
@@ -30,7 +30,7 @@ const Follow = ({ ...props }) => {
 						<Button
 							key={i}
 							variant='contained'>
-							{getText(lang, 'system', stream)}
+							{getText(locale, 'system', stream)}
 						</Button>
 					</Link>
 				)}

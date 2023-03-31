@@ -7,7 +7,7 @@ const initialState = {
 		es: ES,
 		zh: ZH,
 	},
-	lang: 'en',
+	locale: 'en',
 	fullScreen: false,
 	intro: true,
 	// Audio
@@ -22,7 +22,7 @@ const initialState = {
 
 const useStore = create((set, get) => ({
 	...initialState,
-	setLang: lang => set({ lang }),
+	setLocale: locale => set({ locale }),
 	setFullScreen: fullScreen => set({ fullScreen }),
 	setIntro: intro => set({ intro }),
 	// Audio

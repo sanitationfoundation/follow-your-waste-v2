@@ -12,7 +12,7 @@ import { getText } from 'selectors'
 
 const SortBin = ({ data, ...props }) => {
 	const theme = useTheme()
-	const { lang, opening } = useStore()
+	const { locale, opening } = useStore()
 	const [hover, setHover] = useState(false)
 
 	const isOpening = opening === data.slug
@@ -59,7 +59,7 @@ const SortBin = ({ data, ...props }) => {
 				}}
 			/>
 			<img
-				src={`/images/bins/fronts/${data.slug}-${lang}.png`}
+				src={`/images/bins/fronts/${data.slug}-${locale}.png`}
 				style={{
 					width: 200,
 					height: 'auto',

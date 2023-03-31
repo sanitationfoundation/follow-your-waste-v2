@@ -1,19 +1,23 @@
-import FormControl from '@mui/material/FormControl'
+import router from 'next/router'
+import { useRouter } from 'next/router'
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import Select from '@mui/material/Select'
 import useStore from 'hooks'
-import { getLangs } from 'selectors'
+import { getLocales } from 'selectors'
 
-const HeaderLangSelector = () => {
-	const { lang, setLang } = useStore()
-	const langs = getLangs()
+const HeaderLocaleSelector = () => {
+	const router = useRouter()
+	const { locale, setLocale } = useStore()
+	const locales = getLocales()
 	const handleChange = e => {
-		setLang(e.target.value)
+		const { value } = e.target
+		router.push(router.asPath, router.asPath, { locale: value })
 	}
+
 	return (
 		<Select
-			value={lang}
+			value={locale}
 			onChange={handleChange}
 			sx={{
 				py: 0,
@@ -22,7 +26,7 @@ const HeaderLangSelector = () => {
 				}
 			}}
 		>
-			{langs.map(key =>
+			{locales.map(key =>
 				<MenuItem
 					key={key}
 					value={key}
@@ -36,4 +40,4 @@ const HeaderLangSelector = () => {
 	)
 }
 
-export default HeaderLangSelector
+export default HeaderLocaleSelector

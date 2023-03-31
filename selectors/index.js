@@ -11,9 +11,9 @@ export const getItems = () => getData('sort').items
 export const getStreams = () => Object.keys(getData('follow'))
 export const getScenes = stream => stream ? getData('follow')[stream] : []
 
-export const getLangs = () => Object.keys(CONST.TEXT)
-export const getText = (lang, type, slug, key) => {
-	const obj = CONST.TEXT[lang][type].find(t => t.slug === slug)
+export const getLocales = () => Object.keys(CONST.TEXT)
+export const getText = (locale, type, slug, key) => {
+	const obj = CONST.TEXT[locale][type].find(t => t.slug === slug)
 	return obj ? obj[key || 'text'] : ''
 }
 

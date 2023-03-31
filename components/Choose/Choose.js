@@ -9,7 +9,7 @@ import { getText, getSections } from 'selectors' ;
 import useStore from 'hooks';
 
 const Choose = ({ ...props }) => {
-	const { lang } = useStore();
+	const { locale } = useStore();
 
 	return (
 		<Stack
@@ -32,7 +32,7 @@ const Choose = ({ ...props }) => {
 						variant='contained'
 						// onClick={onClose}
 						>
-						{getText(lang, 'system', section)}
+						{getText(locale, 'system', section)}
 					</Button>
 				</Link>
 			)}

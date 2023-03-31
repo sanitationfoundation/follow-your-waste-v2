@@ -21,7 +21,7 @@ import { getText } from 'selectors'
 
 const FollowProgress = ({ stream, scenes, ...props }) => {
 	const theme = useTheme()
-	const { lang, currentScene, nextScene, prevScene, setCurrentScene } = useStore()
+	const { locale, currentScene, nextScene, prevScene, setCurrentScene } = useStore()
 
 	const handleStepClick = (e, index) => {
 		setCurrentScene(index)
@@ -65,7 +65,7 @@ const FollowProgress = ({ stream, scenes, ...props }) => {
 						disabled={false}>
 						<Tooltip
 							arrow
-							title={getText(lang, stream, scene.slug, 'label')}>
+							title={getText(locale, stream, scene.slug, 'label')}>
 							<Box>
 								<StepButton
 									icon={<CircleIcon fontSize='xsmall' />}

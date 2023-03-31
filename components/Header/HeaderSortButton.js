@@ -4,7 +4,7 @@ import Button from '@mui/material/Button'
 const HeaderGameButton = () => {
 	return (
 		<Link
-			href='/game'>
+			href='/sort'>
 			<Button
 				color='primary'
 				variant='outlined'

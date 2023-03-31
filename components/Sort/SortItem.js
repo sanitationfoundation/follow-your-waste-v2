@@ -31,7 +31,7 @@ const scale = {
 
 const SortItem = ({ data, ...props }) => {
 	const theme = useTheme()
-	const { lang, dragging, sorted } = useStore()
+	const { locale, dragging, sorted } = useStore()
 
 	const [lastX, setLastX] = useState(0)
 
@@ -57,10 +57,10 @@ const SortItem = ({ data, ...props }) => {
 			title={
 				<Stack spacing={0.5}>
 					<Typography variant='h4'>
-						{getText(lang, 'items', data.slug, 'label')}
+						{getText(locale, 'items', data.slug, 'label')}
 					</Typography>
 					<Typography>
-						{getText(lang, 'items', data.slug, 'tooltip')}
+						{getText(locale, 'items', data.slug, 'tooltip')}
 					</Typography>
 				</Stack>
 			}>

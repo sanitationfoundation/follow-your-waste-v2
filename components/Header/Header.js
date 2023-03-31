@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useTheme } from '@mui/material/styles'
 import AppBar from '@mui/material/AppBar'
@@ -15,7 +16,7 @@ import HeaderVolume from './HeaderVolume'
 import HeaderSortButton from './HeaderSortButton'
 import HeaderFollowBackButton from './HeaderFollowBackButton'
 import HeaderFollowButton from './HeaderFollowButton'
-import HeaderLangSelector from './HeaderLangSelector'
+import HeaderLocaleSelector from './HeaderLocaleSelector'
 
 
 const Header = ({ onFullScreenClick, position, sx, ...props }) => {
@@ -44,10 +45,23 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 						mr: 'auto'
 					}}
 				>
+					<Link href='/'>
+						<Image
+							width={400}
+							height={156}
+							src='/images/fyw-logo.svg'
+							style={{
+								width: 'auto',
+								height: 54,
+								marginRight: 'auto'
+							}}
+							alt='Follow Your Waste logo'
+						/>
+					</Link>
 					<Image
 						width={400}
 						height={156}
-						src='/images/logo.png'
+						src='/images/sf-logo.png'
 						style={{
 							width: 'auto',
 							height: 54,
@@ -64,7 +78,7 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 				>
 					{pathname.includes('follow') ? <HeaderSortButton /> : null}
 					{pathname.includes('sort') ? <HeaderFollowButton /> : null}
-					<HeaderLangSelector />
+					<HeaderLocaleSelector />
 					<Stack
 						direction='row'
 						alignItems='center'
