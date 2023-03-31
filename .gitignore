@@ -1,0 +1,8 @@
+.DS_Store
+.env.*
+.next
+.netlify
+.husky
+out
+node_modules
+constants/lang.js

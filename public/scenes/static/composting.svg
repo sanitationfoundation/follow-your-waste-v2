@@ -1,0 +1,32 @@
+<svg width="1440" height="821" viewBox="0 0 1440 821" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="482" y="55" width="760" height="712" fill="url(#composting_pattern0)"/>
+<rect x="151" y="113" width="177" height="216" fill="url(#composting_pattern1)"/>
+<rect x="994" y="80" width="261" height="331" fill="url(#composting_pattern2)"/>
+<rect x="295" y="260" width="376" height="404" fill="url(#composting_pattern3)"/>
+<rect x="127" y="155" width="176" height="219" fill="url(#composting_pattern4)"/>
+<rect x="109" y="195" width="176" height="216" fill="url(#composting_pattern5)"/>
+<defs>
+<pattern id="composting_pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#composting_image0" transform="translate(0 -0.000744645) scale(0.000693963)"/>
+</pattern>
+<pattern id="composting_pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#composting_image1" transform="translate(0 -0.00457438) scale(0.00119332 0.000977857)"/>
+</pattern>
+<pattern id="composting_pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#composting_image2" transform="translate(0 -0.000394929) scale(0.000775795 0.00061173)"/>
+</pattern>
+<pattern id="composting_pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#composting_image3" transform="translate(0 -0.000239595) scale(0.000681663)"/>
+</pattern>
+<pattern id="composting_pattern4" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#composting_image1" transform="translate(-0.00520283) scale(0.00120573 0.000968992)"/>
+</pattern>
+<pattern id="composting_pattern5" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#composting_image1" transform="translate(0 -0.00172368) scale(0.00119332 0.000972333)"/>
+</pattern>
+<image id="composting_image0" width="1441" height="1352" xlink:href="/images/scenes/composting0.png"/>
+<image id="composting_image1" width="838" height="1032" xlink:href="/images/scenes/composting1.png"/>
+<image id="composting_image2" width="1289" height="1636" xlink:href="/images/scenes/composting2.png"/>
+<image id="composting_image3" width="1467" height="1577" xlink:href="/images/scenes/composting3.png"/>
+</defs>
+</svg>

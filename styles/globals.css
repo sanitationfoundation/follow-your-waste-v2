@@ -1,0 +1,115 @@
+html,
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: 'Uncut Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+/*
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+	}
+	body {
+		color: white;
+		background: black;
+	}
+}
+*/
+
+@font-face {
+	font-family: 'Uncut Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-Regular.woff2')
+			format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-Regular.woff')
+			format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Uncut Sans';
+	font-style: italic;
+	font-weight: 400;
+	src: url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-RegularItalic.woff2')
+			format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-RegularItalic.woff')
+			format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Uncut Sans';
+	font-style: normal;
+	font-weight: 500;
+	src: url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-Medium.woff2')
+			format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-Medium.woff')
+			format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Uncut Sans';
+	font-style: italic;
+	font-weight: 500;
+	src: url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-MediumItalic.woff2')
+			format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-MediumItalic.woff')
+			format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Uncut Sans';
+	font-style: normal;
+	font-weight: 600;
+	src: url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-Bold.woff2')
+			format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-Bold.woff')
+			format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Uncut Sans';
+	font-style: italic;
+	font-weight: 600;
+	src: url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-BoldItalic.woff2')
+			format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-BoldItalic.woff')
+			format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Uncut Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-Semibold.woff2')
+			format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-Semibold.woff')
+			format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Uncut Sans';
+	font-style: italic;
+	font-weight: 700;
+	src: url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-SemiboldItalic.woff2')
+			format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/kaspernordkvist/uncut_sans/Webfonts/Uncut-Sans-SemiboldItalic.woff')
+			format('woff');
+	font-display: swap;
+}

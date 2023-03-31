@@ -1,0 +1,23 @@
+<svg width="1440" height="821" viewBox="0 0 1440 821" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g>
+<g>
+<rect x="326" y="552.661" width="779" height="152" fill="url(#end-glass_pattern0)"/>
+<rect x="294" y="664.661" width="826" height="103" fill="url(#end-glass_pattern1)"/>
+<rect x="294" y="54" width="853" height="525.661" fill="url(#end-glass_pattern2)"/>
+</g>
+</g>
+<defs>
+<pattern id="end-glass_pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#end-glass_image0" transform="translate(-0.00126156) scale(0.00112139 0.00574713)"/>
+</pattern>
+<pattern id="end-glass_pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#end-glass_image1" transform="translate(-0.000977019) scale(0.00109384 0.00877193)"/>
+</pattern>
+<pattern id="end-glass_pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#end-glass_image2" transform="translate(0 -0.000608515) scale(0.0005 0.000811359)"/>
+</pattern>
+<image id="end-glass_image0" width="894" height="174" xlink:href="/images/scenes/end-glass0.png"/>
+<image id="end-glass_image1" width="916" height="114" xlink:href="/images/scenes/end-glass1.png"/>
+<image id="end-glass_image2" width="2000" height="1234" xlink:href="/images/scenes/end-glass2.png"/>
+</defs>
+</svg>

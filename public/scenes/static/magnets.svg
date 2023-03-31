@@ -1,0 +1,33 @@
+<svg width="1440" height="821" viewBox="0 0 1440 821" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g>
+<rect x="256" y="26" width="928" height="769" fill="url(#magnets_pattern0)"/>
+<rect x="815.132" y="129" width="199.804" height="216.588" transform="rotate(26.0546 815.132 129)" fill="url(#magnets_pattern1)"/>
+<rect x="654" y="58" width="179" height="207" fill="url(#magnets_pattern2)"/>
+<rect x="380" y="631.276" width="57.6459" height="113.545" transform="rotate(-35.2576 380 631.276)" fill="url(#magnets_pattern3)"/>
+<g>
+<rect x="728.357" y="411" width="47.5623" height="86.1042" transform="rotate(59.72 728.357 411)" fill="url(#magnets_pattern4)"/>
+</g>
+</g>
+<defs>
+<pattern id="magnets_pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#magnets_image0" transform="translate(-0.000199473) scale(0.000833666 0.00100604)"/>
+</pattern>
+<pattern id="magnets_pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#magnets_image1" transform="scale(0.00140252 0.00129384)"/>
+</pattern>
+<pattern id="magnets_pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#magnets_image2" transform="translate(-0.00210996) scale(0.0016544 0.00143062)"/>
+</pattern>
+<pattern id="magnets_pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#magnets_image3" transform="translate(-0.0392326) scale(0.00187234 0.00095057)"/>
+</pattern>
+<pattern id="magnets_pattern4" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#magnets_image4" transform="translate(-0.00588479) scale(0.00361346 0.00199601)"/>
+</pattern>
+<image id="magnets_image0" width="1200" height="994" xlink:href="/images/scenes/magnets0.png"/>
+<image id="magnets_image1" width="713" height="773" xlink:href="/images/scenes/magnets1.png"/>
+<image id="magnets_image2" width="607" height="699" xlink:href="/images/scenes/magnets2.png"/>
+<image id="magnets_image3" width="576" height="1052" xlink:href="/images/items/soda-can.png"/>
+<image id="magnets_image4" width="280" height="501" xlink:href="/images/items/food-can.png"/>
+</defs>
+</svg>

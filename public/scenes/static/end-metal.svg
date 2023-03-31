@@ -1,0 +1,25 @@
+<svg width="1440" height="821" viewBox="0 0 1440 821" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#end-metal_clip0)">
+<rect x="-26" y="583" width="1492" height="250" fill="#F2B622"/>
+<rect y="165" width="1440" height="427" fill="url(#end-metal_pattern0)"/>
+<rect x="19" y="71" width="1378" height="512" fill="url(#end-metal_pattern1)"/>
+<rect x="212" y="39" width="496" height="706" fill="url(#end-metal_pattern2)"/>
+</g>
+<defs>
+<pattern id="end-metal_pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#end-metal_image0" transform="scale(0.000694444 0.00234192)"/>
+</pattern>
+<pattern id="end-metal_pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#end-metal_image1" transform="scale(0.000725689 0.00195312)"/>
+</pattern>
+<pattern id="end-metal_pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#end-metal_image2" transform="scale(0.00201613 0.00141643)"/>
+</pattern>
+<clipPath id="end-metal_clip0">
+<rect width="1440" height="821" fill="white"/>
+</clipPath>
+<image id="end-metal_image0" width="1440" height="427" xlink:href="/images/scenes/end-metal0.png"/>
+<image id="end-metal_image1" data-name="end-metal_.png" width="1378" height="512" xlink:href="/images/scenes/end-metal1.png"/>
+<image id="end-metal_image2" data-name="end-metal_.png" width="496" height="706" xlink:href="/images/scenes/end-metal2.png"/>
+</defs>
+</svg>

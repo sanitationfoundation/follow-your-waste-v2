@@ -1,0 +1,11 @@
+<svg width="1440" height="821" viewBox="0 0 1440 821" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g>
+<rect x="230" y="110" width="980" height="601" fill="url(#end-plastic_pattern0)"/>
+</g>
+<defs>
+<pattern id="end-plastic_pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#end-plastic_image0" transform="translate(0 -0.0164975) scale(0.0005 0.000815308)"/>
+</pattern>
+<image id="end-plastic_image0" width="2000" height="1267" xlink:href="/images/scenes/end-plastic0.png"/>
+</defs>
+</svg>

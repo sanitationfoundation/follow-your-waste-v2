@@ -1,0 +1,25 @@
+<svg width="1440" height="821" viewBox="0 0 1440 821" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="1440" height="821" fill="#E5E5E5"/>
+<g>
+<rect width="1440" height="821" fill="#FD642D"/>
+<rect x="333" y="783" width="743" height="773" transform="rotate(-90 333 783)" fill="url(#trommel_pattern0)"/>
+<rect x="706" y="559.59" width="58.1292" height="114.497" transform="rotate(-10.4972 706 559.59)" fill="url(#trommel_pattern1)"/>
+<g>
+<rect x="604.241" y="298" width="47.5623" height="86.1042" transform="rotate(39.9085 604.241 298)" fill="url(#trommel_pattern2)"/>
+</g>
+</g>
+<defs>
+<pattern id="trommel_pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#trommel_image0" transform="translate(0 -0.000219303) scale(0.000833333)"/>
+</pattern>
+<pattern id="trommel_pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#trommel_image1" transform="translate(-0.0392326) scale(0.00187234 0.00095057)"/>
+</pattern>
+<pattern id="trommel_pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#trommel_image2" transform="translate(-0.00588479) scale(0.00361346 0.00199601)"/>
+</pattern>
+<image id="trommel_image0" width="1200" height="1249" xlink:href="/images/scenes/trommel0.png"/>
+<image id="trommel_image1" width="576" height="1052" xlink:href="/images/items/soda-can.png"/>
+<image id="trommel_image2" width="280" height="501" xlink:href="/images/items/food-can.png"/>
+</defs>
+</svg>

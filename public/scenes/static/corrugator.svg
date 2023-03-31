@@ -1,0 +1,11 @@
+<svg width="1440" height="821" viewBox="0 0 1440 821" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="corrugator">
+<rect width="1440" height="821" fill="url(#corrugator_pattern0)"/>
+</g>
+<defs>
+<pattern id="corrugator_pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#corrugator_image0" transform="scale(0.000694444 0.00121803)"/>
+</pattern>
+<image id="corrugator_image0" width="1440" height="821" xlink:href="/images/scenes/corrugator0.png"/>
+</defs>
+</svg>

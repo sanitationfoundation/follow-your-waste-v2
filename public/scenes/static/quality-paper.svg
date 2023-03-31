@@ -1,0 +1,16 @@
+<svg width="1440" height="821" viewBox="0 0 1440 821" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="quality-paper">
+<rect width="1440" height="821" fill="url(#quality_pattern0)"/>
+<rect x="955" width="407" height="821" fill="url(#quality_pattern1)"/>
+</g>
+<defs>
+<pattern id="quality_pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#quality_image0" transform="scale(0.000694444 0.00121803)"/>
+</pattern>
+<pattern id="quality_pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#quality_image1" transform="scale(0.002457 0.00121803)"/>
+</pattern>
+<image id="quality_image0" width="1440" height="821" xlink:href="/images/scenes/quality-paper0.png"/>
+<image id="quality_image1" width="407" height="821" xlink:href="/images/scenes/quality-paper1.png"/>
+</defs>
+</svg>

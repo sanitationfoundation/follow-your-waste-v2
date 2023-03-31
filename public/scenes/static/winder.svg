@@ -1,0 +1,21 @@
+<svg width="1440" height="821" viewBox="0 0 1440 821" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="winder">
+<rect x="43" y="458.849" width="1354.47" height="299.151" fill="url(#winder_pattern0)"/>
+<rect x="408.436" y="-227" width="396.833" height="716.045" fill="url(#winder_pattern1)"/>
+<rect x="967.491" y="191.095" width="220.657" height="491.899" fill="url(#winder_pattern2)"/>
+</g>
+<defs>
+<pattern id="winder_pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#winder_image0" transform="scale(0.000643915 0.00291545)"/>
+</pattern>
+<pattern id="winder_pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#winder_image1" transform="scale(0.0021978 0.00121803)"/>
+</pattern>
+<pattern id="winder_pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#winder_image2" transform="translate(0 -0.00138075) scale(0.00188324 0.000844786)"/>
+</pattern>
+<image id="winder_image0" data-name="Art_Paper_7_yellowlines.png" width="1553" height="343" xlink:href="/images/scenes/winder0.png"/>
+<image id="winder_image1" data-name="Art_Paper_7_paperroll.png" width="455" height="821" xlink:href="/images/scenes/winder1.png"/>
+<image id="winder_image2" data-name="Art_Paper_7_worker.png" width="531" height="1187" xlink:href="/images/scenes/winder2.png"/>
+</defs>
+</svg>
