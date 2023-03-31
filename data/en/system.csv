@@ -1,0 +1,47 @@
+slug,text
+title,Follow Your Waste
+tagline,"The everyday story of your waste, as told by New York’s Strongest."
+loading,Loading...
+get_started,Get started!
+lets_go,Let's go!
+okay,Okay!
+im_ready,I'm ready!
+try_again,Try again
+try_another,Try another
+sort_intro,Discover what happens to your household waste after you toss it in the bin.
+sort_prompt,"To start, click on any item and drag it to the bin you think it belongs."
+sort_prompt_alt,"To start, select which material you would like to follow."
+sort_top,Drag and drop an item in the correct bin to begin the journey.
+sort_not_trash,Oh no! This item can be recycled! Please drop the item into a different bin.
+sort_wrong_recycle,You have misplaced this recyclable item—an easy mistake to make. Try dropping the item into a different bin.
+sort_not_recycle,This piece of trash is not currently recyclable in NYC. Drop the item into a different bin.
+sort_correct_bin,"You have placed this item in the correct bin! Now, learn from a NYC Sanitation Worker what happens next."
+mgp,"Metal, Glass, Plastic, Cartons"
+metal,Metal
+glass,Glass
+plastic,Plastic
+paper,Paper
+landfill,Landfill
+help_progress,Use this progress bar to track your journey. You can also click the dots to jump between scenes.
+help_restart,Click the bins to go back and select another item.
+help_arrows,"Click these arrows, or use your arrow keys, to navigate through the journey."
+help_factoid,Look out for these tabs to learn extra facts and vocabulary words.
+help_audio,Use these icons to control the sound.
+final_title,Thanks for playing!
+final_statement,"Remember, the story of this item may have ended but our fight to end waste hasn’t. Before our items even enter the bin, reduce what you can and donate the rest. Small steps can make a big impact."
+final_restart,Follow another item
+final_resources,View additional resources
+final_workers,Meet the Sanitation Workers
+final_lessons,Lesson plans for teachers
+final_about,About the project
+aria_skip,Skip to main content
+aria_lang_switch,Switch language
+aria_full_screen,Toggle full screen
+aria_audio_menu,Voiceover controls
+aria_playback,Toggle play/pause
+aria_volume,Toggle volume
+aria_progress_menu,Progress controls
+aria_prev,Previous
+aria_next,Next
+follow,Follow your waste
+sort,Sort your waste

@@ -1,0 +1,9 @@
+slug,color,orientation,animated,looped,environment
+garage-plastic,blue,width,TRUE,TRUE,traffic
+curbside-plastic,forest,height,TRUE,TRUE,facility
+sims,teal,width,TRUE,TRUE,water
+sorting,yellow,width,TRUE,FALSE,facility
+liberator,black,width,TRUE,TRUE,facility
+optical-plastic,lime,width,FALSE,FALSE,facility
+quality-plastic,pink,width,FALSE,FALSE,facility
+end-plastic,blue,width,FALSE,FALSE,traffic

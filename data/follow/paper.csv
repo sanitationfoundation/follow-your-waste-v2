@@ -1,0 +1,15 @@
+slug,color,orientation,animated,looped,environment
+garage-paper,yellow,width,TRUE,TRUE,traffic
+curbside-paper,teal,height,TRUE,TRUE,traffic
+mts,yellow,width,TRUE,TRUE,water
+weighing,blue,width,TRUE,TRUE,facility
+tipping-paper,orange,height,TRUE,TRUE,facility
+barge-paper,blue,height,TRUE,TRUE,water
+pratt,black,height,TRUE,TRUE,facility
+pulper,yellow,height,FALSE,FALSE,facility
+press,pink,width,FALSE,FALSE,facility
+winder,teal,height,FALSE,FALSE,facility
+storage,forest,width,FALSE,FALSE,facility
+corrugator,lime,width,FALSE,FALSE,facility
+quality-paper,yellow,width,FALSE,FALSE,facility
+end-paper,pink,height,FALSE,FALSE,traffic

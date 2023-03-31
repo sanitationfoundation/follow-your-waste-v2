@@ -15,6 +15,7 @@ import { getText } from 'selectors'
 const FollowScene = ({ scene, current, ...props }) => {
 	const sceneElemRef = useRef(null)
 	const lottieInstRef = useRef(null)
+	// console.log(scene)
 	const {
 		slug,
 		color,
@@ -23,7 +24,7 @@ const FollowScene = ({ scene, current, ...props }) => {
 		animated,
 		looped,
 		environment
-	} = scene;
+	} = scene
 
 	const animateScene = () => {
 		if(!sceneElemRef.current) return
@@ -32,14 +33,14 @@ const FollowScene = ({ scene, current, ...props }) => {
 			container: sceneElemRef.current,
 			// renderer: 'canvas',
 			renderer: 'svg',
-			loop: looped === 'true',
+			loop: looped === 'TRUE',
 			autoplay: false,
 			path: `/scenes/animate/${slug}.json`
 		})
 	}
 
 	useEffect(() => {
-		if(animated === 'true') animateScene()
+		if(animated === 'TRUE') animateScene()
 		return () => lottieInstRef.current
 			? lottieInstRef.current.destroy()
 			: false
@@ -85,7 +86,7 @@ const FollowScene = ({ scene, current, ...props }) => {
 					}
 				}}
 			>
-				{animated === 'false' ?
+				{animated === 'FALSE' ?
 					<ReactSVG src={`/scenes/static/${slug}.svg`} />
 				: null}
 			</Box>

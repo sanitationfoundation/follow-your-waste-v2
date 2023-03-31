@@ -1,0 +1,8 @@
+slug,color,orientation,animated,looped,environment
+garage-organics,yellow,width,TRUE,TRUE,traffic
+curbside-organics,green,height,TRUE,TRUE,traffic
+pile,teal,height,TRUE,FALSE,traffic
+composting,orange,width,FALSE,FALSE,traffic
+organisms,lime,height,TRUE,TRUE,traffic
+curing,blue,width,TRUE,TRUE,traffic
+garden,pink,width,TRUE,FALSE,traffic

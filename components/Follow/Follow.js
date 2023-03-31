@@ -24,7 +24,7 @@ const Follow = ({ stream, ...props }) => {
 
 	const handleEmblaSelect = () =>
 		setEmblaCurrentScene(emblaApi.selectedScrollSnap())
-
+	
 	useEffect(() => {
 		const handleKeyDown = ({ keyCode }) => {
 			if (keyCode === KEY_CODE_ARROW_RIGHT && currentScene < scenes.length - 1)

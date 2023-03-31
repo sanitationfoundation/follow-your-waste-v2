@@ -1,10 +1,10 @@
 import { Layout } from 'common/Layout'
-import { SortingGame } from 'components/SortingGame'
+import { Sort } from 'components/Sort'
 
 const Game = ({ ...props }) => {
 	return (
 		<Layout>
-			<SortingGame />
+			<Sort />
 		</Layout>
 	);
 }

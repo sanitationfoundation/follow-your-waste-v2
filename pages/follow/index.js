@@ -26,11 +26,11 @@ const Follow = ({ ...props }) => {
 				{streams.map((stream, i) =>
 					<Link
 						key={i}
-						href={`/follow/${stream.slug}`}>
+						href={`/follow/${stream}`}>
 						<Button
 							key={i}
 							variant='contained'>
-							{getText(lang, 'system', stream.slug)}
+							{getText(lang, 'system', stream)}
 						</Button>
 					</Link>
 				)}

@@ -61,16 +61,14 @@ const Sort = ({ ...props }) => {
 
 	const handleDragEnd = ({ active, over }) => {
 		setDragging(null)
-    if(over) {
-    	setOpening(false)
-    	if(over.data.current.accepts.includes(active.data.current.type)) {
-	      addSorted(active.id)
-	      setTimeout(() => {
-	      	const sortedElem = packeryRef.current.querySelector(`[data-item="${active.id}"]`)
-		      packeryInst.remove(sortedElem)
-	      }, 300)
-	    }
-    }
+		if(!over) return
+		setOpening(false)
+		if(!over.data.current.accepts.includes(active.data.current.type)) return
+		addSorted(active.id)
+		setTimeout(() => {
+			const sortedElem = packeryRef.current.querySelector(`[data-item="${active.id}"]`)
+			packeryInst.remove(sortedElem)
+		}, 300)
 	}
 
 	return (

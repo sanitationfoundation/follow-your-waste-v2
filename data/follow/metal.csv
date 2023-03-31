@@ -1,0 +1,15 @@
+slug,color,orientation,animated,looped,environment
+garage-metal,blue,width,TRUE,TRUE,traffic
+curbside-metal,forest,height,TRUE,TRUE,traffic
+tipping-barge-metal,orange,width,TRUE,TRUE,facility
+barge-metal,blue,height,TRUE,TRUE,water
+sims,teal,width,TRUE,TRUE,water
+tipping-floor-metal,pink,width,TRUE,TRUE,facility
+sorting,yellow,width,TRUE,FALSE,facility
+liberator,black,width,TRUE,TRUE,facility
+magnets,teal,width,FALSE,TRUE,facility
+trommel,orange,width,FALSE,TRUE,facility
+quality-metal,pink,width,FALSE,FALSE,facility
+bales-metal,lime,width,TRUE,FALSE,facility
+barge-rail-metal,blue,height,TRUE,TRUE,water
+end-metal,green,width,FALSE,FALSE,traffic

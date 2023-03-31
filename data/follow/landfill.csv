@@ -1,0 +1,10 @@
+slug,color,orientation,animated,looped,environment
+garage-landfill,blue,width,TRUE,TRUE,traffic
+curbside-landfill,teal,height,TRUE,TRUE,traffic
+weighing,blue,width,TRUE,TRUE,facility
+tipping-landfill,orange,height,TRUE,TRUE,facility
+loading-landfill,lime,width,TRUE,TRUE,facility
+lidding,pink,height,TRUE,FALSE,facility
+crane-landfill,yellow,height,TRUE,FALSE,water
+barge-landfill,blue,height,TRUE,TRUE,water
+end-landfill,yellow,width,TRUE,TRUE,traffic
