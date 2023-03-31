@@ -10,7 +10,7 @@ import useStore from 'hooks'
 import { getText } from 'selectors'
 
 
-const SortingGameBin = ({ data, ...props }) => {
+const SortBin = ({ data, ...props }) => {
 	const theme = useTheme()
 	const { lang, opening } = useStore()
 	const [hover, setHover] = useState(false)
@@ -92,4 +92,4 @@ const SortingGameBin = ({ data, ...props }) => {
 	)
 }
 
-export default SortingGameBin
+export default SortBin

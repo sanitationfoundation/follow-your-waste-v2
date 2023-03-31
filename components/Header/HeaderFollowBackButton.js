@@ -3,10 +3,10 @@ import IconButton from '@mui/material/IconButton'
 import SvgIcon from '@mui/material/SvgIcon'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 
-const HeaderJourneyBackButton = ({ ...props }) => {
+const HeaderFollowBackButton = ({ ...props }) => {
 	return (
 		<Link
-			href='/journey'>
+			href='/follow'>
 			<IconButton
 				color='primary'
 				variant='outlined'
@@ -17,4 +17,4 @@ const HeaderJourneyBackButton = ({ ...props }) => {
 	)
 }
 
-export default HeaderJourneyBackButton
+export default HeaderFollowBackButton

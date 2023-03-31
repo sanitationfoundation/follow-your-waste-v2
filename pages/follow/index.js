@@ -7,7 +7,7 @@ import { Layout } from 'common'
 import useStore from 'hooks'
 import { getText, getStreams } from 'selectors'
 
-const Journeys = ({ ...props }) => {
+const Follow = ({ ...props }) => {
 	const { lang } = useStore()
  	const streams = getStreams()
 
@@ -26,7 +26,7 @@ const Journeys = ({ ...props }) => {
 				{streams.map((stream, i) =>
 					<Link
 						key={i}
-						href={`/journey/${stream.slug}`}>
+						href={`/follow/${stream.slug}`}>
 						<Button
 							key={i}
 							variant='contained'>
@@ -39,4 +39,4 @@ const Journeys = ({ ...props }) => {
 	)
 }
 
-export default Journeys
+export default Follow

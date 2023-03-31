@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { Layout } from 'common'
-import { WasteJourney } from 'components/WasteJourney'
+import { Follow } from 'components/Follow'
 
 const Stream = ({ ...props }) => {
 	const router = useRouter()
@@ -14,7 +14,7 @@ const Stream = ({ ...props }) => {
 					top: 32
 				}
 			}}>
-			<WasteJourney stream={stream} />
+			<Follow stream={stream} />
 		</Layout>
 	);
 }

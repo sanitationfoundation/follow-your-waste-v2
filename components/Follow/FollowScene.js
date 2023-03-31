@@ -12,7 +12,7 @@ import { getText } from 'selectors'
 
 // const Packery = async () => (await import('lottie-web')).then((m) => m.default)
 
-const WasteJourneyScene = ({ scene, current, ...props }) => {
+const FollowScene = ({ scene, current, ...props }) => {
 	const sceneElemRef = useRef(null)
 	const lottieInstRef = useRef(null)
 	const {
@@ -93,4 +93,4 @@ const WasteJourneyScene = ({ scene, current, ...props }) => {
 	)
 }
 
-export default WasteJourneyScene
+export default FollowScene

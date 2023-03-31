@@ -29,7 +29,7 @@ const scale = {
 	'banana': 13,
 }
 
-const SortingGameItem = ({ data, ...props }) => {
+const SortItem = ({ data, ...props }) => {
 	const theme = useTheme()
 	const { lang, dragging, sorted } = useStore()
 
@@ -65,7 +65,7 @@ const SortingGameItem = ({ data, ...props }) => {
 				</Stack>
 			}>
 			<Box
-				className='SortingGameItem'
+				className='SortItem'
 				sx={{
 					height: 'auto',
 					cursor: 'pointer',
@@ -106,4 +106,4 @@ const SortingGameItem = ({ data, ...props }) => {
 	)
 }
 
-export default SortingGameItem
+export default SortItem

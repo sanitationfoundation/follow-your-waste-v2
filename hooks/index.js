@@ -12,11 +12,11 @@ const initialState = {
 	intro: true,
 	// Audio
 	mute: false,
-	// Game
+	// Sort
 	dragging: null,
 	opening: null,
 	sorted: [],
-	// Journey
+	// Follow
 	currentScene: 0,
 };
 
@@ -27,14 +27,14 @@ const useStore = create((set, get) => ({
 	setIntro: intro => set({ intro }),
 	// Audio
 	setMute: mute => set({ mute }),
-	// Game
+	// Sort
 	setDragging: dragging => set({ dragging }),
 	setOpening: opening => set({ opening }),
 	setSorted: sorted => set({ sorted }),
 	addSorted: item => set(state => ({
 		sorted: [...state.sorted, item]
 	})),
-	// Journey
+	// Follow
 	setCurrentScene: currentScene => set({ currentScene }),
 	nextScene: () => set(state => ({
 		currentScene: state.currentScene + 1

@@ -9,4 +9,4 @@ export const ES = es;
 export const ZH = zh;
 export const TEXT = { en, es, zh };
 
-export const SECTIONS = ['journeys','game'];
+export const SECTIONS = ['follow','sort'];

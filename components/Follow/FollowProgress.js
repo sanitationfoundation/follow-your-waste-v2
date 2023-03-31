@@ -17,9 +17,9 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight'
 
 import useStore from 'hooks'
 import { getText } from 'selectors'
-// import WasteJourneyScene from './WasteJourneyScene'
+// import FollowScene from './FollowScene'
 
-const WasteJourneyProgress = ({ stream, scenes, ...props }) => {
+const FollowProgress = ({ stream, scenes, ...props }) => {
 	const theme = useTheme()
 	const { lang, currentScene, nextScene, prevScene, setCurrentScene } = useStore()
 
@@ -97,4 +97,4 @@ const WasteJourneyProgress = ({ stream, scenes, ...props }) => {
 	)
 }
 
-export default WasteJourneyProgress
+export default FollowProgress

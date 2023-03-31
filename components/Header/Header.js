@@ -12,9 +12,9 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import HeaderFullScreen from './HeaderFullScreen'
 import HeaderVolume from './HeaderVolume'
-import HeaderGameButton from './HeaderGameButton'
-import HeaderJourneyBackButton from './HeaderJourneyBackButton'
-import HeaderJourneyButton from './HeaderJourneyButton'
+import HeaderSortButton from './HeaderSortButton'
+import HeaderFollowBackButton from './HeaderFollowBackButton'
+import HeaderFollowButton from './HeaderFollowButton'
 import HeaderLangSelector from './HeaderLangSelector'
 
 
@@ -55,15 +55,15 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 						}}
 						alt='Sanitation Foundation logo'
 					/>
-					{stream ? <HeaderJourneyBackButton /> : null}
+					{stream ? <HeaderFollowBackButton /> : null}
 				</Stack>
 				<Stack
 					direction='row'
 					alignItems='center'
 					spacing={2}
 				>
-					{pathname.includes('journey') ? <HeaderGameButton /> : null}
-					{pathname.includes('game') ? <HeaderJourneyButton /> : null}
+					{pathname.includes('Follow') ? <HeaderSortButton /> : null}
+					{pathname.includes('Sort') ? <HeaderFollowButton /> : null}
 					<HeaderLangSelector />
 					<Stack
 						direction='row'

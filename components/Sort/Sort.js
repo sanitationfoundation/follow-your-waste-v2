@@ -9,12 +9,12 @@ import { DndContext } from '@dnd-kit/core'
 
 import useStore from 'hooks'
 import { getText, getItems, getBins } from 'selectors'
-import SortingGameItem from './SortingGameItem'
-import SortingGameBin from './SortingGameBin'
+import SortItem from './SortItem'
+import SortBin from './SortBin'
 
 const Packery = async () => (await import('packery')).then((m) => m.default)
 
-const SortingGame = ({ ...props }) => {
+const Sort = ({ ...props }) => {
 	const { lang, sorted, addSorted, setDragging, setOpening } = useStore()
 	const items = getItems()
 	const bins = getBins()
@@ -35,7 +35,7 @@ const SortingGame = ({ ...props }) => {
 		const newPackeryInst = new Packery(container, {
 			gutter: 10,
 			transitionDuration: 400,
-			itemSelector: '.SortingGameItem',
+			itemSelector: '.SortItem',
 			// initLayout: false,
 			// resize: true,
 		})
@@ -85,7 +85,7 @@ const SortingGame = ({ ...props }) => {
 				onDragEnd={handleDragEnd}>
 				<Box ref={packeryRef}>
 					{items.map((item, i) =>
-						<SortingGameItem
+						<SortItem
 							key={i}
 							data={item}
 						/>
@@ -102,7 +102,7 @@ const SortingGame = ({ ...props }) => {
 						left: 0,
 					}}>
 					{bins.map((bin, i) =>
-						<SortingGameBin
+						<SortBin
 							key={i}
 							data={bin}
 						/>
@@ -113,4 +113,4 @@ const SortingGame = ({ ...props }) => {
 	)
 }
 
-export default SortingGame
+export default Sort

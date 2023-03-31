@@ -1,18 +1,18 @@
 import Link from 'next/link'
 import Button from '@mui/material/Button'
 
-const HeaderJourneyButton = () => {
+const HeaderFollowButton = () => {
 	return (
 		<Link
-			href='/journey'>
+			href='/follow'>
 			<Button
 				color='primary'
 				variant='outlined'
-				aria-label='Switch to waste journeys'>
-				Waste Journey
+				aria-label='Switch to follow your waste'>
+				Follow your waste
 			</Button>
 		</Link>
 	)
 }
 
-export default HeaderJourneyButton
+export default HeaderFollowButton

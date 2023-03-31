@@ -8,13 +8,13 @@ import useEmblaCarousel from 'embla-carousel-react'
 
 import useStore from 'hooks'
 import { getText, getScenes } from 'selectors'
-import WasteJourneyProgress from './WasteJourneyProgress'
-import WasteJourneyScene from './WasteJourneyScene'
+import FollowProgress from './FollowProgress'
+import FollowScene from './FollowScene'
 
 const KEY_CODE_ARROW_LEFT = 37
 const KEY_CODE_ARROW_RIGHT = 39
 
-const WasteJourney = ({ stream, ...props }) => {
+const Follow = ({ stream, ...props }) => {
 	const [emblaCurrentScene, setEmblaCurrentScene] = useState(0)
 	const { currentScene, setCurrentScene, nextScene, prevScene } = useStore()
 	const scenes = getScenes(stream)
@@ -56,7 +56,7 @@ const WasteJourney = ({ stream, ...props }) => {
 	
 	return (
 		<>
-			<WasteJourneyProgress
+			<FollowProgress
 				stream={stream}
 				scenes={scenes} />
 			<Box
@@ -69,7 +69,7 @@ const WasteJourney = ({ stream, ...props }) => {
 					className='embla__container'
 					direction='row'>
 					{scenes.map((scene,i) =>
-						<WasteJourneyScene
+						<FollowScene
 							key={i}
 							scene={scene}
 							current={i === emblaCurrentScene}
@@ -81,4 +81,4 @@ const WasteJourney = ({ stream, ...props }) => {
 	)
 }
 
-export default WasteJourney
+export default Follow
