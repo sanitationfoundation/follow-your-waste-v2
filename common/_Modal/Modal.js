@@ -1,6 +1,6 @@
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Dialog from '@mui/material/Dialog';
+import React from 'react'
+import { useTheme } from '@mui/material/styles'
+import Dialog from '@mui/material/Dialog'
 
 //<Dialog />
 //<DialogActions />
@@ -9,7 +9,7 @@ import Dialog from '@mui/material/Dialog';
 //<DialogTitle />
 
 const Modal = ({ sx, children, ...props }) => {
-	const theme = useTheme();
+	const theme = useTheme()
 	return (
 		<Dialog
 			sx={{
@@ -20,19 +20,19 @@ const Modal = ({ sx, children, ...props }) => {
 				// borderTopWidth: 1.5,
 				// borderTopStyle: 'solid',
 				// borderTopColor: 'tertiary.main',
-				...sx
+				...sx,
 			}}
 			PaperProps={{
 				sx: {
 					width: '100%',
 					maxWidth: theme.spacing(45),
-				}
+				},
 			}}
 			{...props}
 		>
 			{children}
 		</Dialog>
-	);
-};
+	)
+}
 
-export default Modal;
+export default Modal

@@ -858,6 +858,10 @@ export default {
       "text": "Vertedero"
     },
     {
+      "slug": "organics",
+      "text": ""
+    },
+    {
       "slug": "help_progress",
       "text": "Use la barra de avance para rastrear el recorrido. De igual forma, puede hacer clic en los puntos para saltar entre las escenas."
     },
@@ -940,6 +944,10 @@ export default {
     {
       "slug": "aria_next",
       "text": "Siguiente"
+    },
+    {
+      "slug": "locale",
+      "text": "Español"
     }
   ]
 }

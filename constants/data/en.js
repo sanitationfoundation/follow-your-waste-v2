@@ -948,6 +948,10 @@ export default {
     {
       "slug": "sort",
       "text": "Sort your waste"
+    },
+    {
+      "slug": "locale",
+      "text": "English"
     }
   ]
 }

@@ -1,14 +1,14 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { ThemeProvider } from '@mui/material';
-import CssBaseline from '@mui/material/CssBaseline';
-import { CacheProvider } from '@emotion/react';
-import { default as theme } from '../theme';
-import createEmotionCache from '../createEmotionCache';
-import '../styles/globals.css';
+import { ThemeProvider } from '@mui/material'
+import CssBaseline from '@mui/material/CssBaseline'
+import { CacheProvider } from '@emotion/react'
+import { default as theme } from '../theme'
+import createEmotionCache from '../createEmotionCache'
+import '../styles/globals.css'
 import useStore from '../hooks'
 
-const clientSideEmotionCache = createEmotionCache();
+const clientSideEmotionCache = createEmotionCache()
 
 function App({
 	Component,
@@ -18,7 +18,7 @@ function App({
 	const router = useRouter()
 	const { locale, setLocale } = useStore()
 
-	useEffect(() => { 
+	useEffect(() => {
 		setLocale(router.locale)
 	}, [router])
 
@@ -29,7 +29,7 @@ function App({
 				<Component {...pageProps} />
 			</ThemeProvider>
 		</CacheProvider>
-	);
+	)
 }
 
-export default App;
+export default App

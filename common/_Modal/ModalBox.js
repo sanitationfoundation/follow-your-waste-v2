@@ -1,5 +1,5 @@
-import React from 'react';
-import Box from '@mui/material/Box';
+import React from 'react'
+import Box from '@mui/material/Box'
 
 const ModalBox = ({ children, sx, ...props }) => {
 	return (
@@ -8,13 +8,13 @@ const ModalBox = ({ children, sx, ...props }) => {
 				sx={{
 					px: 2.5,
 					py: 2.5,
-					...sx
+					...sx,
 				}}
 			>
 				{children}
 			</Box>
 		</Box>
-	);
-};
+	)
+}
 
-export default ModalBox;
+export default ModalBox

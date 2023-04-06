@@ -14,15 +14,17 @@ const HeaderVolume = () => {
 
 	return (
 		<IconButton
-			color='primary'
+			color="primary"
 			// size='large'
-			aria-label='Toggle volume on/off'
+			aria-label="Toggle volume on/off"
 			aria-pressed={mute}
-			onClick={onClick}>
-			{mute
-				? <VolumeOffIcon fontSize='large' />
-				: <VolumeUpIcon fontSize='large' />
-			}
+			onClick={onClick}
+		>
+			{mute ? (
+				<VolumeOffIcon fontSize="large" />
+			) : (
+				<VolumeUpIcon fontSize="large" />
+			)}
 		</IconButton>
 	)
 }

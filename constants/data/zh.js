@@ -940,6 +940,10 @@ export default {
     {
       "slug": "aria_next",
       "text": "下一个"
+    },
+    {
+      "slug": "locale",
+      "text": "中国人"
     }
   ]
 }

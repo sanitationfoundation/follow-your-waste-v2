@@ -6,7 +6,7 @@ const Game = ({ ...props }) => {
 		<Layout>
 			<Sort />
 		</Layout>
-	);
+	)
 }
 
 export default Game

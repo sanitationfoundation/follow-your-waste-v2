@@ -4,7 +4,7 @@
   "tabWidth": 2,
   "useTabs": true,
   "semi": false,
-  "printWidth": 100,
+  "printWidth": 75,
   "arrowParens": "always",
   "proseWrap": "always",
   "endOfLine": "lf"

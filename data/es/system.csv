@@ -22,6 +22,7 @@ glass,Vidrio
 plastic,Plástico
 paper,Papel
 landfill,Vertedero
+organics,
 help_progress,"Use la barra de avance para rastrear el recorrido. De igual forma, puede hacer clic en los puntos para saltar entre las escenas."
 help_restart,Haga clic en los contenedores para retroceder y seleccionar otro elemento.
 help_arrows,Haga clic en las flechas o utilice las teclas de flecha para navegar en el recorrido.
@@ -43,3 +44,4 @@ aria_volume,Cambiar a volumen
 aria_progress_menu,Controles de avance
 aria_prev,Anterior
 aria_next,Siguiente
+locale,Español

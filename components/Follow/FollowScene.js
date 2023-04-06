@@ -1,21 +1,23 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState, forwardRef } from 'react'
 import Image from 'next/image'
 import { alpha, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
-import { ReactSVG } from "react-svg";
+import { ReactSVG } from 'react-svg'
 import lottie from 'lottie-web'
 
 import useStore from 'hooks'
-import { getText } from 'selectors'
+import { getText, getStreamColor } from 'selectors'
+import FollowFact from './FollowFact'
 
 // const Packery = async () => (await import('lottie-web')).then((m) => m.default)
-
-const FollowScene = ({ scene, current, ...props }) => {
+const FollowScene = forwardRef(({ scene, stream, current, ...props }, ref) => {
+// const FollowScene = ({ scene, stream, current, ...props }) => {
+	const [openFact, setOpenFact] = useState(null)
 	const sceneElemRef = useRef(null)
 	const lottieInstRef = useRef(null)
-	// console.log(scene)
+	const { locale } = useStore()
 	const {
 		slug,
 		color,
@@ -23,11 +25,12 @@ const FollowScene = ({ scene, current, ...props }) => {
 		// TODO convert animated and looped to boolean early on in pipeline
 		animated,
 		looped,
-		environment
+		environment,
 	} = scene
+	const streamColor = getStreamColor(stream)
 
 	const animateScene = () => {
-		if(!sceneElemRef.current) return
+		if (!sceneElemRef.current) return
 		// sceneElemRef.current.innerHtml = ''
 		lottieInstRef.current = lottie.loadAnimation({
 			container: sceneElemRef.current,
@@ -35,46 +38,40 @@ const FollowScene = ({ scene, current, ...props }) => {
 			renderer: 'svg',
 			loop: looped === 'TRUE',
 			autoplay: false,
-			path: `/scenes/animate/${slug}.json`
+			path: `/scenes/animate/${slug}.json`,
 		})
 	}
 
+	const sceneFacts = [1,2,3]
+		.map(i => getText(locale, stream, slug, `fact${i}`))
+		.filter(str => str.length > 0)
+
+	const handleClick = useCallback(i =>
+		setOpenFact(i === openFact ? null : i)
+	, [openFact])
+
 	useEffect(() => {
-		if(animated === 'TRUE') animateScene()
-		return () => lottieInstRef.current
-			? lottieInstRef.current.destroy()
-			: false
+		if (animated === 'TRUE') animateScene()
+		return () =>
+			lottieInstRef.current ? lottieInstRef.current.destroy() : false
 	}, [])
 
 	useEffect(() => {
-		if(current && lottieInstRef.current)
-			lottieInstRef.current.play()
+		if (current && lottieInstRef.current) lottieInstRef.current.play()
 	}, [current, lottieInstRef])
-	
+
 	return (
 		<Box
+			ref={ref}
 			sx={{
 				maxWidth: '100vw',
 				flex: '0 0 100vw',
 				overflow: 'hidden',
 				bgcolor: `${color}.main`,
 				position: 'relative',
-				'& svg': {
-					...(orientation === 'width' ? {
-						width: '100% !important',
-						height: 'auto !important',
-					} : {}),
-					...(orientation === 'height' ? {
-						width: 'auto !important',
-						height: '100% !important',
-						ml: 'calc(-87.5vh - -50vw)!important',
-						position: 'absolute',
-						top: 0,
-						left: 0
-					} : {})
-				}
 			}}
-			{...props}>
+			{...props}
+		>
 			<Box
 				ref={sceneElemRef}
 				sx={{
@@ -82,16 +79,57 @@ const FollowScene = ({ scene, current, ...props }) => {
 					pointerEvents: 'none',
 					display: 'flex',
 					'& > *': {
-						m: 'auto'
-					}
+						m: 'auto',
+					},
+					'& svg': {
+						...(orientation === 'width'
+							? {
+									width: '100% !important',
+									height: 'auto !important',
+							  }
+							: {}),
+						...(orientation === 'height'
+							? {
+									width: 'auto !important',
+									height: '100% !important',
+									ml: 'calc(-87.5vh - -50vw)!important',
+									position: 'absolute',
+									top: 0,
+									left: 0,
+							  }
+							: {}),
+					},
 				}}
 			>
-				{animated === 'FALSE' ?
+				{animated === 'FALSE' ? (
 					<ReactSVG src={`/scenes/static/${slug}.svg`} />
-				: null}
+				) : null}
 			</Box>
+			<Stack
+				spacing={2}
+				justifyContent='center'
+				sx={{
+					width: '100%',
+					// maxWidth: 500,
+					height: '100%',
+					position: 'absolute',
+					right: 0,
+					top: 0,
+					overflow: 'hidden'
+				}}
+			>
+				{sceneFacts.map((fact, i) =>
+					<FollowFact
+						key={i}
+						fact={fact}
+						color={streamColor}
+						open={i === openFact}
+						onClick={() => handleClick(i)}
+					/>
+				)}
+			</Stack>
 		</Box>
 	)
-}
+})
 
 export default FollowScene

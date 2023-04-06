@@ -4,15 +4,17 @@ import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import Select from '@mui/material/Select'
 import useStore from 'hooks'
-import { getLocales } from 'selectors'
+import { getText, getLocales } from 'selectors'
 
 const HeaderLocaleSelector = () => {
 	const router = useRouter()
 	const { locale, setLocale } = useStore()
 	const locales = getLocales()
-	const handleChange = e => {
+	const handleChange = (e) => {
 		const { value } = e.target
-		router.push(router.asPath, router.asPath, { locale: value })
+		router.push(router.asPath, router.asPath, {
+			locale: value,
+		})
 	}
 
 	return (
@@ -22,20 +24,21 @@ const HeaderLocaleSelector = () => {
 			sx={{
 				py: 0,
 				'& .MuiSelect-select': {
-					py: 1
-				}
+					py: 1,
+				},
 			}}
 		>
-			{locales.map(key =>
+			{locales.map((key) => (
 				<MenuItem
 					key={key}
 					value={key}
 					sx={{
-						color: 'secondary.main'
-					}}>
-					{key}
+						color: 'secondary.main',
+					}}
+				>
+					{getText(key, 'system', 'locale')}
 				</MenuItem>
-			)}
+			))}
 		</Select>
 	)
 }

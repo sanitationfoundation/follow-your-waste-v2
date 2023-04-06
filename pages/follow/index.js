@@ -2,38 +2,80 @@ import Link from 'next/link'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
+import Typography from '@mui/material/Typography'
+
 
 import { Layout } from 'common'
 import useStore from 'hooks'
-import { getText, getStreams } from 'selectors'
+import { getRandom } from 'utils'
+import { getText, getStreams, getItems, getItemSize } from 'selectors'
 
 const Follow = ({ ...props }) => {
 	const { locale } = useStore()
- 	const streams = getStreams()
+	const streams = getStreams()
+	const items = getItems()
+	// console.log(items)
 
- 	// const handleClick = e => {
- 	// 	const stream = e.target.value
- 	// 	if(streams.some(s => s.slug === stream))
- 	// 		setStream(stream)
- 	// }
+	// const handleClick = e => {
+	// 	const stream = e.target.value
+	// 	if(streams.some(s => s.slug === stream))
+	// 		setStream(stream)
+	// }
 
 	return (
 		<Layout>
 			<Stack
-				spacing={1}
+				direction='row'
 				alignItems='center'
-				sx={{m: 'auto'}}>
-				{streams.map((stream, i) =>
-					<Link
-						key={i}
-						href={`/follow/${stream}`}>
-						<Button
-							key={i}
-							variant='contained'>
+				justifyContent='center'
+				flexWrap='wrap'
+				// spacing={1}
+				sx={{
+					m: 'auto',
+					width: '100%',
+					'& > a': {
+						// width: '100%',
+						maxWidth: 200,
+						display: 'block'
+					}
+				}}>
+				{streams.map((stream, i) => (
+					<Link key={i} href={`/follow/${stream}`}>
+						<Box
+							sx={{
+								pb: '100%',
+								width: 200,
+								position: 'relative'
+							}}>
+							{items
+								.filter(item => item.stream === stream)
+								.sort((a, b) => getItemSize(b.slug) - getItemSize(a.slug))
+								.map((item, i) =>
+								<img
+									key={i}
+									src={`/images/items/${item.slug}.png`}
+									style={{
+										width: `${getItemSize(item.slug) / 2}%`,
+										minWidth: `${getItemSize(item.slug) * 10}px`,
+										height: 'auto',
+										position: 'absolute',
+										top: '50%',
+										left: '50%',
+										transform: `translate(-50%, -50%) rotate(${getRandom(-80, 80)}deg)`,
+										marginLeft: getRandom(-25, 0),
+										marginRight: getRandom(-25, 0),
+										marginTop: getRandom(-25, 0),
+										marginBottom: getRandom(-25, 0),
+									}}
+									alt=""
+								/>
+							)}
+						</Box>
+						<Typography variant='h3' align='center'>
 							{getText(locale, 'system', stream)}
-						</Button>
+						</Typography>
 					</Link>
-				)}
+				))}
 			</Stack>
 		</Layout>
 	)

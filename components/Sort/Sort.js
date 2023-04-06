@@ -12,7 +12,8 @@ import { getText, getItems, getBins } from 'selectors'
 import SortItem from './SortItem'
 import SortBin from './SortBin'
 
-const Packery = async () => (await import('packery')).then((m) => m.default)
+const Packery = async () =>
+	(await import('packery')).then((m) => m.default)
 
 const Sort = ({ ...props }) => {
 	const { locale, sorted, addSorted, setDragging, setOpening } = useStore()
@@ -21,7 +22,7 @@ const Sort = ({ ...props }) => {
 	const packeryRef = useRef(null)
 	const [packeryInst, setPackeryInst] = useState(null)
 
-	// const Packery = 
+	// const Packery =
 	// const packeryInst = useMemo(() =>
 	// 	new Packery(packeryRef.current, {
 
@@ -39,16 +40,17 @@ const Sort = ({ ...props }) => {
 			// initLayout: false,
 			// resize: true,
 		})
-		
+
 		setPackeryInst(newPackeryInst)
 	}
 
 	useEffect(() => {
-		if(packeryRef.current) loadPackery(packeryRef.current)
+		if (packeryRef.current) loadPackery(packeryRef.current)
 	}, [packeryRef])
 
 	useEffect(() => {
-		if(packeryInst && packeryInst.hasOwnProperty('reloadItems')) packeryInst.reloadItems()
+		if (packeryInst && packeryInst.hasOwnProperty('reloadItems'))
+			packeryInst.reloadItems()
 	}, [packeryInst])
 
 	const handleDragStart = ({ active }) => {
@@ -56,17 +58,20 @@ const Sort = ({ ...props }) => {
 	}
 
 	const handleDragOver = ({ active, over }) => {
-		if(over) setOpening(over.id)
+		if (over) setOpening(over.id)
 	}
 
 	const handleDragEnd = ({ active, over }) => {
 		setDragging(null)
-		if(!over) return
+		if (!over) return
 		setOpening(false)
-		if(!over.data.current.accepts.includes(active.data.current.type)) return
+		if (!over.data.current.accepts.includes(active.data.current.type))
+			return
 		addSorted(active.id)
 		setTimeout(() => {
-			const sortedElem = packeryRef.current.querySelector(`[data-item="${active.id}"]`)
+			const sortedElem = packeryRef.current.querySelector(
+				`[data-item="${active.id}"]`,
+			)
 			packeryInst.remove(sortedElem)
 		}, 300)
 	}
@@ -75,36 +80,33 @@ const Sort = ({ ...props }) => {
 		<Stack
 			sx={{
 				p: 3,
-				flex: 1
-			}}>
+				flex: 1,
+			}}
+		>
 			<DndContext
 				onDragStart={handleDragStart}
 				onDragOver={handleDragOver}
-				onDragEnd={handleDragEnd}>
+				onDragEnd={handleDragEnd}
+			>
 				<Box ref={packeryRef}>
-					{items.map((item, i) =>
-						<SortItem
-							key={i}
-							data={item}
-						/>
-					)}
+					{items.map((item, i) => (
+						<SortItem key={i} data={item} />
+					))}
 				</Box>
 				<Stack
-					direction='row'
-					justifyContent='center'
+					direction="row"
+					justifyContent="center"
 					spacing={2}
 					sx={{
 						width: '100%',
 						position: 'absolute',
 						bottom: 0,
 						left: 0,
-					}}>
-					{bins.map((bin, i) =>
-						<SortBin
-							key={i}
-							data={bin}
-						/>
-					)}
+					}}
+				>
+					{bins.map((bin, i) => (
+						<SortBin key={i} data={bin} />
+					))}
 				</Stack>
 			</DndContext>
 		</Stack>

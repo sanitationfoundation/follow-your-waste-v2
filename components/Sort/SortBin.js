@@ -9,7 +9,6 @@ import { CSS } from '@dnd-kit/utilities'
 import useStore from 'hooks'
 import { getText } from 'selectors'
 
-
 const SortBin = ({ data, ...props }) => {
 	const theme = useTheme()
 	const { locale, opening } = useStore()
@@ -20,9 +19,9 @@ const SortBin = ({ data, ...props }) => {
 
 	const { setNodeRef } = useDroppable({
 		id: data.slug,
-    data: {
-      accepts: data.streams,
-    },
+		data: {
+			accepts: data.streams,
+		},
 	})
 
 	// useEffect(() => {
@@ -44,10 +43,11 @@ const SortBin = ({ data, ...props }) => {
 			sx={{
 				width: 200,
 				height: 200,
-				position: 'relative'
+				position: 'relative',
 			}}
 			onMouseOver={() => setHover(true)}
-			onMouseLeave={() => setHover(false)}>
+			onMouseLeave={() => setHover(false)}
+		>
 			<img
 				src={`/images/bins/backs/${data.slug}.png`}
 				style={{
@@ -55,7 +55,7 @@ const SortBin = ({ data, ...props }) => {
 					height: 'auto',
 					position: 'absolute',
 					left: 0,
-					top: 42
+					top: 42,
 				}}
 			/>
 			<img
@@ -65,7 +65,7 @@ const SortBin = ({ data, ...props }) => {
 					height: 'auto',
 					position: 'absolute',
 					bottom: 0,
-					zIndex: 30
+					zIndex: 30,
 				}}
 			/>
 			<img
@@ -77,15 +77,14 @@ const SortBin = ({ data, ...props }) => {
 					left: data.slug === 'organics' ? 2 : 0,
 					top: 20,
 					zIndex: 40,
-					transformOrigin: data.slug === 'organics'
-						? 'right bottom'
-						: 'center',
+					transformOrigin:
+						data.slug === 'organics' ? 'right bottom' : 'center',
 					transition: 'transform 300ms ease-in-out',
 					transform: isOpening
 						? data.slug === 'organics'
 							? 'translateX(-13px) translateY(13px) rotate(45deg)'
 							: 'translateX(100px) translateY(-60px) rotate(45deg)'
-						: 'translate(0)'
+						: 'translate(0)',
 				}}
 			/>
 		</Box>

@@ -21,7 +21,8 @@ import { getText } from 'selectors'
 
 const FollowProgress = ({ stream, scenes, ...props }) => {
 	const theme = useTheme()
-	const { locale, currentScene, nextScene, prevScene, setCurrentScene } = useStore()
+	const { locale, currentScene, nextScene, prevScene, setCurrentScene } =
+		useStore()
 
 	const handleStepClick = (e, index) => {
 		setCurrentScene(index)
@@ -29,68 +30,74 @@ const FollowProgress = ({ stream, scenes, ...props }) => {
 
 	return (
 		<Stack
-			direction='row'
+			direction="row"
 			sx={{
 				width: '100%',
 				position: 'fixed',
 				top: 0,
 				left: 0,
 				zIndex: 30,
-				backgroundColor: alpha(theme.palette.secondary.main, .15),
-			}}>
+				backgroundColor: alpha(theme.palette.secondary.main, 0.15),
+			}}
+		>
 			<Button
-				size='small'
+				size="small"
 				onClick={prevScene}
 				disabled={currentScene === 0}
-				aria-label='Back'
+				aria-label="Back"
 				sx={{
-					borderRadius: 0
-				}}>
+					borderRadius: 0,
+				}}
+			>
 				<KeyboardArrowLeft />
 			</Button>
 			<Stepper
-				variant='dots'
-				color='primary'
+				variant="dots"
+				color="primary"
 				steps={scenes.length}
 				connector={null}
-				position='static'
+				position="static"
 				activeStep={currentScene}
 				sx={{
 					width: '100%',
 				}}
 			>
-				{scenes.map((scene, i) =>
-					<Step
-						key={i}
-						disabled={false}>
+				{scenes.map((scene, i) => (
+					<Step key={i} disabled={false}>
 						<Tooltip
 							arrow
-							title={getText(locale, stream, scene.slug, 'label')}>
+							title={getText(locale, stream, scene.slug, 'label')}
+						>
 							<Box>
 								<StepButton
-									icon={<CircleIcon fontSize='xsmall' />}
+									icon={<CircleIcon fontSize="xsmall" />}
 									sx={{
-										opacity: 0.25
+										opacity: 0.25,
 									}}
-									style={currentScene === i ? {
-										opacity: 1
-									} : {}}
+									style={
+										currentScene === i
+											? {
+													opacity: 1,
+											  }
+											: {}
+									}
 									data-index={i}
-									onClick={e => handleStepClick(e, i)}
+									onClick={(e) => handleStepClick(e, i)}
 								/>
 							</Box>
 						</Tooltip>
 					</Step>
-		    )}
+				))}
 			</Stepper>
 			<Button
-				size='small'
+				size="small"
 				onClick={nextScene}
 				disabled={currentScene === scenes.length - 1}
-				aria-label='Next'
+				aria-label="Next"
 				sx={{
-					borderRadius: 0
-				}}>
+					borderRadius: 0,
+				}}
+			>
 				<KeyboardArrowRight />
 			</Button>
 		</Stack>

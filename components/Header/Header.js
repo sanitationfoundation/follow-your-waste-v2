@@ -18,71 +18,69 @@ import HeaderFollowBackButton from './HeaderFollowBackButton'
 import HeaderFollowButton from './HeaderFollowButton'
 import HeaderLocaleSelector from './HeaderLocaleSelector'
 
-
 const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 	const theme = useTheme()
 	const router = useRouter()
-  const { pathname, query } = router
-  const { stream } = query
+	const { pathname, query } = router
+	const { stream } = query
 
 	return (
 		<AppBar
-			color='orange'
+			color="orange"
 			position={position}
 			sx={{
 				zIndex: 30,
 				boxShadow: 'none',
-				...sx
+				...sx,
 			}}
 			{...props}
-			>
+		>
 			<Toolbar>
 				<Stack
-					direction='row'
-					alignItems='center'
+					direction="row"
+					alignItems="center"
 					spacing={2}
 					sx={{
-						mr: 'auto'
+						mr: 'auto',
+						'& > div': {
+							height: 50,
+							my: 'auto !important',
+						},
 					}}
 				>
-					<Link href='/'>
+					<div>
+						<Link href="/">
+							<Image
+								width={72}
+								height={50}
+								src="/images/fyw-logo.svg"
+								style={{
+									width: 'auto',
+									height: 50,
+								}}
+								alt="Follow Your Waste logo"
+							/>
+						</Link>
+					</div>
+					<div>
 						<Image
-							width={400}
-							height={156}
-							src='/images/fyw-logo.svg'
+							width={128}
+							height={50}
+							src="/images/sf-logo.png"
 							style={{
 								width: 'auto',
-								height: 54,
-								marginRight: 'auto'
+								height: 50,
 							}}
-							alt='Follow Your Waste logo'
+							alt="Sanitation Foundation logo"
 						/>
-					</Link>
-					<Image
-						width={400}
-						height={156}
-						src='/images/sf-logo.png'
-						style={{
-							width: 'auto',
-							height: 54,
-							marginRight: 'auto'
-						}}
-						alt='Sanitation Foundation logo'
-					/>
+					</div>
 					{stream ? <HeaderFollowBackButton /> : null}
 				</Stack>
-				<Stack
-					direction='row'
-					alignItems='center'
-					spacing={2}
-				>
+				<Stack direction="row" alignItems="center" spacing={2}>
 					{pathname.includes('follow') ? <HeaderSortButton /> : null}
 					{pathname.includes('sort') ? <HeaderFollowButton /> : null}
 					<HeaderLocaleSelector />
-					<Stack
-						direction='row'
-						alignItems='center'
-					>
+					<Stack direction="row" alignItems="center">
 						<HeaderFullScreen onClick={onFullScreenClick} />
 						<HeaderVolume />
 					</Stack>
@@ -93,7 +91,7 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 }
 
 Header.defaultProps = {
-	position: 'relative'
+	position: 'relative',
 }
 
 export default Header

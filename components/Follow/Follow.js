@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
 import { alpha, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
@@ -10,73 +10,114 @@ import useStore from 'hooks'
 import { getText, getScenes } from 'selectors'
 import FollowProgress from './FollowProgress'
 import FollowScene from './FollowScene'
+import FollowChyron from './FollowChyron'
+import FollowEnd from './FollowEnd'
 
 const KEY_CODE_ARROW_LEFT = 37
 const KEY_CODE_ARROW_RIGHT = 39
 
 const Follow = ({ stream, ...props }) => {
+	const [emblaScrolling, setEmblaScrolling] = useState(false)
 	const [emblaCurrentScene, setEmblaCurrentScene] = useState(0)
-	const { currentScene, setCurrentScene, nextScene, prevScene } = useStore()
+	const [emblaSlides, setEmblaSlides] = useState([])
+	const [mouseDown, setMouseDown] = useState(null)
+	const { currentScene, setCurrentScene, nextScene, prevScene } =
+		useStore()
 	const scenes = getScenes(stream)
 	const [emblaRef, emblaApi] = useEmblaCarousel({
 		// speed: 10
 	})
 
-	const handleEmblaSelect = () =>
+
+	const handleEmblaSelect = () => {
 		setEmblaCurrentScene(emblaApi.selectedScrollSnap())
-	
+	}
+
+	const handleEmblaScroll = () =>
+		setEmblaScrolling(true)
+
+	const handleEmblaSettle = () =>
+		setEmblaScrolling(false)
+
+	const isCurrent = useCallback(i => i === currentScene, [currentScene])
+
+	useEffect(() => {
+		const handleMouseDown = () => setMouseDown(true)
+		const handleMouseUp = () => setMouseDown(false)
+		document.onmousedown = handleMouseDown
+		document.onmouseup = handleMouseUp
+	}, [])
+
+	useEffect(() => {
+		if(!emblaApi) return
+		emblaApi.reInit()
+	}, [emblaApi, scenes])
+
 	useEffect(() => {
 		const handleKeyDown = ({ keyCode }) => {
-			if (keyCode === KEY_CODE_ARROW_RIGHT && currentScene < scenes.length - 1)
+			if (
+				keyCode === KEY_CODE_ARROW_RIGHT &&
+				currentScene < scenes.length - 1
+			)
 				nextScene()
 			if (keyCode === KEY_CODE_ARROW_LEFT && currentScene >= 1)
 				prevScene()
 		}
 
 		document.onkeydown = handleKeyDown
-	}, [currentScene])
+	}, [currentScene, scenes])
 
 	useEffect(() => {
-		if (currentScene !== emblaCurrentScene) {
+		if (currentScene !== emblaCurrentScene)
 			setCurrentScene(emblaCurrentScene)
-		}
-	}, [emblaCurrentScene])
+	}, [emblaCurrentScene, emblaScrolling])
 
 	useEffect(() => {
-    if (emblaApi) {
-      emblaApi.scrollTo(currentScene)
-    }
-  }, [currentScene])
+		if (emblaApi && !mouseDown)
+			emblaApi.scrollTo(currentScene)
+	}, [emblaApi, emblaScrolling, currentScene, mouseDown])
 
-  useEffect(() => {
-    if (emblaApi) {
-      emblaApi.on('select', handleEmblaSelect)
-    }
-  }, [emblaApi, handleEmblaSelect])
-	
+	useEffect(() => {
+		if (emblaApi) {
+			emblaApi.off('select', handleEmblaSelect)
+			emblaApi.on('select', handleEmblaSelect)
+		}
+	}, [emblaApi, handleEmblaSelect])
+
+	useEffect(() => {
+		if (emblaApi) {
+			emblaApi.off('scroll', handleEmblaScroll)
+			emblaApi.off('settle', handleEmblaSettle)
+			emblaApi.on('scroll', handleEmblaScroll)
+			emblaApi.on('settle', handleEmblaSettle)
+		}
+	}, [emblaApi, handleEmblaScroll, handleEmblaScroll])
+
+
 	return (
 		<>
-			<FollowProgress
-				stream={stream}
-				scenes={scenes} />
+			<FollowProgress stream={stream} scenes={scenes} />
 			<Box
 				className='embla'
 				sx={{
-					flex: 1
+					flex: 1,
 				}}
-				ref={emblaRef}>
-				<Stack
-					className='embla__container'
-					direction='row'>
-					{scenes.map((scene,i) =>
+				ref={emblaRef}
+			>
+				<Stack className='embla__container' direction='row'>
+					{scenes.map((scene, i) => (
 						<FollowScene
 							key={i}
 							scene={scene}
-							current={i === emblaCurrentScene}
-							className='embla__slide' />
-					)}
+							stream={stream}
+							current={isCurrent(i)}
+							className='embla__slide'
+						/>
+					))}
+					<FollowEnd stream={stream} className='embla__slide' />
 				</Stack>
 			</Box>
+			<FollowChyron stream={stream} scenes={scenes} />
 		</>
 	)
 }

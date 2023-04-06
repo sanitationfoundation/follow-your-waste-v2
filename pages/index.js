@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-import useStore from 'hooks';
-import { DATA } from 'constants';
-import { Layout } from 'common';
-import { Header, Intro, Choose } from 'components';
+import { useEffect } from 'react'
+import useStore from 'hooks'
+import { DATA } from 'constants'
+import { Layout } from 'common'
+import { Header, Intro, Choose } from 'components'
 
 export default function Home({ env, ...props }) {
 	// const { setEnv } = useStore();
@@ -15,7 +15,7 @@ export default function Home({ env, ...props }) {
 			<Intro />
 			<Choose />
 		</Layout>
-	);
+	)
 }
 
 // Fetches data and saves to global props

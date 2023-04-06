@@ -1,45 +1,45 @@
-import { createTheme, alpha } from '@mui/material/styles';
-import { deepmerge } from '@mui/utils';
+import { createTheme, alpha } from '@mui/material/styles'
+import { deepmerge } from '@mui/utils'
 
-const DARK = '#000';
-const LIGHT = '#FFF';
+const DARK = '#000'
+const LIGHT = '#FFF'
 
-const BLUE = '#043FAB';
-const TEAL = '#3f8DBA';
-const GREEN = '#00995c';
-const YELLOW = '#F2B621';
-const ORANGE = '#FC652C';
-const PINK = '#E17B98';
-const RED = '#B32618';
-const LIME = '#ADF940';
-const FOREST = '#036A47';
-const LIGHTGREEN = '#00AA64';
+const BLUE = '#043FAB'
+const TEAL = '#3f8DBA'
+const GREEN = '#00995c'
+const YELLOW = '#F2B621'
+const ORANGE = '#FC652C'
+const PINK = '#E17B98'
+const RED = '#B32618'
+const LIME = '#ADF940'
+const FOREST = '#036A47'
+const LIGHTGREEN = '#00AA64'
 
-const BLUE_DARK = '#012E7F';
-const TEAL_DARK = '#01779E';
-const GREEN_DARK = '#025237';
-const YELLOW_DARK = '#AC8118';
-const ORANGE_DARK = '#BE4216';
-const PINK_DARK = '#9E465F';
-const RED_DARK = '#861C11';
+const BLUE_DARK = '#012E7F'
+const TEAL_DARK = '#01779E'
+const GREEN_DARK = '#025237'
+const YELLOW_DARK = '#AC8118'
+const ORANGE_DARK = '#BE4216'
+const PINK_DARK = '#9E465F'
+const RED_DARK = '#861C11'
 
-const BLUE_LIGHT = '#AFCBFD';
-const TEAL_LIGHT = '#D5E7F1';
-const GREEN_LIGHT = '#E0FFF3';
-const YELLOW_LIGHT = '#FAE1A3';
-const ORANGE_LIGHT = '#FED3C3';
-const PINK_LIGHT = '#F5D1DB';
-const RED_LIGHT = '#F8D1CE';
+const BLUE_LIGHT = '#AFCBFD'
+const TEAL_LIGHT = '#D5E7F1'
+const GREEN_LIGHT = '#E0FFF3'
+const YELLOW_LIGHT = '#FAE1A3'
+const ORANGE_LIGHT = '#FED3C3'
+const PINK_LIGHT = '#F5D1DB'
+const RED_LIGHT = '#F8D1CE'
 
 const theme = createTheme({
 	palette: {
 		primary: {
 			main: LIGHT,
-			contrastText: DARK
+			contrastText: DARK,
 		},
 		secondary: {
 			main: DARK,
-			contrastText: LIGHT
+			contrastText: LIGHT,
 		},
 		blue: {
 			main: BLUE,
@@ -96,7 +96,9 @@ const theme = createTheme({
 		fontFamily: ['"Helvetica Neue"', 'Arial', 'sans-serif'].join(','),
 		body1: {
 			fontSize: 16,
-			color: LIGHT
+		},
+		body2: {
+			fontSize: 20,
 		},
 		h1: {
 			fontSize: 34,
@@ -137,7 +139,7 @@ const theme = createTheme({
 	// transitions: {
 
 	// },
-});
+})
 
 const components = {
 	MuiCssBaseline: {
@@ -149,18 +151,19 @@ const components = {
 				overflowX: 'hidden',
 			},
 			body: {
+				color: LIGHT,
 				backgroundColor: ORANGE,
 				overflowY: 'hidden',
 				overflowX: 'hidden',
 				'#__next': {
-					height: '100%'
+					height: '100%',
 				},
 				'.fullscreen': {
 					height: '100%',
 					'&:fullscreen::backdrop': {
-						background: 'transparent'
-					}
-				}
+						background: 'transparent',
+					},
+				},
 			},
 		},
 	},
@@ -173,23 +176,21 @@ const components = {
 				lineHeight: 1,
 				'&.Mui-disabled': {
 					color: theme.palette[ownerState.color].main,
-					opacity: 0.25
-				}
+					opacity: 0.25,
+				},
 			}),
 			outlined: {
 				borderWidth: 2,
 				borderColor: theme.palette.primary.main,
 				'&:hover, &:focus': {
 					borderWidth: 2,
-				}
+				},
 			},
 			contained: {
 				boxShadow: 'none !important',
-				'&:hover, &:focus': {
-
-				}
-			}
-		}
+				'&:hover, &:focus': {},
+			},
+		},
 	},
 	MuiSelect: {
 		styleOverrides: {
@@ -203,41 +204,39 @@ const components = {
 				},
 				'& .MuiOutlinedInput-notchedOutline': {
 					borderWidth: 2,
-				  borderColor: `${theme.palette.primary.main} !important`
+					borderColor: `${theme.palette.primary.main} !important`,
 				},
 				'& .Mui-focused .MuiOutlinedInput-notchedOutline': {
-				  borderColor: `${theme.palette.primary.main} !important`
-				}
+					borderColor: `${theme.palette.primary.main} !important`,
+				},
 			},
 			select: {
 				height: theme.spacing(4),
 				boxSizing: 'border-box',
 				fontSize: 14,
-				fontWeight: 500
+				fontWeight: 500,
 			},
 			icon: {
 				color: 'inherit',
-				fill: 'currentColor'
-			}
+				fill: 'currentColor',
+			},
 		},
-		defaultProps: {
-
-		}
+		defaultProps: {},
 	},
 	MuiTooltip: {
 		styleOverrides: {
 			popper: {
-				pointerEvents: 'none'
+				pointerEvents: 'none',
 			},
 			tooltip: {
 				padding: theme.spacing(1, 1.5),
 				borderRadius: 15,
-				backgroundColor: alpha(theme.palette.secondary.main, .75),
+				backgroundColor: alpha(theme.palette.secondary.main, 0.75),
 			},
 			arrow: {
-				borderColor: alpha(theme.palette.secondary.main, .75)
-			}
-		}
+				borderColor: alpha(theme.palette.secondary.main, 0.75),
+			},
+		},
 	},
 	MuiStepper: {
 		styleOverrides: {
@@ -245,38 +244,38 @@ const components = {
 				padding: 0,
 				flexGrow: 1,
 				justifyContent: 'space-around',
-			}
-		}
+			},
+		},
 	},
 	MuiStepButton: {
 		styleOverrides: {
 			root: {
 				// padding: theme.spacing(1),
 				padding: 0,
-				margin: 0
-			}
-		}
+				margin: 0,
+			},
+		},
 	},
 	MuiStepLabel: {
 		styleOverrides: {
 			iconContainer: {
 				padding: 0,
-			}
-		}
+			},
+		},
 	},
 	MuiMobileStepper: {
 		styleOverrides: {
 			root: {
 				padding: 0,
 				flexGrow: 1,
-				backgroundColor: alpha(theme.palette.secondary.main, .15),
+				backgroundColor: alpha(theme.palette.secondary.main, 0.15),
 			},
 			dots: {
 				flexGrow: 1,
 				justifyContent: 'space-around',
-			}
-		}
-	}
-};
+			},
+		},
+	},
+}
 
-export default createTheme(theme, { components });
+export default createTheme(theme, { components })
