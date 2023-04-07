@@ -952,6 +952,14 @@ export default {
     {
       "slug": "locale",
       "text": "English"
+    },
+    {
+      "slug": "score_right",
+      "text": "Incorrect"
+    },
+    {
+      "slug": "score_wrong",
+      "text": "Correct"
     }
   ]
 }

@@ -11,12 +11,12 @@ import useStore from 'hooks'
 import { getText, getItems, getBins } from 'selectors'
 import SortItem from './SortItem'
 import SortBin from './SortBin'
+import SortScore from './SortScore'
 
-const Packery = async () =>
-	(await import('packery')).then((m) => m.default)
+const Packery = async () => (await import('packery')).then(m => m.default)
 
 const Sort = ({ ...props }) => {
-	const { locale, sorted, addSorted, setDragging, setOpening } = useStore()
+	const { locale, sorted, addSorted, addRight, addWrong, setDragging, setOpening } = useStore()
 	const items = getItems()
 	const bins = getBins()
 	const packeryRef = useRef(null)
@@ -30,7 +30,7 @@ const Sort = ({ ...props }) => {
 	// , [packeryRef.current])
 	// console.log(Packery)
 
-	const loadPackery = async (container) => {
+	const loadPackery = async container => {
 		const Packery = (await import('packery')).default
 
 		const newPackeryInst = new Packery(container, {
@@ -66,7 +66,9 @@ const Sort = ({ ...props }) => {
 		if (!over) return
 		setOpening(false)
 		if (!over.data.current.accepts.includes(active.data.current.type))
-			return
+			return addWrong()
+		
+		addRight()
 		addSorted(active.id)
 		setTimeout(() => {
 			const sortedElem = packeryRef.current.querySelector(
@@ -83,6 +85,7 @@ const Sort = ({ ...props }) => {
 				flex: 1,
 			}}
 		>
+			<SortScore />
 			<DndContext
 				onDragStart={handleDragStart}
 				onDragOver={handleDragOver}

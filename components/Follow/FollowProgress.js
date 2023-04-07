@@ -82,7 +82,7 @@ const FollowProgress = ({ stream, scenes, ...props }) => {
 											: {}
 									}
 									data-index={i}
-									onClick={(e) => handleStepClick(e, i)}
+									onClick={e => handleStepClick(e, i)}
 								/>
 							</Box>
 						</Tooltip>

@@ -9,7 +9,6 @@ import useStore from 'hooks'
 import { getText, getStreamColor } from 'selectors'
 
 const FollowEnd = ({ stream, current, ...props }) => {
-
 	return (
 		<Box
 			sx={{

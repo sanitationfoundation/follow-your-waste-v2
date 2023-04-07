@@ -39,21 +39,22 @@ export const STREAM_COLORS = {
 	plastic: 'red',
 	organics: 'teal',
 }
+export const SCENE_ENVIRONS = ['facility', 'traffic', 'water']
 export const ITEM_SIZES = {
 	'aluminum-foil': 6,
 	'broken-glass': 10,
-	'cardboard': 15,
+	cardboard: 15,
 	'chip-bag': 8,
 	'detergent-bottle': 9,
 	'food-can': 5,
 	'glass-bottles': 9,
 	'glass-jar': 7,
 	'milk-carton': 8,
-	'newspaper': 13,
+	newspaper: 13,
 	'plastic-bag': 12,
 	'plastic-bottle': 6,
 	'soda-can': 5,
-	'toothpaste': 10,
+	toothpaste: 10,
 	'soiled-paper': 10,
-	'banana': 13,
+	banana: 13,
 }

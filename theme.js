@@ -96,9 +96,11 @@ const theme = createTheme({
 		fontFamily: ['"Helvetica Neue"', 'Arial', 'sans-serif'].join(','),
 		body1: {
 			fontSize: 16,
+			fontWeight: 500,
 		},
 		body2: {
 			fontSize: 20,
+			fontWeight: 500,
 		},
 		h1: {
 			fontSize: 34,
@@ -225,16 +227,28 @@ const components = {
 	},
 	MuiTooltip: {
 		styleOverrides: {
+			root: {
+
+			},
 			popper: {
 				pointerEvents: 'none',
+				'&[data-popper-placement*="bottom"] .MuiTooltip-arrow': {
+					marginTop: -25 * .71,
+				}
 			},
 			tooltip: {
+				maxWidth: 400,
 				padding: theme.spacing(1, 1.5),
 				borderRadius: 15,
 				backgroundColor: alpha(theme.palette.secondary.main, 0.75),
 			},
 			arrow: {
+				width: 25,
+				height: 25 * .71,
 				borderColor: alpha(theme.palette.secondary.main, 0.75),
+				'&::before': {
+					backgroundColor: alpha(theme.palette.secondary.main, 0.75),
+				},
 			},
 		},
 	},

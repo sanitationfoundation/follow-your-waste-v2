@@ -4,7 +4,6 @@ import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
-
 import { Layout } from 'common'
 import useStore from 'hooks'
 import { getRandom } from 'utils'
@@ -25,10 +24,10 @@ const Follow = ({ ...props }) => {
 	return (
 		<Layout>
 			<Stack
-				direction='row'
-				alignItems='center'
-				justifyContent='center'
-				flexWrap='wrap'
+				direction="row"
+				alignItems="center"
+				justifyContent="center"
+				flexWrap="wrap"
 				// spacing={1}
 				sx={{
 					m: 'auto',
@@ -36,42 +35,47 @@ const Follow = ({ ...props }) => {
 					'& > a': {
 						// width: '100%',
 						maxWidth: 200,
-						display: 'block'
-					}
-				}}>
+						display: 'block',
+					},
+				}}
+			>
 				{streams.map((stream, i) => (
 					<Link key={i} href={`/follow/${stream}`}>
 						<Box
 							sx={{
 								pb: '100%',
 								width: 200,
-								position: 'relative'
-							}}>
+								position: 'relative',
+							}}
+						>
 							{items
 								.filter(item => item.stream === stream)
 								.sort((a, b) => getItemSize(b.slug) - getItemSize(a.slug))
-								.map((item, i) =>
-								<img
-									key={i}
-									src={`/images/items/${item.slug}.png`}
-									style={{
-										width: `${getItemSize(item.slug) / 2}%`,
-										minWidth: `${getItemSize(item.slug) * 10}px`,
-										height: 'auto',
-										position: 'absolute',
-										top: '50%',
-										left: '50%',
-										transform: `translate(-50%, -50%) rotate(${getRandom(-80, 80)}deg)`,
-										marginLeft: getRandom(-25, 0),
-										marginRight: getRandom(-25, 0),
-										marginTop: getRandom(-25, 0),
-										marginBottom: getRandom(-25, 0),
-									}}
-									alt=""
-								/>
-							)}
+								.map((item, i) => (
+									<img
+										key={i}
+										src={`/images/items/${item.slug}.png`}
+										style={{
+											width: `${getItemSize(item.slug) / 2}%`,
+											minWidth: `${getItemSize(item.slug) * 10}px`,
+											height: 'auto',
+											position: 'absolute',
+											top: '50%',
+											left: '50%',
+											transform: `translate(-50%, -50%) rotate(${getRandom(
+												-80,
+												80,
+											)}deg)`,
+											marginLeft: getRandom(-25, 0),
+											marginRight: getRandom(-25, 0),
+											marginTop: getRandom(-25, 0),
+											marginBottom: getRandom(-25, 0),
+										}}
+										alt=""
+									/>
+								))}
 						</Box>
-						<Typography variant='h3' align='center'>
+						<Typography variant="h3" align="center">
 							{getText(locale, 'system', stream)}
 						</Typography>
 					</Link>

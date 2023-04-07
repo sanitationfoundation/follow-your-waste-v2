@@ -18,7 +18,7 @@ export default class CpalDocument extends Document {
 	}
 }
 
-CpalDocument.getInitialProps = async (ctx) => {
+CpalDocument.getInitialProps = async ctx => {
 	const originalRenderPage = ctx.renderPage
 
 	const cache = createEmotionCache()
@@ -26,7 +26,7 @@ CpalDocument.getInitialProps = async (ctx) => {
 
 	ctx.renderPage = () =>
 		originalRenderPage({
-			enhanceApp: (App) =>
+			enhanceApp: App =>
 				function EnhanceApp(props) {
 					return <App emotionCache={cache} {...props} />
 				},
@@ -35,7 +35,7 @@ CpalDocument.getInitialProps = async (ctx) => {
 	const initialProps = await Document.getInitialProps(ctx)
 
 	const emotionStyles = extractCriticalToChunks(initialProps.html)
-	const emotionStyleTags = emotionStyles.styles.map((style) => (
+	const emotionStyleTags = emotionStyles.styles.map(style => (
 		<style
 			data-emotion={`${style.key} ${style.ids.join(' ')}`}
 			key={style.key}

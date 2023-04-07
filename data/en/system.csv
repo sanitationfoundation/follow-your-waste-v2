@@ -46,3 +46,5 @@ aria_next,Next
 follow,Follow your waste
 sort,Sort your waste
 locale,English
+score_0,Incorrect
+score_1,Correct

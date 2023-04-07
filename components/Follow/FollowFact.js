@@ -13,10 +13,10 @@ import CloseIcon from '@mui/icons-material/Close'
 import useStore from 'hooks'
 import { getText, getStreamColor } from 'selectors'
 
-
-const FollowFact = ({ fact, color, open, onClick, ...props }) => {
+const FollowFact = ({ fact, color, open, current, onClick, ...props }) => {
 	const theme = useTheme()
 	const tabSize = 50
+
 	return (
 		<Box
 			sx={{
@@ -28,20 +28,23 @@ const FollowFact = ({ fact, color, open, onClick, ...props }) => {
 				// transform: `translateX(-50%)`,
 				// borderTopLeftRadius: 30,
 				color: 'primary.main',
-				backgroundColor: alpha(theme.palette.secondary.main, 0.75),
+				// backgroundColor: alpha(theme.palette.secondary.main, 0.75),
+				// backgroundColor: alpha(theme.palette[color].main, 0.75),
+				backgroundColor: theme.palette[color].main,
 				borderBottomLeftRadius: 30,
 				borderBottomLeftRadius: 30,
-				borderColor: color ? theme.palette[color].main : '',
+				borderColor: 'primary.main',
 				borderWidth: 3,
 				// borderLeftWidth: 0,
 				borderRightWidth: 0,
 				borderStyle: 'solid',
-				transition: theme => theme.transitions.create('transform')
+				transition: theme => theme.transitions.create('transform'),
 			}}
 			style={{
-				transform: open ? '' : `translateX(100%)`
+				transform: open ? '' : `translateX(100%)`,
 			}}
-			onClick={onClick}>
+			onClick={onClick}
+		>
 			<Box
 				sx={{
 					width: tabSize,
@@ -55,11 +58,11 @@ const FollowFact = ({ fact, color, open, onClick, ...props }) => {
 					// backgroundColor: alpha(theme.palette.secondary.main, 0.75),
 					borderTopLeftRadius: 30,
 					borderBottomLeftRadius: 30,
-					borderColor: color ? theme.palette[color].main : '',
+					borderColor: 'primary.main',
 					borderWidth: 3,
 					borderRightWidth: 0,
 					borderStyle: 'solid',
-					cursor: 'pointer'
+					cursor: 'pointer',
 				}}
 			>
 				<CloseIcon
@@ -70,11 +73,12 @@ const FollowFact = ({ fact, color, open, onClick, ...props }) => {
 						mr: '-6px',
 						ml: 0,
 						transform: `rotate(${open ? 0 : 1485}deg)`,
-						transition: theme => theme.transitions.create('transform')
-					}} />
+						transition: theme => theme.transitions.create('transform'),
+					}}
+				/>
 			</Box>
 			<Box maxWidth={500} minHeight={tabSize + 25}>
-				<Typography>
+				<Typography variant="body2" color="primary.main">
 					{fact}
 				</Typography>
 			</Box>

@@ -12,6 +12,8 @@ import FollowProgress from './FollowProgress'
 import FollowScene from './FollowScene'
 import FollowChyron from './FollowChyron'
 import FollowEnd from './FollowEnd'
+import FollowEnvirons from './FollowEnvirons'
+import FollowVoices from './FollowVoices'
 
 const KEY_CODE_ARROW_LEFT = 37
 const KEY_CODE_ARROW_RIGHT = 39
@@ -24,22 +26,19 @@ const Follow = ({ stream, ...props }) => {
 	const { currentScene, setCurrentScene, nextScene, prevScene } =
 		useStore()
 	const scenes = getScenes(stream)
-	const [emblaRef, emblaApi] = useEmblaCarousel({
-		// speed: 10
-	})
+	const [emblaRef, emblaApi] = useEmblaCarousel({})
+	const isCurrent = useCallback(i =>
+		i === currentScene, [currentScene]
+	)
 
-
-	const handleEmblaSelect = () => {
+	const handleEmblaSelect = () =>
 		setEmblaCurrentScene(emblaApi.selectedScrollSnap())
-	}
 
 	const handleEmblaScroll = () =>
 		setEmblaScrolling(true)
 
 	const handleEmblaSettle = () =>
 		setEmblaScrolling(false)
-
-	const isCurrent = useCallback(i => i === currentScene, [currentScene])
 
 	useEffect(() => {
 		const handleMouseDown = () => setMouseDown(true)
@@ -49,8 +48,7 @@ const Follow = ({ stream, ...props }) => {
 	}, [])
 
 	useEffect(() => {
-		if(!emblaApi) return
-		emblaApi.reInit()
+		if (emblaApi) emblaApi.reInit()
 	}, [emblaApi, scenes])
 
 	useEffect(() => {
@@ -60,8 +58,7 @@ const Follow = ({ stream, ...props }) => {
 				currentScene < scenes.length - 1
 			)
 				nextScene()
-			if (keyCode === KEY_CODE_ARROW_LEFT && currentScene >= 1)
-				prevScene()
+			if (keyCode === KEY_CODE_ARROW_LEFT && currentScene >= 1) prevScene()
 		}
 
 		document.onkeydown = handleKeyDown
@@ -73,8 +70,7 @@ const Follow = ({ stream, ...props }) => {
 	}, [emblaCurrentScene, emblaScrolling])
 
 	useEffect(() => {
-		if (emblaApi && !mouseDown)
-			emblaApi.scrollTo(currentScene)
+		if (emblaApi && !mouseDown) emblaApi.scrollTo(currentScene)
 	}, [emblaApi, emblaScrolling, currentScene, mouseDown])
 
 	useEffect(() => {
@@ -93,31 +89,32 @@ const Follow = ({ stream, ...props }) => {
 		}
 	}, [emblaApi, handleEmblaScroll, handleEmblaScroll])
 
-
 	return (
 		<>
 			<FollowProgress stream={stream} scenes={scenes} />
 			<Box
-				className='embla'
+				className="embla"
 				sx={{
 					flex: 1,
 				}}
 				ref={emblaRef}
 			>
-				<Stack className='embla__container' direction='row'>
+				<Stack className="embla__container" direction="row">
 					{scenes.map((scene, i) => (
 						<FollowScene
 							key={i}
 							scene={scene}
 							stream={stream}
 							current={isCurrent(i)}
-							className='embla__slide'
+							className="embla__slide"
 						/>
 					))}
-					<FollowEnd stream={stream} className='embla__slide' />
+					<FollowEnd stream={stream} className="embla__slide" />
 				</Stack>
 			</Box>
 			<FollowChyron stream={stream} scenes={scenes} />
+			<FollowEnvirons stream={stream} />
+			<FollowVoices stream={stream} />
 		</>
 	)
 }

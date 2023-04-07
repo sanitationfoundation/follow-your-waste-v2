@@ -5,7 +5,7 @@
   "useTabs": true,
   "semi": false,
   "printWidth": 75,
-  "arrowParens": "always",
+  "arrowParens": "avoid",
   "proseWrap": "always",
   "endOfLine": "lf"
 }

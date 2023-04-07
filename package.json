@@ -36,6 +36,7 @@
     "node-fetch": "^3.3.0",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
+    "react-animated-numbers": "^0.16.0",
     "react-dom": "18.2.0",
     "react-grid-layout": "^1.3.4",
     "react-map-gl": "^7.0.19",

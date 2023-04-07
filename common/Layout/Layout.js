@@ -19,7 +19,7 @@ const Layout = ({ children, sx, HeaderProps, ...props }) => {
 		}
 	}
 
-	const onFullScreenChange = (state) => {
+	const onFullScreenChange = state => {
 		setFullScreen(state)
 	}
 

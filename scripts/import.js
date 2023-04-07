@@ -32,11 +32,9 @@ const SCHEMA = {
 const importData = () => {
 	const dataDir = path.join(__dirname, '..', 'data')
 	const dirNames = getDirNames(dataDir, 'data')
-	dirNames.forEach((dirName) => {
+	dirNames.forEach(dirName => {
 		const filePaths = getFilePaths(path.join(dataDir, dirName))
-		const fileNames = filePaths.map(
-			(filePath) => path.parse(filePath).name,
-		)
+		const fileNames = filePaths.map(filePath => path.parse(filePath).name)
 		const fileContents = mergePairs(
 			fileNames,
 			filePaths.map(getFile).map(parseCsv),
@@ -46,33 +44,33 @@ const importData = () => {
 	})
 }
 
-const getDirNames = (dir) =>
+const getDirNames = dir =>
 	fs
 		.readdirSync(dir, { withFileTypes: true })
-		.filter((dirent) => dirent.isDirectory())
-		.map((dirent) => dirent.name)
+		.filter(dirent => dirent.isDirectory())
+		.map(dirent => dirent.name)
 
-const getFilePaths = (dir) =>
+const getFilePaths = dir =>
 	fs
 		.readdirSync(dir, { withFileTypes: true })
 		.filter(
-			(dirent) =>
+			dirent =>
 				dirent.isDirectory() || path.extname(dirent.name) === '.csv',
 		)
-		.map((dirent) => {
+		.map(dirent => {
 			const fileName = path.parse(dirent.name).name
 			const filePath = path.join(dir, dirent.name)
 			if (dirent.isDirectory()) return getFilePaths(filePath)
 			return filePath
 		})
 
-const getFile = (filePath) =>
+const getFile = filePath =>
 	fs.readFileSync(filePath, {
 		encoding: 'utf8',
 		flag: 'r',
 	})
 
-const parseCsv = (data) => Papa.parse(data, { header: true }).data
+const parseCsv = data => Papa.parse(data, { header: true }).data
 
 const parseSlug = (accum, prev) => {
 	console.log(prev)
@@ -87,9 +85,15 @@ const mergePairs = (keys, vals) =>
 
 // write JSON to lang.js
 const writeJson = (json, name) => {
-	const filePath = path.join(__dirname, '..', 'constants', 'data', `${name}.js`)
+	const filePath = path.join(
+		__dirname,
+		'..',
+		'constants',
+		'data',
+		`${name}.js`,
+	)
 	const fileContent = `export default ${JSON.stringify(json, null, 2)}`
-	fs.writeFile(filePath, fileContent, (err) => {
+	fs.writeFile(filePath, fileContent, err => {
 		if (err) return console.log(err)
 		console.log(`lang constants written to ${filePath}`)
 	})

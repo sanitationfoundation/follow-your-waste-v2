@@ -10,7 +10,7 @@ const HeaderLocaleSelector = () => {
 	const router = useRouter()
 	const { locale, setLocale } = useStore()
 	const locales = getLocales()
-	const handleChange = (e) => {
+	const handleChange = e => {
 		const { value } = e.target
 		router.push(router.asPath, router.asPath, {
 			locale: value,
@@ -28,7 +28,7 @@ const HeaderLocaleSelector = () => {
 				},
 			}}
 		>
-			{locales.map((key) => (
+			{locales.map(key => (
 				<MenuItem
 					key={key}
 					value={key}
