@@ -7,8 +7,8 @@ const MarkerClinicIcon = ({ ...props }) => {
 			priority
 			width={24}
 			height={30}
-			src="/marker-clinic.svg"
-			alt=""
+			src='/marker-clinic.svg'
+			alt=''
 			{...props}
 		/>
 	)

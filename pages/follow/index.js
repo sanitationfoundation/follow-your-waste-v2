@@ -24,10 +24,10 @@ const Follow = ({ ...props }) => {
 	return (
 		<Layout>
 			<Stack
-				direction="row"
-				alignItems="center"
-				justifyContent="center"
-				flexWrap="wrap"
+				direction='row'
+				alignItems='center'
+				justifyContent='center'
+				flexWrap='wrap'
 				// spacing={1}
 				sx={{
 					m: 'auto',
@@ -71,11 +71,11 @@ const Follow = ({ ...props }) => {
 											marginTop: getRandom(-25, 0),
 											marginBottom: getRandom(-25, 0),
 										}}
-										alt=""
+										alt=''
 									/>
 								))}
 						</Box>
-						<Typography variant="h3" align="center">
+						<Typography variant='h3' align='center'>
 							{getText(locale, 'system', stream)}
 						</Typography>
 					</Link>

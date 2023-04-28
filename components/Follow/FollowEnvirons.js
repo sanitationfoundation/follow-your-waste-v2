@@ -11,24 +11,27 @@ const FollowEnvirons = ({ stream }) => {
 	const [newEnviron, setNewEnviron] = useState(null)
 	const audios = useRef({})
 
-	const playAudio = useCallback(environ => {
-		const audioElem = audios.current[environ]
-		if(audioElem)
-			audioElem.play()
-		Object.keys(audios.current)
-			.filter(e => e !== environ)
-			.forEach(pauseAudio)
-	}, [audios])
+	const playAudio = useCallback(
+		environ => {
+			const audioElem = audios.current[environ]
+			if (audioElem) audioElem.play()
+			Object.keys(audios.current)
+				.filter(e => e !== environ)
+				.forEach(pauseAudio)
+		},
+		[audios],
+	)
 
-	const pauseAudio = useCallback(environ => {
-		const audioElem = audios.current[environ]
-		if(audioElem)
-			audioElem.pause()
-	}, [audios])
+	const pauseAudio = useCallback(
+		environ => {
+			const audioElem = audios.current[environ]
+			if (audioElem) audioElem.pause()
+		},
+		[audios],
+	)
 
 	useEffect(() => {
-		if(currEnviron !== prevEnviron)
-			setNewEnviron(currEnviron)
+		if (currEnviron !== prevEnviron) setNewEnviron(currEnviron)
 		setPrevEnviron(currEnviron)
 	}, [currEnviron])
 
@@ -45,7 +48,7 @@ const FollowEnvirons = ({ stream }) => {
 						type='environs'
 						slug={environ}
 						loop={true}
-						ref={ref => audios.current[environ] = ref}
+						ref={ref => (audios.current[environ] = ref)}
 					/>
 				)
 			})}

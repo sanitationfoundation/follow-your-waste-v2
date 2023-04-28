@@ -78,7 +78,7 @@ const FollowFact = ({ fact, color, open, current, onClick, ...props }) => {
 				/>
 			</Box>
 			<Box maxWidth={500} minHeight={tabSize + 25}>
-				<Typography variant="body2" color="primary.main">
+				<Typography variant='body2' color='primary.main'>
 					{fact}
 				</Typography>
 			</Box>

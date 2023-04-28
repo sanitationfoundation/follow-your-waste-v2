@@ -7,7 +7,7 @@ import createEmotionCache from '../createEmotionCache'
 export default class CpalDocument extends Document {
 	render() {
 		return (
-			<Html lang="en">
+			<Html lang='en'>
 				<Head>{this.props.emotionStyleTags}</Head>
 				<body>
 					<Main />

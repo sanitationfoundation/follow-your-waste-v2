@@ -1,4 +1,11 @@
-import { useEffect, useCallback, useMemo, usePrevious, useRef, useState } from 'react'
+import {
+	useEffect,
+	useCallback,
+	useMemo,
+	usePrevious,
+	useRef,
+	useState,
+} from 'react'
 import { useTheme } from '@mui/material/styles'
 import Avatar from '@mui/material/Avatar'
 import Box from '@mui/material/Box'
@@ -24,16 +31,15 @@ const SortScore = ({ ...props }) => {
 	// }, [score])
 
 	useEffect(() => {
-		const updatedKey = Object.keys(score)
-			.find(key => score[key] !== prevScore[key])
+		const updatedKey = Object.keys(score).find(
+			key => score[key] !== prevScore[key],
+		)
 		setEnlargeScore(updatedKey)
 		setPrevScore(score)
 	}, [score])
 
 	useEffect(() => {
-		setTimeout(() =>
-			setEnlargeScore(null)
-		, 200)
+		setTimeout(() => setEnlargeScore(null), 200)
 	}, [enlargeScore])
 
 	const getPoints = useCallback(key => score[key], [score])
@@ -59,7 +65,7 @@ const SortScore = ({ ...props }) => {
 				// spacing={1}
 				maxWidth={175}
 				mx='auto'
-				>
+			>
 				{/*{Object.keys(score).map((key, i) => (
 					<Box
 						key={i}
@@ -90,11 +96,11 @@ const SortScore = ({ ...props }) => {
 						</Typography>
 					</Box>
 				))}*/}
-				{items.map((key, i) =>
+				{items.map((key, i) => (
 					<Avatar
 						key={i}
 						sx={{
-							m: .5,
+							m: 0.5,
 							width: 20,
 							height: 20,
 							color: 'primary.contrastText',
@@ -102,11 +108,15 @@ const SortScore = ({ ...props }) => {
 							fontSize: 11,
 							pointerEvents: 'all',
 							opacity: 0.5,
-							transition: theme.transitions.create(['opacity'], { duration: 75 }),
+							transition: theme.transitions.create(['opacity'], {
+								duration: 75,
+							}),
 						}}
 						style={i + 1 <= sorted.length ? { opacity: 1 } : null}
-					>{i + 1}</Avatar>
-				)}
+					>
+						{i + 1}
+					</Avatar>
+				))}
 			</Stack>
 		</Stack>
 	)

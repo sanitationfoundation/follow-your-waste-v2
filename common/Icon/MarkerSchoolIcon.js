@@ -7,8 +7,8 @@ const MarkerSchoolIcon = ({ ...props }) => {
 			priority
 			width={24}
 			height={30}
-			src="/marker-school.svg"
-			alt=""
+			src='/marker-school.svg'
+			alt=''
 			{...props}
 		/>
 	)

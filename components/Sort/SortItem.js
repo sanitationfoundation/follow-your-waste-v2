@@ -50,7 +50,13 @@ const SortItem = ({ data, ...props }) => {
 					<Typography variant='h4'>
 						{getText(locale, 'items', data.slug, 'label')}
 					</Typography>
-					<Divider sx={{ borderColor: 'primary.main', borderWidth: 1, opacity: .75 }} />
+					<Divider
+						sx={{
+							borderColor: 'primary.main',
+							borderWidth: 1,
+							opacity: 0.75,
+						}}
+					/>
 					<Typography variant='body1'>
 						{getText(locale, 'items', data.slug, 'tooltip')}
 					</Typography>

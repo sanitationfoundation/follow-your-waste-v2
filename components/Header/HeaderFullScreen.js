@@ -10,16 +10,16 @@ const HeaderFullScreen = ({ onClick }) => {
 
 	return (
 		<IconButton
-			color="primary"
+			color='primary'
 			// size='large'
-			aria-label="Toggle full screen"
+			aria-label='Toggle full screen'
 			aria-pressed={fullScreen}
 			onClick={onClick}
 		>
 			{fullScreen ? (
-				<FullscreenExitIcon fontSize="large" />
+				<FullscreenExitIcon fontSize='large' />
 			) : (
-				<FullscreenIcon fontSize="large" />
+				<FullscreenIcon fontSize='large' />
 			)}
 		</IconButton>
 	)

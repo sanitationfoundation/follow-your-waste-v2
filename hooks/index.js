@@ -15,7 +15,7 @@ const initialState = {
 	},
 	locale: 'en',
 	fullScreen: false,
-	intro: true,
+	showIntro: true,
 	// Audio
 	mute: false,
 	pauseVoice: false,
@@ -26,7 +26,7 @@ const initialState = {
 	sorted: [],
 	score: {
 		wrong: 0,
-		right: 0
+		right: 0,
 	},
 	// Follow
 	currentScene: 0,
@@ -36,7 +36,7 @@ const useStore = create((set, get) => ({
 	...initialState,
 	setLocale: locale => set({ locale }),
 	setFullScreen: fullScreen => set({ fullScreen }),
-	setIntro: intro => set({ intro }),
+	setShowIntro: showIntro => set({ showIntro }),
 	// Audio
 	setMute: mute => set({ mute }),
 	setPauseVoice: pauseVoice => set({ pauseVoice }),

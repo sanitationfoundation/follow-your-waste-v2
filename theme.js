@@ -227,14 +227,12 @@ const components = {
 	},
 	MuiTooltip: {
 		styleOverrides: {
-			root: {
-
-			},
+			root: {},
 			popper: {
 				pointerEvents: 'none',
 				'&[data-popper-placement*="bottom"] .MuiTooltip-arrow': {
-					marginTop: -25 * .71,
-				}
+					marginTop: -25 * 0.71,
+				},
 			},
 			tooltip: {
 				maxWidth: 400,
@@ -244,7 +242,7 @@ const components = {
 			},
 			arrow: {
 				width: 25,
-				height: 25 * .71,
+				height: 25 * 0.71,
 				borderColor: alpha(theme.palette.secondary.main, 0.75),
 				'&::before': {
 					backgroundColor: alpha(theme.palette.secondary.main, 0.75),

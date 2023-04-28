@@ -83,8 +83,6 @@ const FollowScene = forwardRef(
 		// 	}
 		// }, [current, sceneAudio])
 
-		
-
 		return (
 			<Box
 				ref={ref}
@@ -132,7 +130,7 @@ const FollowScene = forwardRef(
 				</Box>
 				<Stack
 					spacing={2}
-					justifyContent="center"
+					justifyContent='center'
 					sx={{
 						width: '100%',
 						// maxWidth: 500,

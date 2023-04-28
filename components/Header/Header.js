@@ -26,7 +26,7 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 
 	return (
 		<AppBar
-			color="orange"
+			color='orange'
 			position={position}
 			sx={{
 				zIndex: 30,
@@ -37,8 +37,8 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 		>
 			<Toolbar>
 				<Stack
-					direction="row"
-					alignItems="center"
+					direction='row'
+					alignItems='center'
 					spacing={2}
 					sx={{
 						mr: 'auto',
@@ -49,16 +49,16 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 					}}
 				>
 					<div>
-						<Link href="/">
+						<Link href='/'>
 							<Image
 								width={72}
 								height={50}
-								src="/images/fyw-logo.svg"
+								src='/images/fyw-logo.svg'
 								style={{
 									width: 'auto',
 									height: 50,
 								}}
-								alt="Follow Your Waste logo"
+								alt='Follow Your Waste logo'
 							/>
 						</Link>
 					</div>
@@ -66,21 +66,21 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 						<Image
 							width={128}
 							height={50}
-							src="/images/sf-logo.png"
+							src='/images/sf-logo.png'
 							style={{
 								width: 'auto',
 								height: 50,
 							}}
-							alt="Sanitation Foundation logo"
+							alt='Sanitation Foundation logo'
 						/>
 					</div>
 					{stream ? <HeaderFollowBackButton /> : null}
 				</Stack>
-				<Stack direction="row" alignItems="center" spacing={2}>
+				<Stack direction='row' alignItems='center' spacing={2}>
 					{pathname.includes('follow') ? <HeaderSortButton /> : null}
 					{pathname.includes('sort') ? <HeaderFollowButton /> : null}
 					<HeaderLocaleSelector />
-					<Stack direction="row" alignItems="center">
+					<Stack direction='row' alignItems='center'>
 						<HeaderFullScreen onClick={onFullScreenClick} />
 						<HeaderVolume />
 					</Stack>

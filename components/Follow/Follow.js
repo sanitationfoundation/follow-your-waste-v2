@@ -27,18 +27,14 @@ const Follow = ({ stream, ...props }) => {
 		useStore()
 	const scenes = getScenes(stream)
 	const [emblaRef, emblaApi] = useEmblaCarousel({})
-	const isCurrent = useCallback(i =>
-		i === currentScene, [currentScene]
-	)
+	const isCurrent = useCallback(i => i === currentScene, [currentScene])
 
 	const handleEmblaSelect = () =>
 		setEmblaCurrentScene(emblaApi.selectedScrollSnap())
 
-	const handleEmblaScroll = () =>
-		setEmblaScrolling(true)
+	const handleEmblaScroll = () => setEmblaScrolling(true)
 
-	const handleEmblaSettle = () =>
-		setEmblaScrolling(false)
+	const handleEmblaSettle = () => setEmblaScrolling(false)
 
 	useEffect(() => {
 		const handleMouseDown = () => setMouseDown(true)
@@ -93,23 +89,23 @@ const Follow = ({ stream, ...props }) => {
 		<>
 			<FollowProgress stream={stream} scenes={scenes} />
 			<Box
-				className="embla"
+				className='embla'
 				sx={{
 					flex: 1,
 				}}
 				ref={emblaRef}
 			>
-				<Stack className="embla__container" direction="row">
+				<Stack className='embla__container' direction='row'>
 					{scenes.map((scene, i) => (
 						<FollowScene
 							key={i}
 							scene={scene}
 							stream={stream}
 							current={isCurrent(i)}
-							className="embla__slide"
+							className='embla__slide'
 						/>
 					))}
-					<FollowEnd stream={stream} className="embla__slide" />
+					<FollowEnd stream={stream} className='embla__slide' />
 				</Stack>
 			</Box>
 			<FollowChyron stream={stream} scenes={scenes} />

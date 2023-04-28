@@ -27,7 +27,7 @@ const Layout = ({ children, sx, HeaderProps, ...props }) => {
 		<>
 			<Head>
 				<title>Follow Your Waste</title>
-				<meta name="description" content="" />
+				<meta name='description' content='' />
 				{/*<link rel="icon" href="/favicon.ico" />*/}
 			</Head>
 			<FullScreen handle={fullScreenHandle} onChange={onFullScreenChange}>

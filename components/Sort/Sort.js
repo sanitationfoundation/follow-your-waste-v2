@@ -16,7 +16,15 @@ import SortScore from './SortScore'
 const Packery = async () => (await import('packery')).then(m => m.default)
 
 const Sort = ({ ...props }) => {
-	const { locale, sorted, addSorted, addRight, addWrong, setDragging, setOpening } = useStore()
+	const {
+		locale,
+		sorted,
+		addSorted,
+		addRight,
+		addWrong,
+		setDragging,
+		setOpening,
+	} = useStore()
 	const items = getItems()
 	const bins = getBins()
 	const packeryRef = useRef(null)
@@ -67,7 +75,7 @@ const Sort = ({ ...props }) => {
 		setOpening(false)
 		if (!over.data.current.accepts.includes(active.data.current.type))
 			return addWrong()
-		
+
 		addRight()
 		addSorted(active.id)
 		setTimeout(() => {
@@ -97,8 +105,8 @@ const Sort = ({ ...props }) => {
 					))}
 				</Box>
 				<Stack
-					direction="row"
-					justifyContent="center"
+					direction='row'
+					justifyContent='center'
 					spacing={2}
 					sx={{
 						width: '100%',

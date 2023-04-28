@@ -30,7 +30,7 @@ const FollowProgress = ({ stream, scenes, ...props }) => {
 
 	return (
 		<Stack
-			direction="row"
+			direction='row'
 			sx={{
 				width: '100%',
 				position: 'fixed',
@@ -41,10 +41,10 @@ const FollowProgress = ({ stream, scenes, ...props }) => {
 			}}
 		>
 			<Button
-				size="small"
+				size='small'
 				onClick={prevScene}
 				disabled={currentScene === 0}
-				aria-label="Back"
+				aria-label='Back'
 				sx={{
 					borderRadius: 0,
 				}}
@@ -52,11 +52,11 @@ const FollowProgress = ({ stream, scenes, ...props }) => {
 				<KeyboardArrowLeft />
 			</Button>
 			<Stepper
-				variant="dots"
-				color="primary"
+				variant='dots'
+				color='primary'
 				steps={scenes.length}
 				connector={null}
-				position="static"
+				position='static'
 				activeStep={currentScene}
 				sx={{
 					width: '100%',
@@ -70,7 +70,7 @@ const FollowProgress = ({ stream, scenes, ...props }) => {
 						>
 							<Box>
 								<StepButton
-									icon={<CircleIcon fontSize="xsmall" />}
+									icon={<CircleIcon fontSize='xsmall' />}
 									sx={{
 										opacity: 0.25,
 									}}
@@ -90,10 +90,10 @@ const FollowProgress = ({ stream, scenes, ...props }) => {
 				))}
 			</Stepper>
 			<Button
-				size="small"
+				size='small'
 				onClick={nextScene}
 				disabled={currentScene === scenes.length - 1}
-				aria-label="Next"
+				aria-label='Next'
 				sx={{
 					borderRadius: 0,
 				}}

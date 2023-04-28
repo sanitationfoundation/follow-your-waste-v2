@@ -21,7 +21,7 @@ const PLAYBACK_ICON_SIZE = 20
 const FollowChyronCaption = ({ stream, scene }) => {
 	const { locale } = useStore()
 	const text = getText(locale, stream, scene.slug, true)
-	return <Typography variant="body2">{text.caption}</Typography>
+	return <Typography variant='body2'>{text.caption}</Typography>
 }
 
 const FollowChyronPlaybackButton = ({ color, ...props }) => {
@@ -40,22 +40,28 @@ const FollowChyronPlaybackButton = ({ color, ...props }) => {
 				'&:hover': {
 					backgroundColor: alpha(theme.palette[color].dark, 0.75),
 				},
-				'svg': {
-					width: PLAYBACK_ICON_SIZE * .75,
-					height: PLAYBACK_ICON_SIZE * .75
-				}
+				svg: {
+					width: PLAYBACK_ICON_SIZE * 0.75,
+					height: PLAYBACK_ICON_SIZE * 0.75,
+				},
 			}}
 			{...props}
-		>
-			
-		</IconButton>
+		></IconButton>
 	)
 }
 
 const FollowChyron = ({ stream, scenes, ...props }) => {
 	const theme = useTheme()
-	const { locale, currentScene, setCurrentScene, nextScene, prevScene, pauseVoice, setPauseVoice, setReplayVoice } =
-		useStore()
+	const {
+		locale,
+		currentScene,
+		setCurrentScene,
+		nextScene,
+		prevScene,
+		pauseVoice,
+		setPauseVoice,
+		setReplayVoice,
+	} = useStore()
 	// const isCurrent = useCallback(scene => scenes.indexOf(scene) === currentScene, [currentScene])
 	const scene = scenes[currentScene]
 	const color = getStreamColor(stream) || 'primary'
@@ -87,8 +93,8 @@ const FollowChyron = ({ stream, scenes, ...props }) => {
 			}}
 		>
 			<IconButton
-				size="large"
-				color="primary"
+				size='large'
+				color='primary'
 				sx={{
 					position: 'absolute',
 					right: '100%',
@@ -97,11 +103,11 @@ const FollowChyron = ({ stream, scenes, ...props }) => {
 				}}
 				onClick={prevScene}
 			>
-				<KeyboardArrowLeftIcon fontSize="large" />
+				<KeyboardArrowLeftIcon fontSize='large' />
 			</IconButton>
 			<IconButton
-				size="large"
-				color="primary"
+				size='large'
+				color='primary'
 				sx={{
 					position: 'absolute',
 					left: '100%',
@@ -110,7 +116,7 @@ const FollowChyron = ({ stream, scenes, ...props }) => {
 				}}
 				onClick={nextScene}
 			>
-				<KeyboardArrowRightIcon fontSize="large" />
+				<KeyboardArrowRightIcon fontSize='large' />
 			</IconButton>
 			<Box
 				sx={{
@@ -120,13 +126,14 @@ const FollowChyron = ({ stream, scenes, ...props }) => {
 					left: 0,
 					top: '50%',
 					transform: `translate(${-40}px, -50%)`,
-				}}>
+				}}
+			>
 				<img
-					alt=""
+					alt=''
 					src={`/images/workers/${stream}.png`}
 					style={{
 						width: 75,
-						height: 'auto',	
+						height: 'auto',
 					}}
 				/>
 				<Stack
@@ -140,20 +147,15 @@ const FollowChyron = ({ stream, scenes, ...props }) => {
 				>
 					<FollowChyronPlaybackButton
 						color={color}
-						onClick={togglePauseVoice}>
-						{pauseVoice
-							? <PlayArrowIcon />
-							: <PauseIcon />
-						}
+						onClick={togglePauseVoice}
+					>
+						{pauseVoice ? <PlayArrowIcon /> : <PauseIcon />}
 					</FollowChyronPlaybackButton>
 
-					<FollowChyronPlaybackButton
-						color={color}
-						onClick={replayVoice}>
+					<FollowChyronPlaybackButton color={color} onClick={replayVoice}>
 						<ReplayIcon />
 					</FollowChyronPlaybackButton>
 				</Stack>
-
 			</Box>
 			<Box
 				sx={{

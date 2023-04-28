@@ -14,8 +14,8 @@ const Choose = ({ ...props }) => {
 
 	return (
 		<Stack
-			alignItems="center"
-			justifyContent="center"
+			alignItems='center'
+			justifyContent='center'
 			sx={{
 				my: 'auto',
 			}}
@@ -29,8 +29,8 @@ const Choose = ({ ...props }) => {
 					xs: 2,
 					sm: '10%',
 				}}
-				alignItems="center"
-				justifyContent="center"
+				alignItems='center'
+				justifyContent='center'
 				sx={{
 					'& > *': {
 						// width: '50%',
@@ -50,13 +50,13 @@ const Choose = ({ ...props }) => {
 					<Link key={i} href={`/${section}`}>
 						<Box>
 							<Image
-								alt=""
+								alt=''
 								src={`/images/${section}.png`}
 								width={345}
 								height={345}
 								aria-hidden
 							/>
-							<Typography variant="h3" align="center" mt={-1}>
+							<Typography variant='h3' align='center' mt={-1}>
 								{getText(locale, 'system', section)}
 							</Typography>
 						</Box>
