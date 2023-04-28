@@ -13,7 +13,8 @@
     "export": "next export",
     "prepare": "husky install",
     "format": "prettier --write \"**/*.{js,jsx,css,md}\"",
-    "import": "node scripts/import.js"
+    "import": "node scripts/import.js",
+    "deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.0.8",

@@ -157,4 +157,6 @@ const FollowScene = forwardRef(
 	},
 )
 
+FollowScene.displayName = 'FollowScene'
+
 export default FollowScene
