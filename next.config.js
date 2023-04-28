@@ -2,8 +2,9 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
 	reactStrictMode: true,
-	output: 'export',
-	basePath: '/follow-your-waste-v2',
+	// output: 'standalone',
+	// basePath: '/follow-your-waste-v2',
+	assetPrefix: isProd ? '/follow-your-waste-v2/' : '',
 	// experimental: {
 	// 	appDir: true,
 	// },
