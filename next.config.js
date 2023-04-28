@@ -4,7 +4,7 @@ module.exports = {
 	reactStrictMode: true,
 	// output: 'standalone',
 	// basePath: '/follow-your-waste-v2',
-	assetPrefix: isProd ? '/follow-your-waste-v2/' : '',
+	// assetPrefix: isProd ? '/follow-your-waste-v2/' : '',
 	// experimental: {
 	// 	appDir: true,
 	// },
