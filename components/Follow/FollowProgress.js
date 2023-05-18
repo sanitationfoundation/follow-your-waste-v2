@@ -34,7 +34,7 @@ const FollowProgress = ({ stream, scenes, ...props }) => {
 			sx={{
 				width: '100%',
 				position: 'fixed',
-				top: 0,
+				bottom: 0,
 				left: 0,
 				zIndex: 30,
 				backgroundColor: alpha(theme.palette.secondary.main, 0.15),

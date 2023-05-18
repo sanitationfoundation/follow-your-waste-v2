@@ -77,8 +77,8 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 					{stream ? <HeaderFollowBackButton /> : null}
 				</Stack>
 				<Stack direction='row' alignItems='center' spacing={2}>
-					{pathname.includes('follow') ? <HeaderSortButton /> : null}
-					{pathname.includes('sort') ? <HeaderFollowButton /> : null}
+					{/*{pathname.includes('follow') ? <HeaderSortButton /> : null}
+					{pathname.includes('sort') ? <HeaderFollowButton /> : null}*/}
 					<HeaderLocaleSelector />
 					<Stack direction='row' alignItems='center'>
 						<HeaderFullScreen onClick={onFullScreenClick} />

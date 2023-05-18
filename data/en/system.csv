@@ -22,6 +22,8 @@ glass,Glass
 plastic,Plastic
 paper,Paper
 landfill,Landfill
+organics,Organics
+ewaste,E-waste
 help_progress,Use this progress bar to track your journey. You can also click the dots to jump between scenes.
 help_restart,Click the bins to go back and select another item.
 help_arrows,"Click these arrows, or use your arrow keys, to navigate through the journey."
@@ -46,5 +48,5 @@ aria_next,Next
 follow,Follow your waste
 sort,Sort your waste
 locale,English
-score_0,Incorrect
-score_1,Correct
+score_right,Correct
+score_wrong,Incorrect

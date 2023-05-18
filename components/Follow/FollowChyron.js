@@ -81,7 +81,7 @@ const FollowChyron = ({ stream, scenes, ...props }) => {
 				width: { sm: 700 },
 				// height: { sm: 200 },
 				left: { sm: '50%' },
-				bottom: { sm: 20 },
+				bottom: { sm: 60 },
 				position: 'fixed',
 				transform: `translateX(-50%)`,
 				borderRadius: 10,

@@ -19,9 +19,9 @@ const Stream = ({ ...props }) => {
 			HeaderProps={{
 				position: 'fixed',
 				color: 'transparent',
-				sx: {
-					top: 32,
-				},
+				// sx: {
+				// 	top: 32,
+				// },
 			}}
 		>
 			<Follow stream={stream} />

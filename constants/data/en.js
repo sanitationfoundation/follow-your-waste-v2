@@ -858,6 +858,14 @@ export default {
       "text": "Landfill"
     },
     {
+      "slug": "organics",
+      "text": "Organics"
+    },
+    {
+      "slug": "ewaste",
+      "text": "E-waste"
+    },
+    {
       "slug": "help_progress",
       "text": "Use this progress bar to track your journey. You can also click the dots to jump between scenes."
     },
@@ -955,11 +963,11 @@ export default {
     },
     {
       "slug": "score_right",
-      "text": "Incorrect"
+      "text": "Correct"
     },
     {
       "slug": "score_wrong",
-      "text": "Correct"
+      "text": "Incorrect"
     }
   ]
 }

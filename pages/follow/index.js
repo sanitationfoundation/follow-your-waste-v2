@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
@@ -10,6 +11,7 @@ import { getRandom } from 'utils'
 import { getText, getStreams, getItems, getItemSize } from 'selectors'
 
 const Follow = ({ ...props }) => {
+	const theme = useTheme()
 	const { locale } = useStore()
 	const streams = getStreams()
 	const items = getItems()
@@ -28,13 +30,14 @@ const Follow = ({ ...props }) => {
 				alignItems='center'
 				justifyContent='center'
 				flexWrap='wrap'
-				// spacing={1}
+				spacing={1}
 				sx={{
 					m: 'auto',
 					width: '100%',
+					maxWidth: theme.spacing(80),
 					'& > a': {
-						// width: '100%',
-						maxWidth: 200,
+						mb: 5,
+						maxWidth: theme.spacing(25),
 						display: 'block',
 					},
 				}}
@@ -44,7 +47,7 @@ const Follow = ({ ...props }) => {
 						<Box
 							sx={{
 								pb: '100%',
-								width: 200,
+								width: theme.spacing(25),
 								position: 'relative',
 							}}
 						>
@@ -62,6 +65,7 @@ const Follow = ({ ...props }) => {
 											position: 'absolute',
 											top: '50%',
 											left: '50%',
+											// TODO: Remove randomness
 											transform: `translate(-50%, -50%) rotate(${getRandom(
 												-80,
 												80,
@@ -75,7 +79,7 @@ const Follow = ({ ...props }) => {
 									/>
 								))}
 						</Box>
-						<Typography variant='h3' align='center'>
+						<Typography variant='h3' align='center' mt={-4}>
 							{getText(locale, 'system', stream)}
 						</Typography>
 					</Link>
