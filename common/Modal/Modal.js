@@ -8,9 +8,15 @@ import Typography from '@mui/material/Typography'
 const Modal = ({ open, children, ...props }) => {
 	return (
 		<MuiModal open={open} {...props}>
-			{children}
+			<Box>
+				{children}
+			</Box>
 		</MuiModal>
 	)
+}
+
+Modal.defaultProps = {
+	open: true
 }
 
 export default Modal

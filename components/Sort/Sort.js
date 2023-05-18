@@ -5,10 +5,13 @@ import { alpha, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
+import ClickAwayListener from '@mui/base/ClickAwayListener'
 import { DndContext } from '@dnd-kit/core'
 
 import useStore from 'hooks'
 import { getText, getItems, getBins } from 'selectors'
+import { Chyron } from 'common/Chyron'
+import { Modal } from 'common/Modal'
 import SortItem from './SortItem'
 import SortBin from './SortBin'
 import SortScore from './SortScore'
@@ -52,6 +55,10 @@ const Sort = ({ ...props }) => {
 		setPackeryInst(newPackeryInst)
 	}
 
+	const handleChyronClickAway = () => {
+		
+	}
+
 	useEffect(() => {
 		if (packeryRef.current) loadPackery(packeryRef.current)
 	}, [packeryRef])
@@ -91,9 +98,9 @@ const Sort = ({ ...props }) => {
 			sx={{
 				p: 3,
 				flex: 1,
+				position: 'relative'
 			}}
 		>
-			<SortScore />
 			<DndContext
 				onDragStart={handleDragStart}
 				onDragOver={handleDragOver}
@@ -120,6 +127,30 @@ const Sort = ({ ...props }) => {
 					))}
 				</Stack>
 			</DndContext>
+			<Stack
+				alignItems='center'
+				sx={{
+					width: '100%',
+					height: '100%',
+					position: 'absolute',
+					left: 0,
+					top: 0,
+					zIndex: 20,
+					pointerEvents: 'none'
+				}}
+			>	
+				<Box my='auto'>
+					<ClickAwayListener onClickAway={handleChyronClickAway}>
+						<Chyron
+							float={false}
+							caption='Testing'
+							color='yellow'
+							imgSrc={`/images/workers/chief.png`}
+						/>
+					</ClickAwayListener>
+					<SortScore />
+				</Box>
+			</Stack>
 		</Stack>
 	)
 }

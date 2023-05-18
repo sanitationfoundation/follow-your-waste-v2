@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography'
 import useEmblaCarousel from 'embla-carousel-react'
 
 import useStore from 'hooks'
-import { getText, getScenes } from 'selectors'
+import { getText, getScenes, getSceneByIndex, getSceneSlugs } from 'selectors'
 import FollowProgress from './FollowProgress'
 import FollowScene from './FollowScene'
 import FollowChyron from './FollowChyron'
@@ -26,6 +26,9 @@ const Follow = ({ stream, ...props }) => {
 	const { currentScene, setCurrentScene, nextScene, prevScene } =
 		useStore()
 	const scenes = getScenes(stream)
+	const sceneSlugs = getSceneSlugs(stream)
+	const currVoice = getSceneByIndex(stream, currentScene)?.slug
+
 	const [emblaRef, emblaApi] = useEmblaCarousel({})
 	const isCurrent = useCallback(i => i === currentScene, [currentScene])
 

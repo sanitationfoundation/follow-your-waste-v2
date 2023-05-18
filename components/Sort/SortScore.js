@@ -49,12 +49,12 @@ const SortScore = ({ ...props }) => {
 			alignContent='center'
 			justifyContent='center'
 			sx={{
-				width: '100%',
-				height: '100%',
-				position: 'absolute',
-				left: 0,
-				top: 0,
-				zIndex: 30,
+				// width: '100%',
+				// height: '100%',
+				// position: 'absolute',
+				// left: 0,
+				// top: 0,
+				// zIndex: 30,
 				pointerEvents: 'none',
 			}}
 		>
