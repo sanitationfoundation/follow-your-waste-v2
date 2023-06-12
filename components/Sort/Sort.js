@@ -14,32 +14,33 @@ import { Chyron } from 'common/Chyron'
 import { Modal } from 'common/Modal'
 import SortItem from './SortItem'
 import SortBin from './SortBin'
-import SortScore from './SortScore'
 
 const Packery = async () => (await import('packery')).then(m => m.default)
 
 const Sort = ({ ...props }) => {
+	const theme = useTheme()
 	const {
 		locale,
+		score,
 		sorted,
+		thumbsUp,
 		addSorted,
-		addRight,
-		addWrong,
+		addScore,
+		resetSorted,
+		resetScore,
+		setThumbsUp,
 		setDragging,
 		setOpening,
+		resetAllSort
 	} = useStore()
 	const items = getItems()
 	const bins = getBins()
 	const packeryRef = useRef(null)
 	const [packeryInst, setPackeryInst] = useState(null)
+	const [packeryCompleted, setPackeryCompleted] = useState(false)
+	const [prevScore, setPrevScore] = useState(0)
 
-	// const Packery =
-	// const packeryInst = useMemo(() =>
-	// 	new Packery(packeryRef.current, {
-
-	// 	})
-	// , [packeryRef.current])
-	// console.log(Packery)
+	const introCaption = getText(locale, 'system', 'sort_intro')
 
 	const loadPackery = async container => {
 		const Packery = (await import('packery')).default
@@ -51,22 +52,8 @@ const Sort = ({ ...props }) => {
 			// initLayout: false,
 			// resize: true,
 		})
-
 		setPackeryInst(newPackeryInst)
 	}
-
-	const handleChyronClickAway = () => {
-		
-	}
-
-	useEffect(() => {
-		if (packeryRef.current) loadPackery(packeryRef.current)
-	}, [packeryRef])
-
-	useEffect(() => {
-		if (packeryInst && packeryInst.hasOwnProperty('reloadItems'))
-			packeryInst.reloadItems()
-	}, [packeryInst])
 
 	const handleDragStart = ({ active }) => {
 		setDragging(active.id)
@@ -79,26 +66,63 @@ const Sort = ({ ...props }) => {
 	const handleDragEnd = ({ active, over }) => {
 		setDragging(null)
 		if (!over) return
-		setOpening(false)
-		if (!over.data.current.accepts.includes(active.data.current.type))
-			return addWrong()
-
-		addRight()
+		setOpening(null)
+		if (!over.data.current.accepts.includes(active.data.current.type)) return
+		// 	return addWrong()
+		if (sorted.includes(active.id)) return
+		addScore()
 		addSorted(active.id)
 		setTimeout(() => {
 			const sortedElem = packeryRef.current.querySelector(
 				`[data-item="${active.id}"]`,
 			)
-			packeryInst.remove(sortedElem)
+			// packeryInst.remove(sortedElem)
 		}, 300)
 	}
+
+	useEffect(() => {
+		resetAllSort()
+	}, [])
+
+	useEffect(() => {
+		if(sorted.length === 0 && packeryInst) {
+			packeryInst.layout()
+		}
+	}, [sorted, packeryInst])
+
+	useEffect(() => {
+		if (packeryRef.current) loadPackery(packeryRef.current)
+	}, [packeryRef])
+
+	useEffect(() => {
+		if (!packeryInst) return
+		setTimeout(() =>
+			setPackeryCompleted(true)
+		, 100)
+		// if (packeryInst.hasOwnProperty('reloadItems')) {
+		// 	packeryInst.reloadItems()
+		// }
+	}, [packeryInst])
+
+	useEffect(() => {
+		setPrevScore(score)
+		if (score !== prevScore) setThumbsUp(true)
+	}, [score, prevScore])
+
+	useEffect(() => {
+		setTimeout(() => setThumbsUp(false), 200)
+	}, [thumbsUp])
 
 	return (
 		<Stack
 			sx={{
 				p: 3,
 				flex: 1,
-				position: 'relative'
+				width: '100%',
+				height: '100%',
+				position: 'relative',
+				opacity: packeryCompleted ? 1 : 0,
+				transition: theme.transitions.create(['opacity'])
 			}}
 		>
 			<DndContext
@@ -106,11 +130,18 @@ const Sort = ({ ...props }) => {
 				onDragOver={handleDragOver}
 				onDragEnd={handleDragEnd}
 			>
-				<Box ref={packeryRef}>
+				<Box
+					ref={packeryRef}
+				>
 					{items.map((item, i) => (
-						<SortItem key={i} data={item} />
+						<SortItem
+							key={i}
+							data={item}
+							visible={packeryCompleted}
+						/>
 					))}
 				</Box>
+				
 				<Stack
 					direction='row'
 					justifyContent='center'
@@ -123,34 +154,14 @@ const Sort = ({ ...props }) => {
 					}}
 				>
 					{bins.map((bin, i) => (
-						<SortBin key={i} data={bin} />
+						<SortBin
+							key={i}
+							data={bin}
+							index={i}
+						/>
 					))}
 				</Stack>
 			</DndContext>
-			<Stack
-				alignItems='center'
-				sx={{
-					width: '100%',
-					height: '100%',
-					position: 'absolute',
-					left: 0,
-					top: 0,
-					zIndex: 20,
-					pointerEvents: 'none'
-				}}
-			>	
-				<Box my='auto'>
-					<ClickAwayListener onClickAway={handleChyronClickAway}>
-						<Chyron
-							float={false}
-							caption='Testing'
-							color='yellow'
-							imgSrc={`/images/workers/chief.png`}
-						/>
-					</ClickAwayListener>
-					<SortScore />
-				</Box>
-			</Stack>
 		</Stack>
 	)
 }

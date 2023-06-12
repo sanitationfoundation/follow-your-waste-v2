@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { alpha, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
@@ -11,15 +11,19 @@ import { CSS } from '@dnd-kit/utilities'
 import useStore from 'hooks'
 import { getText, getItemSize } from 'selectors'
 
-const SortItem = ({ data, ...props }) => {
+const SortItem = ({ data, visible, ...props }) => {
 	const [open, setOpen] = useState(false)
 	const theme = useTheme()
+	// const imgRef = useRef(null)
 	const { locale, dragging, sorted } = useStore()
 
 	const [lastX, setLastX] = useState(0)
 
+	const imgSrc = `/images/items/${data.slug}.png`
 	const isDragging = dragging === data.slug
 	const isSorted = sorted.includes(data.slug)
+	const itemLabel = getText(locale, 'items', data.slug, 'label')
+	const itemDesc = getText(locale, 'items', data.slug, 'tooltip')
 
 	const { attributes, listeners, setNodeRef, transform } = useDraggable({
 		id: data.slug,
@@ -46,20 +50,28 @@ const SortItem = ({ data, ...props }) => {
 		<Tooltip
 			arrow
 			title={
-				<Stack spacing={1}>
-					<Typography variant='h4'>
-						{getText(locale, 'items', data.slug, 'label')}
-					</Typography>
-					<Divider
-						sx={{
-							borderColor: 'primary.main',
-							borderWidth: 1,
-							opacity: 0.75,
-						}}
-					/>
-					<Typography variant='body1'>
-						{getText(locale, 'items', data.slug, 'tooltip')}
-					</Typography>
+				<Stack
+					spacing={1}
+					divider={
+						<Divider
+							sx={{
+								borderColor: 'primary.main',
+								borderWidth: 1,
+								opacity: 0.75,
+							}}
+						/>
+					}
+				>
+					{itemLabel ?
+						<Typography variant='h4'>
+							{itemLabel}
+						</Typography>
+					: null}
+					{itemDesc ?
+						<Typography variant='body1'>
+							{itemDesc}
+						</Typography>
+					: null}
 				</Stack>
 			}
 			open={open}
@@ -71,25 +83,28 @@ const SortItem = ({ data, ...props }) => {
 				sx={{
 					height: 'auto',
 					cursor: 'pointer',
+					width: {
+						xs: `${getItemSize(data.slug) / 4}%`,
+						md: `${getItemSize(data.slug) / 2}%`,
+					},
+					minWidth: {
+						xs: `${getItemSize(data.slug) * 5}px`,
+						md: `${getItemSize(data.slug) * 10}px`,
+					},
 				}}
 				style={{
-					width: `${getItemSize(data.slug) / 2}%`,
-					minWidth: `${getItemSize(data.slug) * 10}px`,
-					// transform: CSS.Translate.toString(transform)
-					// borderWidth: 2,
-					// borderColor: 'primary.main',
-					// borderStyle: 'style',
+					// opacity: visible ? 1 : 0,
 					transition: isSorted
 						? 'all 800ms ease'
 						: !isDragging
-						? 'all 400ms ease'
-						: '',
+							? 'all 400ms ease'
+							: '',
 					transform: isSorted
 						? `translate3d(${lastX}px, 100%, 0)`
 						: transform
-						? `translate3d(${transform.x}px, ${transform.y}px, 0)`
-						: 'translate3d(0, 0, 0)',
-					zIndex: isDragging ? 20 : 10,
+							? `translate3d(${transform.x}px, ${transform.y}px, 0)`
+							: 'translate3d(0, 0, 0)',
+					zIndex: isDragging ? 20 : 10,					
 					...(isSorted ? { top: 999 } : {}),
 				}}
 				ref={setNodeRef}
@@ -98,14 +113,24 @@ const SortItem = ({ data, ...props }) => {
 				aria-describedby=''
 				data-item={data.slug}
 			>
-				<img
-					src={`/images/items/${data.slug}.png`}
-					style={{
-						width: '100%',
-						height: 'auto',
+				<Box
+					sx={{
+						transition: theme.transitions.create(['transform']),
+						'&:hover, &:focus': {
+							transform: !isDragging ? `scale(1.1)` : null,
+						}
 					}}
-					alt=''
-				/>
+				>
+					<img
+						// ref={imgRef}
+						src={imgSrc}
+						style={{
+							width: '100%',
+							height: 'auto',
+						}}
+						alt=''
+					/>
+				</Box>
 			</Box>
 		</Tooltip>
 	)

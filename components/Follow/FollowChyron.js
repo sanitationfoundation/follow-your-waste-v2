@@ -33,39 +33,58 @@ const FollowChyron = ({ stream, scenes, ...props }) => {
 	const imgScr = scene ? `/images/workers/${stream}.png` : null
 
 	return (
-		<Chyron
-			open
-			caption={caption}
-			color={color}
-			imgSrc={imgScr}
-		>
-			<IconButton
-				size='large'
-				color='primary'
-				sx={{
-					position: 'absolute',
-					right: '100%',
-					top: '50%',
-					transform: 'translate(-40px, -55%)',
-				}}
-				onClick={prevScene}
-			>
-				<KeyboardArrowLeftIcon fontSize='large' />
-			</IconButton>
-			<IconButton
-				size='large'
-				color='primary'
-				sx={{
-					position: 'absolute',
-					left: '100%',
-					top: '50%',
-					transform: 'translate(15px, -50%)',
-				}}
-				onClick={nextScene}
-			>
-				<KeyboardArrowRightIcon fontSize='large' />
-			</IconButton>
-		</Chyron>
+		<>
+			{caption ?
+				<Chyron
+					open
+					caption={caption}
+					color={color}
+					imgSrc={imgScr}
+					sx={{
+						width: {
+							xs: '100%',
+							sm: 500,
+							md: 700
+						},
+						borderRadius: {
+							xs: theme.spacing(5,5,0,0),
+							sm: 10
+						},
+						borderBottomWidth: {
+							xs: 0,
+							sm: 3
+						}
+					}}
+				>
+					<IconButton
+						size='large'
+						color='primary'
+						sx={{
+							position: 'absolute',
+							right: '100%',
+							top: '50%',
+							transform: 'translate(-40px, -55%)',
+						}}
+						onClick={prevScene}
+					>
+						<KeyboardArrowLeftIcon fontSize='large' />
+					</IconButton>
+					<IconButton
+						size='large'
+						color='primary'
+						sx={{
+							position: 'absolute',
+							left: '100%',
+							top: '50%',
+							transform: 'translate(15px, -50%)',
+						}}
+						onClick={nextScene}
+					>
+						<KeyboardArrowRightIcon fontSize='large' />
+					</IconButton>
+				</Chyron>
+			: null}
+		</>
 	)
 }
 

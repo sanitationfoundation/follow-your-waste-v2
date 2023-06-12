@@ -1,6 +1,6 @@
-import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTheme } from '@mui/material/styles'
 import { visuallyHidden } from '@mui/utils'
 import Box from '@mui/material/Box'
 import IconButton from '@mui/material/IconButton'
@@ -12,6 +12,7 @@ import useStore from 'hooks'
 import { Chyron } from 'common/Chyron'
 
 const Choose = ({ ...props }) => {
+	const theme = useTheme()
 	const { locale } = useStore()
 
 	return (
@@ -35,7 +36,7 @@ const Choose = ({ ...props }) => {
 						sm: 'row',
 					}}
 					spacing={{
-						xs: 2,
+						xs: 5,
 						sm: '10%',
 					}}
 					alignItems='center'
@@ -50,6 +51,7 @@ const Choose = ({ ...props }) => {
 							transform: `scale(${5})`,
 						},
 						'& img': {
+							mx: 'auto',
 							width: '100%',
 							height: 'auto',
 						},
@@ -58,14 +60,33 @@ const Choose = ({ ...props }) => {
 					{getSections().map((section, i) => (
 						<Link key={i} href={`/${section}`}>
 							<Box>
-								<Image
-									alt=''
-									src={`/images/${section}.png`}
-									width={345}
-									height={345}
-									aria-hidden
-								/>
-								<Typography variant='h3' align='center' mt={-1}>
+								<Box
+									sx={{
+										display: 'flex',
+										transition: theme.transitions.create(['transform']),
+										maxWidth: {
+											xs: 200,
+											sm: '100%'
+										},
+										'&:hover, &:focus': {
+											transform: `scale(1.1)`,
+										}
+									}}
+								>
+									<Image
+										alt=''
+										src={`/images/${section}.png`}
+										width={345}
+										height={345}
+										aria-hidden
+									/>
+								</Box>
+								<Typography
+									component='div'
+									variant='h3'
+									align='center'
+									mt={-1}
+								>
 									{getText(locale, 'system', section)}
 								</Typography>
 							</Box>
@@ -73,12 +94,6 @@ const Choose = ({ ...props }) => {
 					))}
 				</Stack>
 			</Stack>
-			<Chyron
-				float={false}
-				caption='Testing'
-				color='yellow'
-				imgSrc={`/images/workers/chief.png`}
-			/>
 		</Stack>
 	)
 }

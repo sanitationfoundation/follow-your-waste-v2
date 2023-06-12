@@ -10,21 +10,21 @@ import Typography from '@mui/material/Typography'
 import { getText } from 'selectors'
 import useStore from 'hooks'
 
-const Intro = ({ ...props }) => {
+const Welcome = ({ ...props }) => {
 	const theme = useTheme()
-	const { locale, showIntro, setShowIntro } = useStore()
+	const { locale, showWelcome, setShowWelcome } = useStore()
 	const [drive, setDrive] = useState(false)
 
 	const onClose = () => {
-		setShowIntro(false)
+		setShowWelcome(false)
 	}
 
-	useEffect(() => {
+	const handleTruckLoad = () => {
 		setDrive(true)
-	}, [])
+	}
 
 	return (
-		<Fade in={showIntro}>
+		<Fade appear={false} in={showWelcome}>
 			<Stack
 				alignItems='center'
 				justifyContent='center'
@@ -39,7 +39,8 @@ const Intro = ({ ...props }) => {
 					bgcolor: 'orange.main',
 					'& img': {
 						width: '100%',
-						maxWidth: 600
+						maxWidth: 600,
+						height: 'auto'
 					}
 				}}
 			>
@@ -63,7 +64,14 @@ const Intro = ({ ...props }) => {
 						transition: theme.transitions.create(['transform'], {
 							duration: 7000,
 							easing: 'linear'
-						})
+						}),
+						'& img': {
+							width: 'auto',
+							height: {
+								xs: 50,
+								md: 100
+							},
+						}
 					}}
 					style={{
 						transform: drive
@@ -74,7 +82,8 @@ const Intro = ({ ...props }) => {
 						width={300}
 						height={120}
 						src='images/loading.png'
-						alt='Illustration of DSNY collection truck'
+						alt=''
+						onLoadingComplete={handleTruckLoad}
 					/>
 				</Box>
 
@@ -92,4 +101,4 @@ const Intro = ({ ...props }) => {
 	)
 }
 
-export default Intro
+export default Welcome

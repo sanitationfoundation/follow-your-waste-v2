@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import useStore from 'hooks'
 import { DATA } from 'constants'
 import { Layout } from 'common'
-import { Header, Intro, Choose } from 'components'
+import { Header, Welcome, Choose } from 'components'
 
 export default function Home({ env, ...props }) {
 	// const { setEnv } = useStore();
@@ -12,7 +12,7 @@ export default function Home({ env, ...props }) {
 
 	return (
 		<Layout>
-			<Intro />
+			<Welcome />
 			<Choose />
 		</Layout>
 	)

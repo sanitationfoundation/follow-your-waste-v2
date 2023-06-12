@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import Image from 'next/image'
 import { alpha, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
@@ -7,15 +8,14 @@ import { useDroppable } from '@dnd-kit/core'
 import { CSS } from '@dnd-kit/utilities'
 
 import useStore from 'hooks'
-import { getText } from 'selectors'
+import { getText, getItem } from 'selectors'
 
 const SortBin = ({ data, ...props }) => {
 	const theme = useTheme()
-	const { locale, opening } = useStore()
+	const { locale, opening, sorted, thumbsUp } = useStore()
 	const [hover, setHover] = useState(false)
-
-	const isOpening = opening === data.slug
-	// console.log(opening, data.slug)
+	const [isOpening, setIsOpening] = useState(false)
+	const [showGlove, setShowGlove] = useState(false)
 
 	const { setNodeRef } = useDroppable({
 		id: data.slug,
@@ -24,58 +24,71 @@ const SortBin = ({ data, ...props }) => {
 		},
 	})
 
-	// useEffect(() => {
-	// 	const newLidRotate = data.slug === 'organics'
-	// 		? hover ? 'translateX(-13px) translateY(13px) rotate(45deg)' : ''
-	// 		: hover ? 'translateX(100px) translateY(-60px) rotate(45deg)' : ''
-	// 	setLidRotate(newLidRotate)
-	// }, [hover])
+	useEffect(() =>
+		setIsOpening(data.slug === opening)
+	, [data.slug, opening])
 
-	// const lidRotate = useMemo(() =>
-	// 	data.slug === 'organics'
-	// 		? hover ? 'translateX(-13px) translateY(13px) rotate(45deg)' : 'translate()'
-	// 		: hover ? 'translateX(100px) translateY(-60px) rotate(45deg)' : 'translate()'
-	// , [data, hover])
+	useEffect(() => {
+		const lastSortedItem = sorted.slice(-1)[0]
+		const lastSortedStream = getItem(lastSortedItem)?.stream
+		const isCorrectBin = data.streams.includes(lastSortedStream)
+		setTimeout(() =>
+			setShowGlove(isCorrectBin && thumbsUp)
+		, thumbsUp ? 0 : 750)
+	}, [data, sorted, thumbsUp])
 
 	return (
 		<Box
 			ref={setNodeRef}
 			sx={{
-				width: 200,
+				width: {
+					xs: 100,
+					md: 200
+				},
 				height: 200,
 				position: 'relative',
-			}}
-			onMouseOver={() => setHover(true)}
-			onMouseLeave={() => setHover(false)}
-		>
-			<img
-				src={`/images/bins/backs/${data.slug}.png`}
-				style={{
-					width: 200,
+				'& img.BinGlove': {
+					width: 100,
+					height: 'auto',
+					opacity: showGlove ? 1 : 0,
+					transform: `translateY(${showGlove ? '-100%' : 0}) scale(${showGlove ? 1.5 : 1})`,
+					transition: theme.transitions.create(['transform', 'opacity'], { duration: 500 }),
+				},
+				'& img.BinBack': {
+					width: {
+						xs: 100,
+						md: 200
+					},
 					height: 'auto',
 					position: 'absolute',
 					left: 0,
-					top: 42,
-				}}
-			/>
-			<img
-				src={`/images/bins/fronts/${data.slug}-${locale}.png`}
-				style={{
-					width: 200,
+					top: {
+						xs: data.slug === 'ewaste' ? 133 : 122,
+						md: data.slug === 'ewaste' ? 66 : 42,
+					}
+				},
+				'& img.BinFront': {
+					width: {
+						xs: 100,
+						md: 200
+					},
 					height: 'auto',
 					position: 'absolute',
 					bottom: 0,
 					zIndex: 30,
-				}}
-			/>
-			<img
-				src={`/images/bins/lids/${data.slug}.png`}
-				style={{
-					width: data.slug === 'organics' ? 210 : 200,
+				},
+				'& img.BinLid': {
+					width: {
+						xs: data.slug === 'organics' ? 105 : 100,
+						md: data.slug === 'organics' ? 210 : 200,
+					},
 					height: 'auto',
 					position: 'absolute',
 					left: data.slug === 'organics' ? 2 : 0,
-					top: 20,
+					top: {
+						xs: 110,
+						md: 20
+					},
 					zIndex: 40,
 					transformOrigin:
 						data.slug === 'organics' ? 'right bottom' : 'center',
@@ -85,8 +98,46 @@ const SortBin = ({ data, ...props }) => {
 							? 'translateX(-13px) translateY(13px) rotate(45deg)'
 							: 'translateX(100px) translateY(-60px) rotate(45deg)'
 						: 'translate(0)',
+				},
+			}}
+			onMouseOver={() => setHover(true)}
+			onMouseLeave={() => setHover(false)}
+		>
+			<Box
+				sx={{
+					width: 'auto',
+					position: 'absolute',
+					left: '50%',
+					top: '50%',
+					transform: `translate(-50%, -100%)`,
+					pointerEvents: 'none',
 				}}
+			>
+				<Image
+					width={500}
+					height={514}
+					src='/images/glove.png'
+					alt=''
+					className='BinGlove'
+				/>
+			</Box>
+			<img
+				src={`/images/bins/backs/${data.slug}.png`}
+				alt=''
+				className='BinBack'
 			/>
+			<img
+				src={`/images/bins/fronts/${data.slug}-${locale}.png`}
+				alt=''
+				className='BinFront'
+			/>
+			{data.slug !== 'ewaste' ?
+				<img
+					alt=''
+					src={`/images/bins/lids/${data.slug}.png`}
+					className='BinLid'
+				/>
+			: null}
 		</Box>
 	)
 }

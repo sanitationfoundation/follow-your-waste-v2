@@ -6,9 +6,9 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "npm run import & next dev",
+    "build": "npm run import & next build",
+    "start": "npm run import & next start",
     "lint": "next lint",
     "export": "next export",
     "prepare": "husky install",

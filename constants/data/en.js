@@ -1,4 +1,127 @@
 export default {
+  "ewaste": [
+    {
+      "slug": "table",
+      "label": "Outreach",
+      "caption": "Hi, I am Civilian Employee Allie Gumas from the Department of Sanitation’s Bureau of Recycling and Sustainability (BRS). At BRS, we work citywide to help residents reduce, reuse, and recycle.",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "apartment",
+      "label": "Apartment Pickup",
+      "caption": "E-waste (or electronic waste), such as cellphones, laptops, and televisions, is picked up from apartment buildings that are enrolled in DSNY’s electronics recycling program. DSNY works with a company called ERI, which takes care of picking up and transporting the e-waste.\n",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "event",
+      "label": "Drop-off Event",
+      "caption": "If your apartment building does not have an ecycle bin, you can take your e-waste to a DSNY special waste drop-off site or to a SAFE disposal event. ",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "eri",
+      "label": "ERI",
+      "caption": "After your e-waste is collected, it is taken to ERI’s processing facility in Lincoln Park, New Jersey.",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "sorting-ewaste",
+      "label": "Sorting",
+      "caption": "Once it arrives at ERI Lincoln Park, all electronic equipment is separated by type and weighed.\n",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "inspect",
+      "label": "Inspecting",
+      "caption": "Following weighing and registration, an ERI employee will grade the physical condition of the product to identify equipment that can be refurbished and resold.",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "laptop",
+      "label": "Testing Laptops",
+      "caption": "Any materials that can be reused are evaluated, refurbished, and tested. They can then be sold on the reuse market and given a second life. All electronics that contain personal information, such as laptops and cellphones, are wiped of their data before being resold.",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "smartphone",
+      "label": "Smartphone",
+      "caption": "Any materials that cannot be reused are taken apart. ",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "ernie",
+      "label": "Shredding Material",
+      "caption": "Flat-screen TVs and laptop screens are sent through ERI’s shredding system, also known as ERNIE (Electronic Recyclers Next Innovation Efficiency). ERNIE shreds the items and stores mercury and other toxic materials in an airtight container.\n",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "sam",
+      "label": "Robotic Sorting",
+      "caption": "ERI’s robotic system, SAM (Super Automated Machine), further sorts the materials based on commodity types, including circuit boards, which contain precious metals, such as copper, plastic, steel, and aluminum.\n",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "end-ewaste",
+      "label": "Recycled!",
+      "caption": "All of these materials end up in products sold on the market today.\n",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    }
+  ],
   "glass": [
     {
       "slug": "garage-glass",
@@ -180,6 +303,21 @@ export default {
       "slug": "soiled-paper",
       "label": "Food-soiled paper",
       "tooltip": "Food isn’t the only thing that can go in the brown compost bin! Dirty paper napkins, plates, and towels are part of the dry, carbon-rich “brown” materials needed to make healthy compost."
+    },
+    {
+      "slug": "smartphone",
+      "label": "Smartphone",
+      "tooltip": ""
+    },
+    {
+      "slug": "vacuum",
+      "label": "Vacuum",
+      "tooltip": ""
+    },
+    {
+      "slug": "tv",
+      "label": "Television",
+      "tooltip": ""
     }
   ],
   "landfill": [
@@ -803,7 +941,7 @@ export default {
     },
     {
       "slug": "sort_intro",
-      "text": "Discover what happens to your household waste after you toss it in the bin."
+      "text": "Can you successfully dispose of these common household items?"
     },
     {
       "slug": "sort_prompt",
@@ -832,6 +970,10 @@ export default {
     {
       "slug": "sort_correct_bin",
       "text": "You have placed this item in the correct bin! Now, learn from a NYC Sanitation Worker what happens next."
+    },
+    {
+      "slug": "follow_intro",
+      "text": "Discover what happens to your household waste after you toss it in the bin."
     },
     {
       "slug": "mgp",
@@ -886,32 +1028,56 @@ export default {
       "text": "Use these icons to control the sound."
     },
     {
-      "slug": "final_title",
+      "slug": "final_follow_title",
       "text": "Thanks for playing!"
     },
     {
-      "slug": "final_statement",
+      "slug": "final_follow_desc",
       "text": "Remember, the story of this item may have ended but our fight to end waste hasn’t. Before our items even enter the bin, reduce what you can and donate the rest. Small steps can make a big impact."
     },
     {
-      "slug": "final_restart",
-      "text": "Follow another item"
+      "slug": "final_sort_title",
+      "text": "Nice work!"
     },
     {
-      "slug": "final_resources",
+      "slug": "final_sort_desc",
+      "text": "You successfully sorted the items into the correct bins. Click any item to learn where it goes after it’s thrown away."
+    },
+    {
+      "slug": "resources_label",
       "text": "View additional resources"
     },
     {
-      "slug": "final_workers",
+      "slug": "resource_workers",
       "text": "Meet the Sanitation Workers"
     },
     {
-      "slug": "final_lessons",
+      "slug": "resource_lessons",
       "text": "Lesson plans for teachers"
     },
     {
-      "slug": "final_about",
+      "slug": "resource_about",
       "text": "About the project"
+    },
+    {
+      "slug": "resource_quiz",
+      "text": "Take the quiz"
+    },
+    {
+      "slug": "resource_workers_url",
+      "text": "https://www.sanitationfoundation.org/meet-the-workers"
+    },
+    {
+      "slug": "resource_lessons_url",
+      "text": "https://www.sanitationfoundation.org/lesson-plans"
+    },
+    {
+      "slug": "resource_about_url",
+      "text": "https://www.sanitationfoundation.org/follow-your-waste"
+    },
+    {
+      "slug": "resource_quiz_url",
+      "text": "https://docs.google.com/document/d/1Wa0EJHwT7V6kTGv_XlVonVZmtHpDauTgHb8DCBPGFeg/edit"
     },
     {
       "slug": "aria_skip",

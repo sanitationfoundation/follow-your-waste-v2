@@ -15,19 +15,17 @@ const initialState = {
 	},
 	locale: 'en',
 	fullScreen: false,
-	showIntro: true,
+	showWelcome: true,
 	// Audio
 	mute: false,
-	pauseVoice: false,
+	pauseVoice: true,
 	replayVoice: false,
 	// Sort
 	dragging: null,
 	opening: null,
 	sorted: [],
-	score: {
-		wrong: 0,
-		right: 0,
-	},
+	score: 0,
+	thumbsUp: false,
 	// Follow
 	currentScene: 0,
 }
@@ -36,7 +34,7 @@ const useStore = create((set, get) => ({
 	...initialState,
 	setLocale: locale => set({ locale }),
 	setFullScreen: fullScreen => set({ fullScreen }),
-	setShowIntro: showIntro => set({ showIntro }),
+	setShowWelcome: showWelcome => set({ showWelcome }),
 	// Audio
 	setMute: mute => set({ mute }),
 	setPauseVoice: pauseVoice => set({ pauseVoice }),
@@ -49,14 +47,29 @@ const useStore = create((set, get) => ({
 		set(state => ({
 			sorted: [...state.sorted, item],
 		})),
-	addRight: () =>
-		set(({ score }) => ({
-			score: { ...score, right: score.right + 1 },
-		})),
-	addWrong: () =>
-		set(({ score }) => ({
-			score: { ...score, wrong: score.wrong + 1 },
-		})),
+	resetSorted: () =>
+		set({ sorted: [] }),
+	addScore: () =>
+		set({ score: get().score + 1 }),
+	setThumbsUp: thumbsUp => set({ thumbsUp }),
+	// addRight: () =>
+	// 	set(({ score }) => ({
+	// 		score: { ...score, right: score.right + 1 },
+	// 	})),
+	// addWrong: () =>
+	// 	set(({ score }) => ({
+	// 		score: { ...score, wrong: score.wrong + 1 },
+	// 	})),
+	resetScore: () =>
+		set({ score: 0 }),
+	resetAllSort: () =>
+		set({
+			dragging: null,
+			opening: null,
+			sorted: [],
+			score: 0,
+			thumbsUp: false,
+		}),
 	// Follow
 	setCurrentScene: currentScene => set({ currentScene }),
 	nextScene: () =>

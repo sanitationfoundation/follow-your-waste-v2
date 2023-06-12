@@ -9,7 +9,7 @@ const Audio = forwardRef(({ type, slug, ...props }, ref) => {
 			{type && slug ? (
 				<audio
 					ref={ref}
-					src={`/audio/${type}/${slug}.wav`}
+					src={`/audio/${type}/${slug}.mp3`}
 					muted={mute}
 					{...props}
 				/>

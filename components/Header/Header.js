@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -13,23 +13,39 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import HeaderFullScreen from './HeaderFullScreen'
 import HeaderVolume from './HeaderVolume'
-import HeaderSortButton from './HeaderSortButton'
+import HeaderBackButton from './HeaderBackButton'
 import HeaderFollowBackButton from './HeaderFollowBackButton'
-import HeaderFollowButton from './HeaderFollowButton'
 import HeaderLocaleSelector from './HeaderLocaleSelector'
+import SortScore from 'components/Sort/SortScore'
 
 const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 	const theme = useTheme()
 	const router = useRouter()
-	const { pathname, query } = router
-	const { stream } = query
+	const [subPage, setSubPage] = useState(null)
+	const [followStream, setFollowStream] = useState(null)
+
+	const getSubPageStr = str => str.substr(str.indexOf('/') + 1)
+
+	useEffect(() => {
+		const { pathname, query } = router
+		const { stream } = query
+		const newSubPage = getSubPageStr(pathname)
+		setSubPage(newSubPage)
+		setFollowStream(stream)
+		const handleRouteChange = pathname => {
+			const newSubPage = getSubPageStr(pathname)
+			setSubPage(newSubPage)
+		}
+		router.events.on('routeChangeComplete', handleRouteChange)
+		return () => router.events.off('routeChangeComplete', handleRouteChange)
+	}, [router])
 
 	return (
 		<AppBar
 			color='orange'
 			position={position}
 			sx={{
-				zIndex: 30,
+				zIndex: 50,
 				boxShadow: 'none',
 				...sx,
 			}}
@@ -62,7 +78,14 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 							/>
 						</Link>
 					</div>
-					<div>
+					<Box
+						sx={{
+							display: {
+								xs: 'none',
+								md: 'block'
+							}
+						}}
+					>
 						<Image
 							width={128}
 							height={50}
@@ -73,15 +96,38 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 							}}
 							alt='Sanitation Foundation logo'
 						/>
-					</div>
-					{stream ? <HeaderFollowBackButton /> : null}
+					</Box>
+					{subPage ? <HeaderBackButton /> : null}
 				</Stack>
+
+				{subPage === 'sort' ?
+					<SortScore
+						sx={{
+							display: {
+								xs: 'none',
+								sm: 'flex'
+							}
+						}}
+					/>
+				: null}
+
 				<Stack direction='row' alignItems='center' spacing={2}>
-					{/*{pathname.includes('follow') ? <HeaderSortButton /> : null}
-					{pathname.includes('sort') ? <HeaderFollowButton /> : null}*/}
+					{/*pathname.includes('follow') ? <HeaderSortButton /> : null*/}
+					{/*pathname.includes('sort') ? <HeaderFollowButton /> : null*/}
+					{followStream ?
+						<HeaderFollowBackButton />
+					: null}
 					<HeaderLocaleSelector />
 					<Stack direction='row' alignItems='center'>
-						<HeaderFullScreen onClick={onFullScreenClick} />
+						<HeaderFullScreen
+							sx={{
+								display: {
+									xs: 'none',
+									md: 'block'
+								}
+							}}
+							onClick={onFullScreenClick}
+						/>
 						<HeaderVolume />
 					</Stack>
 				</Stack>

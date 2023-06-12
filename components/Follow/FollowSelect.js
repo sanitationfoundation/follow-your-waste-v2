@@ -1,0 +1,87 @@
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { alpha, useTheme } from '@mui/material/styles'
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import Stack from '@mui/material/Stack'
+import Typography from '@mui/material/Typography'
+
+import useStore from 'hooks'
+import { getText, getStreams } from 'selectors'
+
+const FollowSelect = ({ stream, current, small, ...props }) => {
+	const theme = useTheme()
+	const streams = getStreams()
+	const { locale } = useStore()
+
+	return (
+		<Box
+			sx={{
+				height: '100%',
+				overflowY: 'scroll',
+				display: 'flex'
+			}}
+		>
+			<Stack
+				direction='row'
+				alignItems='center'
+				alignContent='center'
+				justifyContent={!small ? 'center' : 'unset'}
+				flexWrap='wrap'
+				// spacing={1}
+				flex={1}
+				sx={{
+					m: 'auto',
+					width: '100%',
+					maxWidth: theme.spacing(80),
+					'& > a': {
+						mb: small ? 1 : 5,
+						maxWidth: small ? theme.spacing(9) : theme.spacing(25),
+						display: 'block',
+					},
+				}}
+				{...props}
+			>
+				{streams.map((stream, i) => (
+					<Link key={i} href={`/follow/${stream}`}>
+						<Box
+							sx={{
+								// pb: '100%',
+								width: small ? theme.spacing(9) : theme.spacing(25),
+								position: 'relative',
+								transition: theme.transitions.create(['transform']),
+								'&:hover, &:focus': {
+									transform: `scale(1.1)`,
+								}
+							}}
+						>
+							<img
+								key={i}
+								src={`/images/streams/${stream}.png`}
+								style={{
+									width: `100%`,
+									height: 'auto',
+								}}
+								alt=''
+							/>
+						</Box>
+						{!small ?
+							<Typography
+								component='div'
+								variant='h3'
+								align='center'
+								color='primary'
+								mt={-1}
+							>
+								{getText(locale, 'system', stream)}
+							</Typography>
+						: null}
+					</Link>
+				))}
+			</Stack>
+		</Box>
+	)
+}
+
+export default FollowSelect

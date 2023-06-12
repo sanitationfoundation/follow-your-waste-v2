@@ -1,19 +1,30 @@
 import Link from 'next/link'
-import IconButton from '@mui/material/IconButton'
-import SvgIcon from '@mui/material/SvgIcon'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
 
-const HeaderFollowBackButton = ({ ...props }) => {
+const HeaderFollowBackButton = () => {
 	return (
-		<Link href='/follow'>
-			<IconButton
-				color='primary'
-				variant='outlined'
-				aria-label='Select another stream'
-			>
-				<ArrowBackIcon />
-			</IconButton>
-		</Link>
+		<Box
+			sx={{
+				display: {
+					xs: 'none',
+					sm: 'block'
+				}
+			}}
+		>
+			<Link href='/follow'>
+				<Button
+					size='small'
+					variant='contained'
+					color='green'
+					sx={{
+						mx: 'auto'
+					}}
+				>
+					Choose another stream
+				</Button>
+			</Link>
+		</Box>
 	)
 }
 

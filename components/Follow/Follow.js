@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { alpha, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
@@ -11,7 +12,7 @@ import { getText, getScenes, getSceneByIndex, getSceneSlugs } from 'selectors'
 import FollowProgress from './FollowProgress'
 import FollowScene from './FollowScene'
 import FollowChyron from './FollowChyron'
-import FollowEnd from './FollowEnd'
+import FollowFinal from './FollowFinal'
 import FollowEnvirons from './FollowEnvirons'
 import FollowVoices from './FollowVoices'
 
@@ -19,6 +20,7 @@ const KEY_CODE_ARROW_LEFT = 37
 const KEY_CODE_ARROW_RIGHT = 39
 
 const Follow = ({ stream, ...props }) => {
+	const router = useRouter()
 	const [emblaScrolling, setEmblaScrolling] = useState(false)
 	const [emblaCurrentScene, setEmblaCurrentScene] = useState(0)
 	const [emblaSlides, setEmblaSlides] = useState([])
@@ -51,13 +53,19 @@ const Follow = ({ stream, ...props }) => {
 	}, [emblaApi, scenes])
 
 	useEffect(() => {
+		if(currentScene <= -1) {
+			router.push('/follow')
+			setCurrentScene(0)
+		} 
+	}, [currentScene])
+
+	useEffect(() => {
 		const handleKeyDown = ({ keyCode }) => {
 			if (
-				keyCode === KEY_CODE_ARROW_RIGHT &&
-				currentScene < scenes.length - 1
+				keyCode === KEY_CODE_ARROW_RIGHT && currentScene < scenes.length
 			)
 				nextScene()
-			if (keyCode === KEY_CODE_ARROW_LEFT && currentScene >= 1) prevScene()
+			if (keyCode === KEY_CODE_ARROW_LEFT && currentScene >= 0) prevScene()
 		}
 
 		document.onkeydown = handleKeyDown
@@ -108,7 +116,7 @@ const Follow = ({ stream, ...props }) => {
 							className='embla__slide'
 						/>
 					))}
-					<FollowEnd stream={stream} className='embla__slide' />
+					<FollowFinal stream={stream} className='embla__slide' />
 				</Stack>
 			</Box>
 			<FollowChyron stream={stream} scenes={scenes} />

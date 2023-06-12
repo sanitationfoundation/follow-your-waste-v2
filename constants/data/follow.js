@@ -1,4 +1,94 @@
 export default {
+  "ewaste": [
+    {
+      "slug": "table",
+      "color": "blue",
+      "orientation": "width",
+      "animated": "FALSE",
+      "looped": "FALSE",
+      "environment": ""
+    },
+    {
+      "slug": "apartment",
+      "color": "blue",
+      "orientation": "width",
+      "animated": "FALSE",
+      "looped": "FALSE",
+      "environment": "traffic"
+    },
+    {
+      "slug": "event",
+      "color": "blue",
+      "orientation": "width",
+      "animated": "FALSE",
+      "looped": "FALSE",
+      "environment": ""
+    },
+    {
+      "slug": "eri",
+      "color": "blue",
+      "orientation": "width",
+      "animated": "FALSE",
+      "looped": "FALSE",
+      "environment": "traffic"
+    },
+    {
+      "slug": "sorting-ewaste",
+      "color": "blue",
+      "orientation": "width",
+      "animated": "FALSE",
+      "looped": "FALSE",
+      "environment": "facility"
+    },
+    {
+      "slug": "inspect",
+      "color": "blue",
+      "orientation": "width",
+      "animated": "FALSE",
+      "looped": "FALSE",
+      "environment": "facility"
+    },
+    {
+      "slug": "laptop",
+      "color": "blue",
+      "orientation": "width",
+      "animated": "FALSE",
+      "looped": "FALSE",
+      "environment": "facility"
+    },
+    {
+      "slug": "smartphone",
+      "color": "blue",
+      "orientation": "width",
+      "animated": "FALSE",
+      "looped": "FALSE",
+      "environment": "facility"
+    },
+    {
+      "slug": "ernie",
+      "color": "blue",
+      "orientation": "width",
+      "animated": "FALSE",
+      "looped": "FALSE",
+      "environment": "facility"
+    },
+    {
+      "slug": "sam",
+      "color": "blue",
+      "orientation": "width",
+      "animated": "FALSE",
+      "looped": "FALSE",
+      "environment": "facility"
+    },
+    {
+      "slug": "end-ewaste",
+      "color": "blue",
+      "orientation": "width",
+      "animated": "FALSE",
+      "looped": "FALSE",
+      "environment": ""
+    }
+  ],
   "glass": [
     {
       "slug": "garage-glass",

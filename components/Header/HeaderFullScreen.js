@@ -5,7 +5,7 @@ import FullscreenIcon from '@mui/icons-material/Fullscreen'
 import FullscreenExitIcon from '@mui/icons-material/FullscreenExit'
 import useStore from 'hooks'
 
-const HeaderFullScreen = ({ onClick }) => {
+const HeaderFullScreen = ({ onClick, ...props }) => {
 	const { fullScreen } = useStore()
 
 	return (
@@ -15,6 +15,7 @@ const HeaderFullScreen = ({ onClick }) => {
 			aria-label='Toggle full screen'
 			aria-pressed={fullScreen}
 			onClick={onClick}
+			{...props}
 		>
 			{fullScreen ? (
 				<FullscreenExitIcon fontSize='large' />

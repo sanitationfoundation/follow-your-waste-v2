@@ -60,6 +60,7 @@ const theme = createTheme({
 			main: YELLOW,
 			dark: YELLOW_DARK,
 			light: YELLOW_LIGHT,
+			contrastText: DARK
 		},
 		orange: {
 			main: ORANGE,
@@ -249,6 +250,11 @@ const components = {
 				},
 			},
 		},
+	},
+	MuiTypography: {
+		defaultProps: {
+			component: 'span'
+		}
 	},
 	MuiStepper: {
 		styleOverrides: {

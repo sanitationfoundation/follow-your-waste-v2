@@ -14,6 +14,7 @@ const STREAMS = [
 	'organics',
 	'paper',
 	'plastic',
+	'ewaste',
 ]
 const DATA_SCHEMA = {
 	follow: STREAMS,

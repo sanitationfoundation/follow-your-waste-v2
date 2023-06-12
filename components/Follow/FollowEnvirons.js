@@ -14,7 +14,11 @@ const FollowEnvirons = ({ stream }) => {
 	const playAudio = useCallback(
 		environ => {
 			const audioElem = audios.current[environ]
-			if (audioElem) audioElem.play()
+			if (audioElem) {
+				audioElem.play().catch(err => {
+					console.warn(err)
+				})
+			}
 			Object.keys(audios.current)
 				.filter(e => e !== environ)
 				.forEach(pauseAudio)

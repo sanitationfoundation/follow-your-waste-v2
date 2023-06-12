@@ -1,5 +1,5 @@
 export { Choose } from './Choose'
 export { Header } from './Header'
-export { Intro } from './Intro'
+export { Welcome } from './Welcome'
 export { Sort } from './Sort'
 export { Follow } from './Follow'

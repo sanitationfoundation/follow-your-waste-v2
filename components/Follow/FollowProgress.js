@@ -21,8 +21,7 @@ import { getText } from 'selectors'
 
 const FollowProgress = ({ stream, scenes, ...props }) => {
 	const theme = useTheme()
-	const { locale, currentScene, nextScene, prevScene, setCurrentScene } =
-		useStore()
+	const { locale, currentScene, nextScene, prevScene, setCurrentScene } = useStore()
 
 	const handleStepClick = (e, index) => {
 		setCurrentScene(index)
@@ -38,12 +37,16 @@ const FollowProgress = ({ stream, scenes, ...props }) => {
 				left: 0,
 				zIndex: 30,
 				backgroundColor: alpha(theme.palette.secondary.main, 0.15),
+				display: {
+					xs: 'none',
+					sm: 'flex'
+				}
 			}}
 		>
 			<Button
 				size='small'
 				onClick={prevScene}
-				disabled={currentScene === 0}
+				// disabled={currentScene === 0}
 				aria-label='Back'
 				sx={{
 					borderRadius: 0,
@@ -92,7 +95,7 @@ const FollowProgress = ({ stream, scenes, ...props }) => {
 			<Button
 				size='small'
 				onClick={nextScene}
-				disabled={currentScene === scenes.length - 1}
+				disabled={currentScene === scenes.length}
 				aria-label='Next'
 				sx={{
 					borderRadius: 0,

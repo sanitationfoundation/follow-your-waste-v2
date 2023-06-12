@@ -8,7 +8,7 @@ okay,Okay!
 im_ready,I'm ready!
 try_again,Try again
 try_another,Try another
-sort_intro,Discover what happens to your household waste after you toss it in the bin.
+sort_intro,Can you successfully dispose of these common household items?
 sort_prompt,"To start, click on any item and drag it to the bin you think it belongs."
 sort_prompt_alt,"To start, select which material you would like to follow."
 sort_top,Drag and drop an item in the correct bin to begin the journey.
@@ -16,6 +16,7 @@ sort_not_trash,Oh no! This item can be recycled! Please drop the item into a dif
 sort_wrong_recycle,You have misplaced this recyclable item—an easy mistake to make. Try dropping the item into a different bin.
 sort_not_recycle,This piece of trash is not currently recyclable in NYC. Drop the item into a different bin.
 sort_correct_bin,"You have placed this item in the correct bin! Now, learn from a NYC Sanitation Worker what happens next."
+follow_intro,Discover what happens to your household waste after you toss it in the bin.
 mgp,"Metal, Glass, Plastic, Cartons"
 metal,Metal
 glass,Glass
@@ -29,13 +30,19 @@ help_restart,Click the bins to go back and select another item.
 help_arrows,"Click these arrows, or use your arrow keys, to navigate through the journey."
 help_factoid,Look out for these tabs to learn extra facts and vocabulary words.
 help_audio,Use these icons to control the sound.
-final_title,Thanks for playing!
-final_statement,"Remember, the story of this item may have ended but our fight to end waste hasn’t. Before our items even enter the bin, reduce what you can and donate the rest. Small steps can make a big impact."
-final_restart,Follow another item
-final_resources,View additional resources
-final_workers,Meet the Sanitation Workers
-final_lessons,Lesson plans for teachers
-final_about,About the project
+final_follow_title,Thanks for playing!
+final_follow_desc,"Remember, the story of this item may have ended but our fight to end waste hasn’t. Before our items even enter the bin, reduce what you can and donate the rest. Small steps can make a big impact."
+final_sort_title,Nice work!
+final_sort_desc,You successfully sorted the items into the correct bins. Click any item to learn where it goes after it’s thrown away.
+resources_label,View additional resources
+resource_workers,Meet the Sanitation Workers
+resource_lessons,Lesson plans for teachers
+resource_about,About the project
+resource_quiz,Take the quiz
+resource_workers_url,https://www.sanitationfoundation.org/meet-the-workers
+resource_lessons_url,https://www.sanitationfoundation.org/lesson-plans
+resource_about_url,https://www.sanitationfoundation.org/follow-your-waste
+resource_quiz_url,https://docs.google.com/document/d/1Wa0EJHwT7V6kTGv_XlVonVZmtHpDauTgHb8DCBPGFeg/edit
 aria_skip,Skip to main content
 aria_lang_switch,Switch language
 aria_full_screen,Toggle full screen

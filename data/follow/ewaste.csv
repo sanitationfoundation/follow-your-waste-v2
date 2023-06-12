@@ -1,0 +1,12 @@
+slug,color,orientation,animated,looped,environment
+table,blue,width,FALSE,FALSE,
+apartment,blue,width,FALSE,FALSE,traffic
+event,blue,width,FALSE,FALSE,
+eri,blue,width,FALSE,FALSE,traffic
+sorting-ewaste,blue,width,FALSE,FALSE,facility
+inspect,blue,width,FALSE,FALSE,facility
+laptop,blue,width,FALSE,FALSE,facility
+smartphone,blue,width,FALSE,FALSE,facility
+ernie,blue,width,FALSE,FALSE,facility
+sam,blue,width,FALSE,FALSE,facility
+end-ewaste,blue,width,FALSE,FALSE,

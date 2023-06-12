@@ -3,7 +3,7 @@ import useStore from 'hooks'
 import { getSceneByIndex, getSceneSlugs } from 'selectors'
 import { Audio } from 'common/Audio'
 
-const FollowVoices = ({ type, slugs, curr }) => {
+const Voices = ({ type, slugs, curr }) => {
 	const { currentScene, pauseVoice, replayVoice, setReplayVoice } =
 		useStore()
 	
@@ -22,7 +22,11 @@ const FollowVoices = ({ type, slugs, curr }) => {
 	const playAudio = useCallback(
 		slug => {
 			const audioElem = audios.current[slug]
-			if (audioElem) audioElem.play()
+				if (audioElem) {
+					audioElem.play().catch(err => {
+						console.warn(err)
+					})
+				}
 			Object.keys(audios.current)
 				.filter(e => e !== slug)
 				.forEach(pauseAudio)
@@ -33,7 +37,11 @@ const FollowVoices = ({ type, slugs, curr }) => {
 	const pauseAudio = useCallback(
 		slug => {
 			const audioElem = audios.current[slug]
-			if (audioElem) audioElem.pause()
+			try {
+				if (audioElem) audioElem.pause()
+			} catch (err) {
+				console.warn(err)
+			}
 		},
 		[audios],
 	)
@@ -82,4 +90,8 @@ const FollowVoices = ({ type, slugs, curr }) => {
 	)
 }
 
-export default FollowVoices
+Voices.defaultProps = {
+	slugs: []
+}
+
+export default Voices

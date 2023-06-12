@@ -1,13 +1,12 @@
 import * as CONST from '/constants'
 
-/**
- *
- */
 export const getData = type => (type ? CONST.DATA[type] : CONST.DATA)
 export const getBins = () => CONST.BINS
 export const getItems = () => getData('sort').items
+export const getItem = slug => getItems().find(i => i.slug === slug)
 export const getItemSize = item => CONST.ITEM_SIZES[item]
-export const getStreams = () => Object.keys(getData('follow'))
+// export const getStreams = () => Object.keys(getData('follow'))
+export const getStreams = () => CONST.STREAMS
 export const getStreamColor = stream => CONST.STREAM_COLORS[stream]
 export const getScenes = stream =>
 	stream ? getData('follow')[stream] : []
@@ -30,5 +29,4 @@ export const getText = (locale, type, slug, ...key) => {
 		return null
 	}
 }
-
 export const getSections = () => CONST.SECTIONS

@@ -1,3 +1,7 @@
+export { Audio } from './Audio'
+export { Chyron } from './Chyron'
 export { Icon } from './Icon'
+export { Intro } from './Intro'
 export { Layout } from './Layout'
+export { Loader } from './Loader'
 export { Modal } from './Modal'

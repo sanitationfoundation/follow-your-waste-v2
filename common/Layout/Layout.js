@@ -5,7 +5,8 @@ import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 
 import useStore from 'hooks'
-import { Header } from 'components'
+import { Loader } from 'common/Loader'
+import { Header } from 'components/Header'
 
 const Layout = ({ children, sx, HeaderProps, ...props }) => {
 	const fullScreenHandle = useFullScreenHandle()
@@ -38,6 +39,7 @@ const Layout = ({ children, sx, HeaderProps, ...props }) => {
 					}}
 				>
 					<Header onFullScreenClick={onFullScreenClick} {...HeaderProps} />
+					{/*<Loader />*/}
 					{children}
 				</Stack>
 			</FullScreen>
