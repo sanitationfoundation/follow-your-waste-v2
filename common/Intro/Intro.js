@@ -59,47 +59,6 @@ const Intro = ({ section, children, ...props }) => {
 				/>
 			</>
 		</Modal>
-		// <Backdrop
-		// 	sx={{
-		// 		bgcolor: alpha(theme.palette.orange.main, 0.5),
-		// 		zIndex: 50
-		// 	}}
-		// 	open={isChyronOpen}
-		// 	onClick={handleChyronClose}
-		// >
-		// 	<Stack
-		// 		alignItems='center'
-		// 		sx={{
-		// 			width: '100%',
-		// 			height: '100%',
-		// 			position: 'absolute',
-		// 			left: 0,
-		// 			top: 0,
-		// 			zIndex: 20,
-		// 			// pointerEvents: 'none'
-		// 		}}
-		// 	>	
-		// 		<Box my='auto'>
-		// 			<ClickAwayListener onClickAway={handleChyronClose}>
-		// 				<Box>
-		// 					<Chyron
-		// 						open={isChyronOpen}
-		// 						float={false}
-		// 						caption={introCaption}
-		// 						color='yellow'
-		// 						imgSrc={`/images/workers/chief.png`}
-		// 						onClose={handleChyronClose}
-		// 					/>
-		// 					<Voices
-		// 						type={section}
-		// 						slugs={['intro']}
-		// 						curr='intro'
-		// 					/>
-		// 				</Box>
-		// 			</ClickAwayListener>
-		// 		</Box>
-		// 	</Stack>
-		// </Backdrop>
 	)
 }
 

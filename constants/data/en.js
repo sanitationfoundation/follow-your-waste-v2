@@ -307,17 +307,17 @@ export default {
     {
       "slug": "smartphone",
       "label": "Smartphone",
-      "tooltip": ""
+      "tooltip": "Cellphones and laptops can be recycled. But before they can be resold, all personal information and data are removed."
     },
     {
       "slug": "vacuum",
       "label": "Vacuum",
-      "tooltip": ""
+      "tooltip": "Donate or sell vacuums if in working condition. Otherwise, remove any batteries and recycle with metal, glass, plastic & cartons."
     },
     {
       "slug": "tv",
       "label": "Television",
-      "tooltip": ""
+      "tooltip": "Some electronics, such as flat-screen TVs, contain mercury and other toxic materials."
     }
   ],
   "landfill": [
@@ -904,108 +904,112 @@ export default {
   ],
   "system": [
     {
-      "slug": "title",
-      "text": "Follow Your Waste"
+      "slug": "aria_audio_menu",
+      "text": "Voiceover controls"
     },
     {
-      "slug": "tagline",
-      "text": "The everyday story of your waste, as told by New York’s Strongest."
+      "slug": "aria_full_screen",
+      "text": "Toggle full screen"
     },
     {
-      "slug": "loading",
-      "text": "Loading..."
+      "slug": "aria_lang_switch",
+      "text": "Switch language"
     },
     {
-      "slug": "get_started",
-      "text": "Get started!"
+      "slug": "aria_next",
+      "text": "Next"
     },
     {
-      "slug": "lets_go",
-      "text": "Let's go!"
+      "slug": "aria_playback",
+      "text": "Toggle play/pause"
     },
     {
-      "slug": "okay",
-      "text": "Okay!"
+      "slug": "aria_prev",
+      "text": "Previous"
     },
     {
-      "slug": "im_ready",
-      "text": "I'm ready!"
+      "slug": "aria_progress_menu",
+      "text": "Progress controls"
     },
     {
-      "slug": "try_again",
-      "text": "Try again"
+      "slug": "aria_skip",
+      "text": "Skip to main content"
     },
     {
-      "slug": "try_another",
-      "text": "Try another"
+      "slug": "aria_volume",
+      "text": "Toggle volume"
     },
     {
-      "slug": "sort_intro",
-      "text": "Can you successfully dispose of these common household items?"
+      "slug": "ewaste",
+      "text": "E-waste"
     },
     {
-      "slug": "sort_prompt",
-      "text": "To start, click on any item and drag it to the bin you think it belongs."
+      "slug": "final_follow_body",
+      "text": "The story of this item may have ended but our fight to end waste hasn’t. Before our items even enter the bin, remember to reduce what you can and donate the rest. Small steps can make a big impact."
     },
     {
-      "slug": "sort_prompt_alt",
-      "text": "To start, select which material you would like to follow."
+      "slug": "final_follow_follow",
+      "text": "Keep going! Click any item to learn where it goes after it’s thrown away"
     },
     {
-      "slug": "sort_top",
-      "text": "Drag and drop an item in the correct bin to begin the journey."
+      "slug": "final_follow_sort",
+      "text": "Test your knowledge by sorting common items into the correct waste bins"
     },
     {
-      "slug": "sort_not_trash",
-      "text": "Oh no! This item can be recycled! Please drop the item into a different bin."
+      "slug": "final_follow_sort_prompt",
+      "text": "Play the sorting game"
     },
     {
-      "slug": "sort_wrong_recycle",
-      "text": "You have misplaced this recyclable item—an easy mistake to make. Try dropping the item into a different bin."
+      "slug": "final_follow_title",
+      "text": "Journey complete!"
     },
     {
-      "slug": "sort_not_recycle",
-      "text": "This piece of trash is not currently recyclable in NYC. Drop the item into a different bin."
+      "slug": "final_sort_body",
+      "text": "You successfully sorted the items into the correct bins. Before our items even enter the bin, remember to reduce what you can and donate the rest. Small steps can make a big impact."
     },
     {
-      "slug": "sort_correct_bin",
-      "text": "You have placed this item in the correct bin! Now, learn from a NYC Sanitation Worker what happens next."
+      "slug": "final_sort_follow",
+      "text": "Click any item to learn where it goes after it’s thrown away"
+    },
+    {
+      "slug": "final_sort_sort",
+      "text": "Play again to test what you’ve learned"
+    },
+    {
+      "slug": "final_sort_sort_prompt",
+      "text": "Restart the game"
+    },
+    {
+      "slug": "final_sort_title",
+      "text": "Nice work!"
+    },
+    {
+      "slug": "follow",
+      "text": "Follow your waste"
     },
     {
       "slug": "follow_intro",
       "text": "Discover what happens to your household waste after you toss it in the bin."
     },
     {
-      "slug": "mgp",
-      "text": "Metal, Glass, Plastic, Cartons"
-    },
-    {
-      "slug": "metal",
-      "text": "Metal"
+      "slug": "get_started",
+      "text": "Get started!"
     },
     {
       "slug": "glass",
       "text": "Glass"
     },
     {
-      "slug": "plastic",
-      "text": "Plastic"
+      "slug": "help_arrows",
+      "text": "Click these arrows, or use your arrow keys, to navigate through the journey."
     },
     {
-      "slug": "paper",
-      "text": "Paper"
+      "slug": "help_audio",
+      "text": "Use these icons to control the sound."
     },
     {
-      "slug": "landfill",
-      "text": "Landfill"
-    },
-    {
-      "slug": "organics",
-      "text": "Organics"
-    },
-    {
-      "slug": "ewaste",
-      "text": "E-waste"
+      "slug": "help_factoid",
+      "text": "Look out for these tabs to learn extra facts and vocabulary words."
     },
     {
       "slug": "help_progress",
@@ -1016,116 +1020,132 @@ export default {
       "text": "Click the bins to go back and select another item."
     },
     {
-      "slug": "help_arrows",
-      "text": "Click these arrows, or use your arrow keys, to navigate through the journey."
+      "slug": "im_ready",
+      "text": "I'm ready!"
     },
     {
-      "slug": "help_factoid",
-      "text": "Look out for these tabs to learn extra facts and vocabulary words."
+      "slug": "landfill",
+      "text": "Landfill"
     },
     {
-      "slug": "help_audio",
-      "text": "Use these icons to control the sound."
+      "slug": "lets_go",
+      "text": "Let's go!"
     },
     {
-      "slug": "final_follow_title",
-      "text": "Thanks for playing!"
+      "slug": "loading",
+      "text": "Loading..."
     },
     {
-      "slug": "final_follow_desc",
-      "text": "Remember, the story of this item may have ended but our fight to end waste hasn’t. Before our items even enter the bin, reduce what you can and donate the rest. Small steps can make a big impact."
+      "slug": "locale",
+      "text": "English"
     },
     {
-      "slug": "final_sort_title",
-      "text": "Nice work!"
+      "slug": "metal",
+      "text": "Metal"
     },
     {
-      "slug": "final_sort_desc",
-      "text": "You successfully sorted the items into the correct bins. Click any item to learn where it goes after it’s thrown away."
+      "slug": "mgp",
+      "text": "Metal, Glass, Plastic, Cartons"
     },
     {
-      "slug": "resources_label",
-      "text": "View additional resources"
+      "slug": "okay",
+      "text": "Okay!"
     },
     {
-      "slug": "resource_workers",
-      "text": "Meet the Sanitation Workers"
+      "slug": "organics",
+      "text": "Organics"
     },
     {
-      "slug": "resource_lessons",
-      "text": "Lesson plans for teachers"
+      "slug": "paper",
+      "text": "Paper"
     },
     {
-      "slug": "resource_about",
+      "slug": "plastic",
+      "text": "Plastic"
+    },
+    {
+      "slug": "promp_sort",
+      "text": "Test your knowledge by sorting common items into the correct waste bins. "
+    },
+    {
+      "slug": "prompt_follow",
+      "text": "Learn what happens to your waste after it’s collected by a Sanitation Worker."
+    },
+    {
+      "slug": "resource_about_body",
+      "text": "After we toss our waste in the bin, we don’t often think about where it goes next. But, our choices can have a big impact on the cleanliness and health of our environment."
+    },
+    {
+      "slug": "resource_about_title",
       "text": "About the project"
-    },
-    {
-      "slug": "resource_quiz",
-      "text": "Take the quiz"
-    },
-    {
-      "slug": "resource_workers_url",
-      "text": "https://www.sanitationfoundation.org/meet-the-workers"
-    },
-    {
-      "slug": "resource_lessons_url",
-      "text": "https://www.sanitationfoundation.org/lesson-plans"
     },
     {
       "slug": "resource_about_url",
       "text": "https://www.sanitationfoundation.org/follow-your-waste"
     },
     {
+      "slug": "resource_activities_body",
+      "text": "We offer facilitated litter cleanups, waste audits, and assemblies to schools across NYC."
+    },
+    {
+      "slug": "resource_activities_title",
+      "text": "In-school activities"
+    },
+    {
+      "slug": "resource_activities_url",
+      "text": ""
+    },
+    {
+      "slug": "resource_apply_body",
+      "text": "Apply for grants to support a waste diversion project in your school."
+    },
+    {
+      "slug": "resource_apply_title",
+      "text": "Grants and contests"
+    },
+    {
+      "slug": "resource_apply_url",
+      "text": ""
+    },
+    {
+      "slug": "resource_lessons_body",
+      "text": "A comprehensive waste education curriculum for elementary, middle, and high school students. Includes interactive activities about reducing, reusing, recycling, and composting that are easy for teachers to add to their existing lesson plans."
+    },
+    {
+      "slug": "resource_lessons_title",
+      "text": "Lesson plans for teachers"
+    },
+    {
+      "slug": "resource_lessons_url",
+      "text": "https://www.sanitationfoundation.org/lesson-plans"
+    },
+    {
+      "slug": "resource_quiz_body",
+      "text": "Each quiz will test you on a different waste stream. Pass each one to prove you’re a waste-sorting expert."
+    },
+    {
+      "slug": "resource_quiz_title",
+      "text": "Take the quizzes"
+    },
+    {
       "slug": "resource_quiz_url",
       "text": "https://docs.google.com/document/d/1Wa0EJHwT7V6kTGv_XlVonVZmtHpDauTgHb8DCBPGFeg/edit"
     },
     {
-      "slug": "aria_skip",
-      "text": "Skip to main content"
+      "slug": "resource_workers_body",
+      "text": "The NYC Department of Sanitation employees are on the front lines every day, working tirelessly to keep our city healthy, safe, and clean."
     },
     {
-      "slug": "aria_lang_switch",
-      "text": "Switch language"
+      "slug": "resource_workers_title",
+      "text": "Meet the Sanitation workers"
     },
     {
-      "slug": "aria_full_screen",
-      "text": "Toggle full screen"
+      "slug": "resource_workers_url",
+      "text": "https://www.sanitationfoundation.org/meet-the-workers"
     },
     {
-      "slug": "aria_audio_menu",
-      "text": "Voiceover controls"
-    },
-    {
-      "slug": "aria_playback",
-      "text": "Toggle play/pause"
-    },
-    {
-      "slug": "aria_volume",
-      "text": "Toggle volume"
-    },
-    {
-      "slug": "aria_progress_menu",
-      "text": "Progress controls"
-    },
-    {
-      "slug": "aria_prev",
-      "text": "Previous"
-    },
-    {
-      "slug": "aria_next",
-      "text": "Next"
-    },
-    {
-      "slug": "follow",
-      "text": "Follow your waste"
-    },
-    {
-      "slug": "sort",
-      "text": "Sort your waste"
-    },
-    {
-      "slug": "locale",
-      "text": "English"
+      "slug": "resources_label",
+      "text": "Additional resources"
     },
     {
       "slug": "score_right",
@@ -1134,6 +1154,70 @@ export default {
     {
       "slug": "score_wrong",
       "text": "Incorrect"
+    },
+    {
+      "slug": "sort",
+      "text": "Play the sorting game"
+    },
+    {
+      "slug": "sort_correct_bin",
+      "text": "You have placed this item in the correct bin! Now, learn from a NYC Sanitation Worker what happens next."
+    },
+    {
+      "slug": "sort_intro",
+      "text": "Can you successfully dispose of these common household items?"
+    },
+    {
+      "slug": "sort_not_recycle",
+      "text": "This piece of trash is not currently recyclable in NYC. Drop the item into a different bin."
+    },
+    {
+      "slug": "sort_not_trash",
+      "text": "Oh no! This item can be recycled! Please drop the item into a different bin."
+    },
+    {
+      "slug": "sort_prompt",
+      "text": "To start, click on any item and drag it to the bin you think it belongs."
+    },
+    {
+      "slug": "sort_prompt_alt",
+      "text": "To start, select which material you would like to follow."
+    },
+    {
+      "slug": "sort_prompt_item",
+      "text": "Hover over each item for hints about where they should be placed."
+    },
+    {
+      "slug": "sort_top",
+      "text": "Drag and drop an item in the correct bin to begin the journey."
+    },
+    {
+      "slug": "sort_wrong_recycle",
+      "text": "You have misplaced this recyclable item—an easy mistake to make. Try dropping the item into a different bin."
+    },
+    {
+      "slug": "tagline",
+      "text": "The everyday story of your waste, as told by New York’s Strongest."
+    },
+    {
+      "slug": "title",
+      "text": "Follow Your Waste"
+    },
+    {
+      "slug": "try_again",
+      "text": "Try again"
+    },
+    {
+      "slug": "try_another",
+      "text": "Try another"
+    },
+    {
+      "slug": "",
+      "text": "Select a bin to start."
+    },
+    {
+      "slug": "",
+      "text": "Journey complete!"
     }
   ]
 }

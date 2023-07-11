@@ -1,47 +1,79 @@
 slug,text
-title,Siga sus desechos
-tagline,"La historia cotidiana de sus residuos, contada por Strongest de Nueva York."
-loading,Cargando
+aria_audio_menu,Controles de doblaje
+aria_full_screen,Cambiar a pantalla completa
+aria_lang_switch,Cambiar de idioma
+aria_next,Siguiente
+aria_playback,Jugar/pausar
+aria_prev,Anterior
+aria_progress_menu,Controles de avance
+aria_skip,Skip to main content
+aria_volume,Cambiar a volumen
+ewaste,Residuos electrónicos
+final_follow_body,"Puede que la historia de este artículo haya llegado a su fin, pero nuestra lucha para acabar con los desechos no. Antes de que nuestros artículos entren al contenedor, recuerde reducir lo que pueda y donar el resto. Las pequeñas acciones pueden tener un gran impacto. "
+final_follow_follow,¡Siga así! Pulse cualquier artículo para saber adónde va a parar luego de desecharlo
+final_follow_sort,Ponga a prueba sus conocimientos: arroje artículos comunes en los cubos de basura correctos para clasificarlos
+final_follow_sort_prompt,Pruebe el juego de clasificación
+final_follow_title,¡Recorrido completado!
+final_sort_body,"Ha arrojado los artículos en los contenedores correctos. Antes de que nuestros artículos entren al contenedor, recuerde reducir lo que pueda y donar el resto. Las pequeñas acciones pueden tener un gran impacto."
+final_sort_follow,Pulse cualquier artículo para saber adónde va a parar luego de desecharlo.
+final_sort_sort,Vuelva a jugar para comprobar lo que ha aprendido
+final_sort_sort_prompt,Vuelva a empezar el juego
+final_sort_title,¡Buen trabajo!
+follow,Siga sus desechos
+follow_intro,Descubra adónde va a parar la basura doméstica cuando la tira al contenedor.
 get_started,¡Empezar!
-lets_go,¡Vamonos!
-okay,De acuerdo
-im_ready,¡Estoy listo!
-try_again,Inténtalo de nuevo
-try_another,Intente otra opción
-select_intro,Descubra adónde va a parar la basura doméstica cuando la tira al cubo de basura.
-select_prompt,Pulse cualquier elemento para empezar y arrástrelo al cubo de basura que crea adecuado.
-select_prompt_alt,"Para iniciar, seleccione el material al que quisiera hacer seguimiento."
-select_top,Arrastre un artículo al contenedor correcto para empezar el recorrido.
-select_not_trash,"¡Oh no!, este artículo es reciclable. Échelo en otro cubo, por favor."
-select_wrong_recycle,"Ha colocado mal este artículo reciclable, un error muy fácil de cometer. Pruebe echarlo en otro cubo."
-select_not_recycle,Este artículo de basura actualmente no se recicla en la ciudad de Nueva York. Échelo en otro cubo.
-select_correct_bin,"¡Lo ha echado en el cubo correcto! Ahora, conozca lo que sucede a continuación de un trabajador de saneamiento de la ciudad de Nueva York."
-mgp,"Metal, Vidiro, Plástico, y Cartones"
-metal,Metal
 glass,Vidrio
-plastic,Plástico
-paper,Papel
-landfill,Vertedero
-organics,
+help_arrows,Haga clic en las flechas o utilice las teclas de flecha para navegar en el recorrido.
+help_audio,Use estos íconos para regular el volumen.
+help_factoid,Busque estas pestañas para obtener datos adicionales y vocabulario.
 help_progress,"Use la barra de avance para rastrear el recorrido. De igual forma, puede hacer clic en los puntos para saltar entre las escenas."
 help_restart,Haga clic en los contenedores para retroceder y seleccionar otro elemento.
-help_arrows,Haga clic en las flechas o utilice las teclas de flecha para navegar en el recorrido.
-help_factoid,Busque estas pestañas para obtener datos adicionales y vocabulario.
-help_audio,Use estos íconos para regular el volumen.
-final_title,¡Gracias por jugar!
-final_statement,"Recuerde: puede que la historia de este artículo haya llegado a su fin, pero nuestra lucha para acabar con los desechos no. Antes de que nuestros artículos entren al contenedor, reduzca lo que pueda y done el resto. Las pequeñas acciones pueden tener un gran impacto."
-final_restart,Seguir otro artículo
-final_resources,Ver recursos adicionales
-final_workers,Conocer a los trabajadores de sanidad
-final_lessons,Planes de clases para docentes
-final_about,Acerca del proyecto
-skip,Ir al contenido principal
-aria_lang_switch,Cambiar de idioma
-aria_full_screen,Cambiar a pantalla completa
-aria_audio_menu,Controles de doblaje
-aria_playback,Jugar/pausar
-aria_volume,Cambiar a volumen
-aria_progress_menu,Controles de avance
-aria_prev,Anterior
-aria_next,Siguiente
+im_ready,¡Estoy listo!
+landfill,Vertedero
+lets_go,¡Vamonos!
+loading,Cargando
 locale,Español
+metal,Metal
+mgp,"Metal, Vidiro, Plástico, y Cartones"
+okay,De acuerdo
+organics,Organicos
+paper,Papel
+plastic,Plástico
+promp_sort,Ponga a prueba sus conocimientos: arroje artículos comunes en los cubos de basura correctos para clasificarlos.
+prompt_follow,Conozca lo que sucede con sus desechos luego de que los recoge un trabajador de saneamiento.
+resource_about_body,"Cuando tiramos la basura, casi nunca pensamos adónde va a parar. Pero, nuestras elecciones pueden tener un gran impacto en la limpieza y en la sanidad de nuestro ambiente."
+resource_about_title,Acerca del proyecto
+resource_about_url,https://www.sanitationfoundation.org/follow-your-waste
+resource_activities_body,"Ofrecemos campañas de limpieza de basura asistidas, auditorías de residuos y asambleas en escuelas de toda la ciudad de Nueva York."
+resource_activities_title,Actividades escolares
+resource_activities_url,
+resource_apply_body,Solicite subvenciones para apoyar proyectos de separación de residuos en su escuela.
+resource_apply_title,Subvenciones y concursos
+resource_apply_url,
+resource_lessons_body,"Un plan de estudios completo y educativo sobre los residuos para alumnos de primaria, secundaria y preparatoria. Incluye actividades interactivas sobre reducir, reutilizar, reciclar y compostar que los docentes pueden incorporar fácilmente a sus planes de clases."
+resource_lessons_title,Planes de clases para docentes
+resource_lessons_url,https://www.sanitationfoundation.org/lesson-plans
+resource_quiz_body,Cada juego lo pondrá a prueba sobre un flujo de residuos diferente. Pase cada uno para demostrar que es un experto en la clasificación de residuos.
+resource_quiz_title,Juegue con todas las opciones
+resource_quiz_url,https://docs.google.com/document/d/1Wa0EJHwT7V6kTGv_XlVonVZmtHpDauTgHb8DCBPGFeg/edit
+resource_workers_body,"Los empleados del Departamento de Sanidad de la Ciudad de Nueva York están en la primera línea todos los días y trabajan incansablemente para mantener nuestra ciudad sana, segura y limpia."
+resource_workers_title,Conozca a los trabajadores de saneamiento
+resource_workers_url,https://www.sanitationfoundation.org/meet-the-workers
+resources_label,Recursos adicionales:
+score_right,Correct
+score_wrong,Incorrect
+sort,Pruebe el juego de clasificación
+sort_correct_bin,"You have placed this item in the correct bin! Now, learn from a NYC Sanitation Worker what happens next."
+sort_intro,¿Puede desechar estos artículos domésticos comunes correctamente?
+sort_not_recycle,Este artículo de basura actualmente no se recicla en la ciudad de Nueva York. Échelo en otro cubo.
+sort_not_trash,"¡Oh no!, este artículo es reciclable. Échelo en otro cubo, por favor."
+sort_prompt,Pulse cualquier elemento para empezar y arrástrelo al cubo de basura que crea adecuado.
+sort_prompt_alt,"Para iniciar, seleccione el material al que quisiera hacer seguimiento."
+sort_prompt_item,Pase el cursor por encima de cada artículo para obtener pistas sobre dónde debe desecharse.
+sort_top,Arrastre un artículo al contenedor correcto para empezar el recorrido.
+sort_wrong_recycle,"Ha colocado mal este artículo reciclable, un error muy fácil de cometer. Pruebe echarlo en otro cubo."
+skip,Ir al contenido principal
+tagline,"La historia cotidiana de sus residuos, contada por Strongest de Nueva York."
+title,Siga sus desechos
+try_again,Inténtalo de nuevo
+try_another,Intente otra opción

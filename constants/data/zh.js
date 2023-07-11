@@ -1,4 +1,127 @@
 export default {
+  "ewaste": [
+    {
+      "slug": "table",
+      "label": "Outreach",
+      "caption": "大家好，我是卫生局回收与可持续发展处 (Bureau of Recycling and Sustainability, BRS) 的文员 Allie Gumas。BRS 致力于帮助全市居民减少物资用量以及重复使用和循环回收各种废弃物。",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "apartment",
+      "label": "Apartment Pickup",
+      "caption": "纽约市卫生局 (New York City Department of Sanitation, DSNY) 的电子废弃物回收计划旨在从参与计划的公寓大楼中收集各种电子废弃物，如手机、笔记本电脑和电视。DSNY 委托一家名为 ERI 的公司负责收集和运输这些电子废弃物。 ",
+      "vocab1": "",
+      "fact1": "ERI 在全国各地运营着大量经过认证的电子废弃物回收设施。他们致力于以安全和环保的方式重复使用、循环回收、改造、维修或处置废弃的 IT 设备。",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "event",
+      "label": "Drop-off Event",
+      "caption": "如果你居住的公寓大楼没有电子废弃物回收计划，则可以将电子废弃物送往 DSNY 的特殊废弃物投放点或安全处置活动地点。 ",
+      "vocab1": "",
+      "fact1": "特殊废弃物投放点是指供纽约市居民处置某些有害产品的地点。这些地点的开放时间为每周六以及每月最后一个周五的上午 10 点至下午 5 点。",
+      "vocab2": "",
+      "fact2": "每年春季和秋季，DSNY 都会在五大行政区举办安全处置活动，帮助人们处置各种溶剂、汽车、易燃物和电子设备。\n",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "eri",
+      "label": "ERI",
+      "caption": "收集的各种电子废弃物将被送往 ERI 位于新泽西州林肯公园的回收设施。 ",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "sorting-ewaste",
+      "label": "Sorting",
+      "caption": "送达 ERI 林肯公园后，所有电子设备都将按类型进行分捡并称重。 ",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "inspect",
+      "label": "Inspecting",
+      "caption": "称重和登记之后，ERI 员工将对产品的物理外观进行评估，从而确定可以翻新和转售的设备。 ",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "laptop",
+      "label": "Testing Laptops",
+      "caption": "他们会评估、翻新和测试任何可以重新利用的材料，然后在二手市场上出售，让这些材料获得第二次生命。对于所有包含个人信息的电子设备，如笔记本电脑和手机，转售前都将清除其中的数据。",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "smartphone",
+      "label": "Smartphone",
+      "caption": "对于所有无法重新利用的材料，",
+      "vocab1": "",
+      "fact1": "他们会将其拆解并小心地分离出电池，以防引发火灾。这些材料随后将被送往处理设施，从中提取出可用于制造电动汽车和可再生能源储存系统蓄电池的有用材料。",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "ernie",
+      "label": "Shredding Material",
+      "caption": "平板电视和笔记本电脑屏幕将通过 ERI 的粉碎系统“下一代创新和高效的电子装置回收系统” (Electronic Recyclers Next Innovation Efficiency, ERNIE) 进行处理。ERNIE 能够粉碎这些材料，并将其中的汞和其他有毒物质提取和存放在密闭容器中。 ",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "sam",
+      "label": "Robotic Sorting",
+      "caption": "ERI 的机器人系统“超级自动化机器” (Super Automated Machine, SAM) 能够根据商品类型对材料进行深度分类，包括含贵金属（如铜、钢和铝）的电路板。 ",
+      "vocab1": "",
+      "fact1": "这些贵金属和铜将被送往冶炼厂提取金、银、钯和铜，随后用于制造新设备。",
+      "vocab2": "",
+      "fact2": "铝和钢将被送往其他冶炼厂加以回收利用，制成新的产品。",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "end-ewaste",
+      "label": "Recycled!",
+      "caption": "所有这些材料最终都会变成市场上的待售产品。",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    }
+  ],
   "glass": [
     {
       "slug": "garage-glass",
@@ -180,6 +303,21 @@ export default {
       "slug": "soiled-paper",
       "label": "食物弄脏的纸",
       "tooltip": "食物不是唯一可以放进棕色堆肥箱的东西！脏的餐巾纸、盘子和纸巾也属于制造健康堆肥所需的富含碳的干燥“棕色”材料。"
+    },
+    {
+      "slug": "smartphone",
+      "label": "智能手机",
+      "tooltip": "手机和笔记本电脑都可以回收利用，但转售之前应删除其中所有的个人信息和数据。"
+    },
+    {
+      "slug": "vacuum",
+      "label": "真空吸尘器",
+      "tooltip": "将可以正常使用的真空吸尘器捐赠或转售给其他人。如不能正常使用，请在拆除电池后，将其与金属、玻璃、塑料和纸盒一起回收。"
+    },
+    {
+      "slug": "tv",
+      "label": "电视",
+      "tooltip": "平板电视等电子产品含有汞和其他有毒物质。"
     }
   ],
   "landfill": [
@@ -766,96 +904,112 @@ export default {
   ],
   "system": [
     {
-      "slug": "title",
+      "slug": "aria_audio_menu",
+      "text": "画外音控制"
+    },
+    {
+      "slug": "aria_full_screen",
+      "text": "切换全屏"
+    },
+    {
+      "slug": "aria_lang_switch",
+      "text": "语言转换"
+    },
+    {
+      "slug": "aria_next",
+      "text": "下一个"
+    },
+    {
+      "slug": "aria_playback",
+      "text": "切换播放/暂停"
+    },
+    {
+      "slug": "aria_prev",
+      "text": "上一个"
+    },
+    {
+      "slug": "aria_progress_menu",
+      "text": "进度控制"
+    },
+    {
+      "slug": "aria_skip",
+      "text": "跳到主要内容"
+    },
+    {
+      "slug": "aria_volume",
+      "text": "切换音量"
+    },
+    {
+      "slug": "ewaste",
+      "text": "电子废弃物"
+    },
+    {
+      "slug": "final_follow_body",
+      "text": "这个废弃物的旅程可能已经结束，但我们为消除浪费而努力的事业永无止境。在将物品投入垃圾桶之前，请记住：我们可以尽量减少物资消耗，并将剩余物资捐赠给有需要的人。你的小小善举可能产生巨大影响！"
+    },
+    {
+      "slug": "final_follow_follow",
+      "text": "继续加油！点击任何废弃物，了解其被丢弃后的去向"
+    },
+    {
+      "slug": "final_follow_sort",
+      "text": "试着将常见废弃物分类到正确的垃圾桶中，以此检验自己的垃圾分类知识"
+    },
+    {
+      "slug": "final_follow_sort_prompt",
+      "text": "垃圾分类游戏"
+    },
+    {
+      "slug": "final_follow_title",
+      "text": "旅程结束！"
+    },
+    {
+      "slug": "final_sort_body",
+      "text": "你已成功将废弃物分类到正确的垃圾桶中。在将物品投入垃圾桶之前，请记住：我们可以尽量减少物资消耗，并将剩余物资捐赠给有需要的人。你的小小善举可能产生巨大影响！"
+    },
+    {
+      "slug": "final_sort_follow",
+      "text": "点击任何废弃物，了解其被丢弃后的去向"
+    },
+    {
+      "slug": "final_sort_sort",
+      "text": "再玩一次，测试你学到的知识"
+    },
+    {
+      "slug": "final_sort_sort_prompt",
+      "text": "重新开始游戏"
+    },
+    {
+      "slug": "final_sort_title",
+      "text": "做得不错！"
+    },
+    {
+      "slug": "follow",
       "text": "跟着废弃物去旅行"
     },
     {
-      "slug": "tagline",
-      "text": "纽约最坚强的故事讲述了您每天浪费的故事。"
-    },
-    {
-      "slug": "loading",
-      "text": "炉料"
+      "slug": "follow_intro",
+      "text": "了解家庭垃圾被扔进垃圾桶之后会发生什么。"
     },
     {
       "slug": "get_started",
       "text": "开始吧！"
     },
     {
-      "slug": "lets_go",
-      "text": "我们走吧！"
-    },
-    {
-      "slug": "okay",
-      "text": "好的"
-    },
-    {
-      "slug": "im_ready",
-      "text": "我准备好了！"
-    },
-    {
-      "slug": "try_again",
-      "text": "再试一次"
-    },
-    {
-      "slug": "try_another",
-      "text": "尝试另一种废弃物"
-    },
-    {
-      "slug": "select_intro",
-      "text": "探索您把生活垃圾扔进垃圾箱后它会发生什么。"
-    },
-    {
-      "slug": "select_prompt",
-      "text": "点击任何物品并将其拖进您认为它属于的垃圾箱。"
-    },
-    {
-      "slug": "select_prompt_alt",
-      "text": "要开始，请选择要跟随的材料。"
-    },
-    {
-      "slug": "select_top",
-      "text": "将物品拖放到正确的垃圾箱中，开始旅程。"
-    },
-    {
-      "slug": "select_not_trash",
-      "text": "哦，不！此物品是可以回收的！请将此物品放到其他垃圾箱里。"
-    },
-    {
-      "slug": "select_wrong_recycle",
-      "text": "您将此可回收物放错了位置 — 这是很容易犯的错误。尝试将此物品放到其他垃圾箱里。您将此可回收物放错了位置 — 这是很容易犯的错误。尝试将此物品放到其他垃圾箱里。"
-    },
-    {
-      "slug": "select_not_recycle",
-      "text": "目前纽约市还不能回收这种垃圾。将此物品放到其他垃圾箱里。"
-    },
-    {
-      "slug": "select_correct_bin",
-      "text": "您已经将此物品放入了正确的垃圾箱！现在，从纽约市的一位环卫工人那里了解一下接下来会发生什么。"
-    },
-    {
-      "slug": "mgp",
-      "text": "金属、玻璃、塑料"
-    },
-    {
-      "slug": "metal",
-      "text": "金属"
-    },
-    {
       "slug": "glass",
       "text": "玻璃"
     },
     {
-      "slug": "plastic",
-      "text": "塑料"
+      "slug": "help_arrows",
+      "text": "单击这些箭头，或使用方向键在旅程中导航。"
     },
     {
-      "slug": "paper",
-      "text": "纸张"
+      "slug": "help_audio",
+      "text": "使用这些图标来控制声音。"
     },
     {
-      "slug": "landfill",
-      "text": "垃圾填埋场"
+      "slug": "help_factoid",
+      "text": "注意这些标签，学习额外的事实和词汇。"
     },
     {
       "slug": "help_progress",
@@ -866,84 +1020,196 @@ export default {
       "text": "单击垃圾箱返回，并选择其他物品。"
     },
     {
-      "slug": "help_arrows",
-      "text": "单击这些箭头，或使用方向键在旅程中导航。"
+      "slug": "im_ready",
+      "text": "我准备好了！"
     },
     {
-      "slug": "help_factoid",
-      "text": "注意这些标签，学习额外的事实和词汇。"
+      "slug": "landfill",
+      "text": "垃圾填埋场"
     },
     {
-      "slug": "help_audio",
-      "text": "使用这些图标来控制声音。"
+      "slug": "lets_go",
+      "text": "我们走吧！"
     },
     {
-      "slug": "final_title",
-      "text": "感谢您的参与！"
-    },
-    {
-      "slug": "final_statement",
-      "text": "记住，这个物品的旅程可能已经结束，但我们为消除浪费而进行的斗争还没有结束。在我们的物品进入垃圾箱之前，请尽量减少物资消耗，再捐出剩下的。小步骤可以产生大影响。"
-    },
-    {
-      "slug": "final_restart",
-      "text": "跟随另一个物品"
-    },
-    {
-      "slug": "final_resources",
-      "text": "查看额外资源"
-    },
-    {
-      "slug": "final_workers",
-      "text": "会见环卫工人"
-    },
-    {
-      "slug": "final_lessons",
-      "text": "教师的课程计划"
-    },
-    {
-      "slug": "final_about",
-      "text": "关于这个项目"
-    },
-    {
-      "slug": "aria_skip",
-      "text": "跳到主要内容"
-    },
-    {
-      "slug": "aria_lang_switch",
-      "text": "语言转换"
-    },
-    {
-      "slug": "aria_full_screen",
-      "text": "切换全屏"
-    },
-    {
-      "slug": "aria_audio_menu",
-      "text": "画外音控制"
-    },
-    {
-      "slug": "aria_playback",
-      "text": "切换播放/暂停"
-    },
-    {
-      "slug": "aria_volume",
-      "text": "切换音量"
-    },
-    {
-      "slug": "aria_progress_menu",
-      "text": "进度控制"
-    },
-    {
-      "slug": "aria_prev",
-      "text": "上一个"
-    },
-    {
-      "slug": "aria_next",
-      "text": "下一个"
+      "slug": "loading",
+      "text": "炉料"
     },
     {
       "slug": "locale",
       "text": "中国人"
+    },
+    {
+      "slug": "metal",
+      "text": "金属"
+    },
+    {
+      "slug": "mgp",
+      "text": "金属、玻璃、塑料"
+    },
+    {
+      "slug": "okay",
+      "text": "好的"
+    },
+    {
+      "slug": "organics",
+      "text": "有机废物"
+    },
+    {
+      "slug": "paper",
+      "text": "纸张"
+    },
+    {
+      "slug": "plastic",
+      "text": "塑料"
+    },
+    {
+      "slug": "promp_sort",
+      "text": "你懂得垃圾分类吗？试着将常见废弃物正确分类到相应垃圾桶中。"
+    },
+    {
+      "slug": "prompt_follow",
+      "text": "了解废弃物被环卫工人收走之后会发生什么。"
+    },
+    {
+      "slug": "resource_about_body",
+      "text": "将废弃物扔进垃圾桶之后，我们往往不会考虑它的去向。但我们的选择会对环境的清洁和健康产生重大影响。"
+    },
+    {
+      "slug": "resource_about_title",
+      "text": "关于该项目"
+    },
+    {
+      "slug": "resource_about_url",
+      "text": "https://www.sanitationfoundation.org/follow-your-waste"
+    },
+    {
+      "slug": "resource_activities_body",
+      "text": "我们为纽约市各学校提供垃圾清理、废弃物检查和集会活动。 "
+    },
+    {
+      "slug": "resource_activities_title",
+      "text": "我们为纽约市各学校提供垃圾清理、废弃物检查和集会活动。"
+    },
+    {
+      "slug": "resource_activities_url",
+      "text": ""
+    },
+    {
+      "slug": "resource_apply_body",
+      "text": "为学校的废弃物转移项目申请拨款支持。"
+    },
+    {
+      "slug": "resource_apply_title",
+      "text": "拨款和竞赛活动"
+    },
+    {
+      "slug": "resource_apply_url",
+      "text": ""
+    },
+    {
+      "slug": "resource_lessons_body",
+      "text": "面向小学、初中和高中学生的综合型废弃物教育课程。其中包括与减少物资用量、重复使用和循环回收废弃物以及堆肥的互动活动，便于教师将其加入现有课程计划中。"
+    },
+    {
+      "slug": "resource_lessons_title",
+      "text": "教师的课程计划"
+    },
+    {
+      "slug": "resource_lessons_url",
+      "text": "https://www.sanitationfoundation.org/lesson-plans"
+    },
+    {
+      "slug": "resource_quiz_body",
+      "text": "每个测验将测试不同的废弃物类别。每通过一个测验，都可证明你是相应类别废弃物的分类专家。"
+    },
+    {
+      "slug": "resource_quiz_title",
+      "text": "参加测验"
+    },
+    {
+      "slug": "resource_quiz_url",
+      "text": "https://docs.google.com/document/d/1Wa0EJHwT7V6kTGv_XlVonVZmtHpDauTgHb8DCBPGFeg/edit"
+    },
+    {
+      "slug": "resource_workers_body",
+      "text": "纽约市卫生局的工作人员每天都奋战在一线，竭尽所能地让我们这座城市保持健康、安全和整洁。"
+    },
+    {
+      "slug": "resource_workers_title",
+      "text": "走近环卫工人"
+    },
+    {
+      "slug": "resource_workers_url",
+      "text": "https://www.sanitationfoundation.org/meet-the-workers"
+    },
+    {
+      "slug": "resources_label",
+      "text": "其他资源："
+    },
+    {
+      "slug": "score_right",
+      "text": "Correct"
+    },
+    {
+      "slug": "score_wrong",
+      "text": "Incorrect"
+    },
+    {
+      "slug": "sort",
+      "text": "垃圾分类游戏"
+    },
+    {
+      "slug": "sort_correct_bin",
+      "text": "您已经将此物品放入了正确的垃圾箱！现在，从纽约市的一位环卫工人那里了解一下接下来会发生什么。"
+    },
+    {
+      "slug": "sort_intro",
+      "text": "探索您把生活垃圾扔进垃圾箱后它会发生什么。"
+    },
+    {
+      "slug": "sort_not_recycle",
+      "text": "目前纽约市还不能回收这种垃圾。将此物品放到其他垃圾箱里。"
+    },
+    {
+      "slug": "sort_not_trash",
+      "text": "哦，不！此物品是可以回收的！请将此物品放到其他垃圾箱里。"
+    },
+    {
+      "slug": "sort_prompt",
+      "text": "点击任何物品并将其拖进您认为它属于的垃圾箱。"
+    },
+    {
+      "slug": "sort_prompt_alt",
+      "text": "要开始，请选择要跟随的材料。"
+    },
+    {
+      "slug": "sort_prompt_item",
+      "text": "将鼠标悬停在每个废弃物上，即可查看处置提示。"
+    },
+    {
+      "slug": "sort_top",
+      "text": "将物品拖放到正确的垃圾箱中，开始旅程。"
+    },
+    {
+      "slug": "sort_wrong_recycle",
+      "text": "您将此可回收物放错了位置 — 这是很容易犯的错误。尝试将此物品放到其他垃圾箱里。您将此可回收物放错了位置 — 这是很容易犯的错误。尝试将此物品放到其他垃圾箱里。"
+    },
+    {
+      "slug": "tagline",
+      "text": "纽约最坚强的故事讲述了您每天浪费的故事。"
+    },
+    {
+      "slug": "title",
+      "text": "跟着废弃物去旅行"
+    },
+    {
+      "slug": "try_again",
+      "text": "再试一次"
+    },
+    {
+      "slug": "try_another",
+      "text": "尝试另一种废弃物"
     }
   ]
 }

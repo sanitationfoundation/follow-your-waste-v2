@@ -100,7 +100,7 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 					{subPage ? <HeaderBackButton /> : null}
 				</Stack>
 
-				{subPage === 'sort' ?
+				{subPage && subPage.includes('sort') ?
 					<SortScore
 						sx={{
 							display: {

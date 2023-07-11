@@ -23,33 +23,15 @@ const FollowEnd = ({ stream, current, ...props }) => {
 	const resources = ['workers', 'lessons', 'about', 'quiz']
 
 	return (
-		<Box
+		<Final
+			open={true}
+			section='follow'
 			sx={{
 				maxWidth: '100vw',
 				maxHeight: '100vh',
 				flex: '0 0 100vw',
 			}}
-			{...props}
-		>
-			<Stack
-				sx={{
-					height: '100%',
-					overflowY: 'scroll',
-				}}
-			>	
-				<Box py={12} my='auto'>
-					<Stack
-						sx={{
-							height: '100%'
-						}}
-					>
-						<Final
-							section='follow'
-						/>
-					</Stack>
-				</Box>	
-			</Stack>
-		</Box>
+		/>
 	)
 }
 

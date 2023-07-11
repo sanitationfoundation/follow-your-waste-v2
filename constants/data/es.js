@@ -1,4 +1,127 @@
 export default {
+  "ewaste": [
+    {
+      "slug": "table",
+      "label": "",
+      "caption": "Hola, soy Allie Gumas, empleada civil de la Oficina de Reciclaje y Sostenibilidad (BRS) del Departamento de Sanidad. En la BRS, trabajamos por toda la ciudad para ayudar a los residentes a reducir, reutilizar y reciclar.",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "apartment",
+      "label": "",
+      "caption": "Los residuos electrónicos, como los teléfonos móviles, las computadoras portátiles y los televisores, se recogen en los edificios de apartamentos inscritos en el programa de reciclaje de dispositivos electrónicos del Departamento de Sanidad de la Ciudad de Nueva York (DSNY). El DSNY trabaja con una empresa llamada ERI, que se encarga de recoger y transportar los residuos electrónicos.",
+      "vocab1": "ERI",
+      "fact1": "ERI es una empresa que opera numerosas instalaciones de tratamiento de residuos electrónicos certificadas en todo el país. Se dedican a reutilizar, reciclar, resignificar, reparar o desechar equipos de informática no deseados de forma segura y responsable con el medioambiente.",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "event",
+      "label": "",
+      "caption": "Si su edificio de apartamentos no tiene un programa de reciclaje de dispositivos electrónicos, puede llevar los residuos electrónicos a un sitio de entrega de desechos especiales del DSNY o a un evento de desechos SAFE. ",
+      "vocab1": "",
+      "fact1": "Los sitios de entrega de desechos especiales son lugares donde los residentes de Nueva York pueden entregar determinados productos nocivos. Los sitios están abiertos de 10 a. m. a 5 p. m. todos los sábados y el último viernes de cada mes.",
+      "vocab2": "",
+      "fact2": "Cada primavera y otoño, el DSNY organiza eventos de eliminación segura de desechos solventes, automotores, inflamables y electrónicos (SAFE) en los cinco condados.",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "eri",
+      "label": "",
+      "caption": "Luego de la recolección, los residuos electrónicos se trasladan a las instalaciones de procesamiento de ERI en Lincoln Park, Nueva Jersey. ",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "sorting-ewaste",
+      "label": "",
+      "caption": "Una vez que llegan a ERI Lincoln Park, todos los equipos electrónicos se separan por tipo y se pesan.",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "inspect",
+      "label": "",
+      "caption": "Luego de pesarlos y registrarlos, un empleado de ERI califica el estado del producto para identificar los equipos que pueden ser reacondicionados y revendidos. ",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "laptop",
+      "label": "",
+      "caption": "Todos los materiales reutilizables se evalúan, reacondicionan y prueban. Luego, se pueden vender en el mercado de reutilizables y, de este modo, se les puede dar otra utilidad. Antes de revender los dispositivos electrónicos, se vacían los datos de aquellos que contengan información personal, como las computadoras portátiles y los teléfonos móviles.",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "smartphone",
+      "label": "",
+      "caption": "Se separan los materiales no reutilizables. ",
+      "vocab1": "",
+      "fact1": "Las baterías se separan cuidadosamente para evitar incendios. Y se envían a los procesadores, donde se extraen los materiales necesarios para las baterías de los vehículos eléctricos y para los sistemas de almacenamiento de energías renovables.",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "ernie",
+      "label": "",
+      "caption": "Los televisores de pantalla plana y las pantallas de las computadoras portátiles se envían al sistema de trituración de ERI, también conocido como ERNIE (Electronic Recyclers Next Innovation Efficiency). El procesador ERNIE tritura los artículos y almacena el mercurio y otros materiales tóxicos en un contenedor hermético.",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "sam",
+      "label": "",
+      "caption": "El sistema robotizado de ERI, SAM (Super Automated Machine), también clasifica los materiales en función del tipo de materia prima, incluidas las placas de circuitos, que contienen metales preciosos, como cobre, acero y aluminio.",
+      "vocab1": "",
+      "fact1": "Los metales preciosos y el cobre se envían a hornos de fundición donde se recuperan oro, plata, paladio y cobre para utilizarlos en la fabricación de dispositivos nuevos.",
+      "vocab2": "",
+      "fact2": "El aluminio y el acero se envían a otros hornos de fundición donde se reciclan y se usan para productos nuevos.",
+      "vocab3": "",
+      "fact3": ""
+    },
+    {
+      "slug": "end-ewaste",
+      "label": "",
+      "caption": "Todos estos materiales terminan formando parte de los productos que se venden hoy en día en el mercado.",
+      "vocab1": "",
+      "fact1": "",
+      "vocab2": "",
+      "fact2": "",
+      "vocab3": "",
+      "fact3": ""
+    }
+  ],
   "glass": [
     {
       "slug": "garage-glass",
@@ -180,6 +303,21 @@ export default {
       "slug": "soiled-paper",
       "label": "Papel con restos de alimentos",
       "tooltip": "¡La comida no es lo único que puede ir en el contenedor de compost marrón! Las servilletas, los platos y las toallas de papel sucias son parte del “material marrón\" seco y rico en carbono que sirve para hacer un compost saludable."
+    },
+    {
+      "slug": "smartphone",
+      "label": "Teléfono inteligente",
+      "tooltip": "Los teléfonos móviles y las computadoras portátiles pueden reciclarse. Pero, antes de revenderlos, se elimina toda la información y los datos personales."
+    },
+    {
+      "slug": "vacuum",
+      "label": "Aspiradora",
+      "tooltip": "Done o venda las aspiradoras si están en buen estado. De lo contrario, retire las pilas y recicle junto con metales, vidrios, plásticos y cartones."
+    },
+    {
+      "slug": "tv",
+      "label": "Televisor",
+      "tooltip": "Algunos dispositivos electrónicos, como los televisores de pantalla plana, contienen mercurio y otros materiales tóxicos."
     }
   ],
   "landfill": [
@@ -766,100 +904,112 @@ export default {
   ],
   "system": [
     {
-      "slug": "title",
+      "slug": "aria_audio_menu",
+      "text": "Controles de doblaje"
+    },
+    {
+      "slug": "aria_full_screen",
+      "text": "Cambiar a pantalla completa"
+    },
+    {
+      "slug": "aria_lang_switch",
+      "text": "Cambiar de idioma"
+    },
+    {
+      "slug": "aria_next",
+      "text": "Siguiente"
+    },
+    {
+      "slug": "aria_playback",
+      "text": "Jugar/pausar"
+    },
+    {
+      "slug": "aria_prev",
+      "text": "Anterior"
+    },
+    {
+      "slug": "aria_progress_menu",
+      "text": "Controles de avance"
+    },
+    {
+      "slug": "aria_skip",
+      "text": "Skip to main content"
+    },
+    {
+      "slug": "aria_volume",
+      "text": "Cambiar a volumen"
+    },
+    {
+      "slug": "ewaste",
+      "text": "Residuos electrónicos"
+    },
+    {
+      "slug": "final_follow_body",
+      "text": "Puede que la historia de este artículo haya llegado a su fin, pero nuestra lucha para acabar con los desechos no. Antes de que nuestros artículos entren al contenedor, recuerde reducir lo que pueda y donar el resto. Las pequeñas acciones pueden tener un gran impacto. "
+    },
+    {
+      "slug": "final_follow_follow",
+      "text": "¡Siga así! Pulse cualquier artículo para saber adónde va a parar luego de desecharlo"
+    },
+    {
+      "slug": "final_follow_sort",
+      "text": "Ponga a prueba sus conocimientos: arroje artículos comunes en los cubos de basura correctos para clasificarlos"
+    },
+    {
+      "slug": "final_follow_sort_prompt",
+      "text": "Pruebe el juego de clasificación"
+    },
+    {
+      "slug": "final_follow_title",
+      "text": "¡Recorrido completado!"
+    },
+    {
+      "slug": "final_sort_body",
+      "text": "Ha arrojado los artículos en los contenedores correctos. Antes de que nuestros artículos entren al contenedor, recuerde reducir lo que pueda y donar el resto. Las pequeñas acciones pueden tener un gran impacto."
+    },
+    {
+      "slug": "final_sort_follow",
+      "text": "Pulse cualquier artículo para saber adónde va a parar luego de desecharlo."
+    },
+    {
+      "slug": "final_sort_sort",
+      "text": "Vuelva a jugar para comprobar lo que ha aprendido"
+    },
+    {
+      "slug": "final_sort_sort_prompt",
+      "text": "Vuelva a empezar el juego"
+    },
+    {
+      "slug": "final_sort_title",
+      "text": "¡Buen trabajo!"
+    },
+    {
+      "slug": "follow",
       "text": "Siga sus desechos"
     },
     {
-      "slug": "tagline",
-      "text": "La historia cotidiana de sus residuos, contada por Strongest de Nueva York."
-    },
-    {
-      "slug": "loading",
-      "text": "Cargando"
+      "slug": "follow_intro",
+      "text": "Descubra adónde va a parar la basura doméstica cuando la tira al contenedor."
     },
     {
       "slug": "get_started",
       "text": "¡Empezar!"
     },
     {
-      "slug": "lets_go",
-      "text": "¡Vamonos!"
-    },
-    {
-      "slug": "okay",
-      "text": "De acuerdo"
-    },
-    {
-      "slug": "im_ready",
-      "text": "¡Estoy listo!"
-    },
-    {
-      "slug": "try_again",
-      "text": "Inténtalo de nuevo"
-    },
-    {
-      "slug": "try_another",
-      "text": "Intente otra opción"
-    },
-    {
-      "slug": "select_intro",
-      "text": "Descubra adónde va a parar la basura doméstica cuando la tira al cubo de basura."
-    },
-    {
-      "slug": "select_prompt",
-      "text": "Pulse cualquier elemento para empezar y arrástrelo al cubo de basura que crea adecuado."
-    },
-    {
-      "slug": "select_prompt_alt",
-      "text": "Para iniciar, seleccione el material al que quisiera hacer seguimiento."
-    },
-    {
-      "slug": "select_top",
-      "text": "Arrastre un artículo al contenedor correcto para empezar el recorrido."
-    },
-    {
-      "slug": "select_not_trash",
-      "text": "¡Oh no!, este artículo es reciclable. Échelo en otro cubo, por favor."
-    },
-    {
-      "slug": "select_wrong_recycle",
-      "text": "Ha colocado mal este artículo reciclable, un error muy fácil de cometer. Pruebe echarlo en otro cubo."
-    },
-    {
-      "slug": "select_not_recycle",
-      "text": "Este artículo de basura actualmente no se recicla en la ciudad de Nueva York. Échelo en otro cubo."
-    },
-    {
-      "slug": "select_correct_bin",
-      "text": "¡Lo ha echado en el cubo correcto! Ahora, conozca lo que sucede a continuación de un trabajador de saneamiento de la ciudad de Nueva York."
-    },
-    {
-      "slug": "mgp",
-      "text": "Metal, Vidiro, Plástico, y Cartones"
-    },
-    {
-      "slug": "metal",
-      "text": "Metal"
-    },
-    {
       "slug": "glass",
       "text": "Vidrio"
     },
     {
-      "slug": "plastic",
-      "text": "Plástico"
+      "slug": "help_arrows",
+      "text": "Haga clic en las flechas o utilice las teclas de flecha para navegar en el recorrido."
     },
     {
-      "slug": "paper",
-      "text": "Papel"
+      "slug": "help_audio",
+      "text": "Use estos íconos para regular el volumen."
     },
     {
-      "slug": "landfill",
-      "text": "Vertedero"
-    },
-    {
-      "slug": "organics",
-      "text": ""
+      "slug": "help_factoid",
+      "text": "Busque estas pestañas para obtener datos adicionales y vocabulario."
     },
     {
       "slug": "help_progress",
@@ -870,84 +1020,200 @@ export default {
       "text": "Haga clic en los contenedores para retroceder y seleccionar otro elemento."
     },
     {
-      "slug": "help_arrows",
-      "text": "Haga clic en las flechas o utilice las teclas de flecha para navegar en el recorrido."
+      "slug": "im_ready",
+      "text": "¡Estoy listo!"
     },
     {
-      "slug": "help_factoid",
-      "text": "Busque estas pestañas para obtener datos adicionales y vocabulario."
+      "slug": "landfill",
+      "text": "Vertedero"
     },
     {
-      "slug": "help_audio",
-      "text": "Use estos íconos para regular el volumen."
+      "slug": "lets_go",
+      "text": "¡Vamonos!"
     },
     {
-      "slug": "final_title",
-      "text": "¡Gracias por jugar!"
+      "slug": "loading",
+      "text": "Cargando"
     },
     {
-      "slug": "final_statement",
-      "text": "Recuerde: puede que la historia de este artículo haya llegado a su fin, pero nuestra lucha para acabar con los desechos no. Antes de que nuestros artículos entren al contenedor, reduzca lo que pueda y done el resto. Las pequeñas acciones pueden tener un gran impacto."
+      "slug": "locale",
+      "text": "Español"
     },
     {
-      "slug": "final_restart",
-      "text": "Seguir otro artículo"
+      "slug": "metal",
+      "text": "Metal"
     },
     {
-      "slug": "final_resources",
-      "text": "Ver recursos adicionales"
+      "slug": "mgp",
+      "text": "Metal, Vidiro, Plástico, y Cartones"
     },
     {
-      "slug": "final_workers",
-      "text": "Conocer a los trabajadores de sanidad"
+      "slug": "okay",
+      "text": "De acuerdo"
     },
     {
-      "slug": "final_lessons",
+      "slug": "organics",
+      "text": "Organicos"
+    },
+    {
+      "slug": "paper",
+      "text": "Papel"
+    },
+    {
+      "slug": "plastic",
+      "text": "Plástico"
+    },
+    {
+      "slug": "promp_sort",
+      "text": "Ponga a prueba sus conocimientos: arroje artículos comunes en los cubos de basura correctos para clasificarlos."
+    },
+    {
+      "slug": "prompt_follow",
+      "text": "Conozca lo que sucede con sus desechos luego de que los recoge un trabajador de saneamiento."
+    },
+    {
+      "slug": "resource_about_body",
+      "text": "Cuando tiramos la basura, casi nunca pensamos adónde va a parar. Pero, nuestras elecciones pueden tener un gran impacto en la limpieza y en la sanidad de nuestro ambiente."
+    },
+    {
+      "slug": "resource_about_title",
+      "text": "Acerca del proyecto"
+    },
+    {
+      "slug": "resource_about_url",
+      "text": "https://www.sanitationfoundation.org/follow-your-waste"
+    },
+    {
+      "slug": "resource_activities_body",
+      "text": "Ofrecemos campañas de limpieza de basura asistidas, auditorías de residuos y asambleas en escuelas de toda la ciudad de Nueva York."
+    },
+    {
+      "slug": "resource_activities_title",
+      "text": "Actividades escolares"
+    },
+    {
+      "slug": "resource_activities_url",
+      "text": ""
+    },
+    {
+      "slug": "resource_apply_body",
+      "text": "Solicite subvenciones para apoyar proyectos de separación de residuos en su escuela."
+    },
+    {
+      "slug": "resource_apply_title",
+      "text": "Subvenciones y concursos"
+    },
+    {
+      "slug": "resource_apply_url",
+      "text": ""
+    },
+    {
+      "slug": "resource_lessons_body",
+      "text": "Un plan de estudios completo y educativo sobre los residuos para alumnos de primaria, secundaria y preparatoria. Incluye actividades interactivas sobre reducir, reutilizar, reciclar y compostar que los docentes pueden incorporar fácilmente a sus planes de clases."
+    },
+    {
+      "slug": "resource_lessons_title",
       "text": "Planes de clases para docentes"
     },
     {
-      "slug": "final_about",
-      "text": "Acerca del proyecto"
+      "slug": "resource_lessons_url",
+      "text": "https://www.sanitationfoundation.org/lesson-plans"
+    },
+    {
+      "slug": "resource_quiz_body",
+      "text": "Cada juego lo pondrá a prueba sobre un flujo de residuos diferente. Pase cada uno para demostrar que es un experto en la clasificación de residuos."
+    },
+    {
+      "slug": "resource_quiz_title",
+      "text": "Juegue con todas las opciones"
+    },
+    {
+      "slug": "resource_quiz_url",
+      "text": "https://docs.google.com/document/d/1Wa0EJHwT7V6kTGv_XlVonVZmtHpDauTgHb8DCBPGFeg/edit"
+    },
+    {
+      "slug": "resource_workers_body",
+      "text": "Los empleados del Departamento de Sanidad de la Ciudad de Nueva York están en la primera línea todos los días y trabajan incansablemente para mantener nuestra ciudad sana, segura y limpia."
+    },
+    {
+      "slug": "resource_workers_title",
+      "text": "Conozca a los trabajadores de saneamiento"
+    },
+    {
+      "slug": "resource_workers_url",
+      "text": "https://www.sanitationfoundation.org/meet-the-workers"
+    },
+    {
+      "slug": "resources_label",
+      "text": "Recursos adicionales:"
+    },
+    {
+      "slug": "score_right",
+      "text": "Correct"
+    },
+    {
+      "slug": "score_wrong",
+      "text": "Incorrect"
+    },
+    {
+      "slug": "sort",
+      "text": "Pruebe el juego de clasificación"
+    },
+    {
+      "slug": "sort_correct_bin",
+      "text": "You have placed this item in the correct bin! Now, learn from a NYC Sanitation Worker what happens next."
+    },
+    {
+      "slug": "sort_intro",
+      "text": "¿Puede desechar estos artículos domésticos comunes correctamente?"
+    },
+    {
+      "slug": "sort_not_recycle",
+      "text": "Este artículo de basura actualmente no se recicla en la ciudad de Nueva York. Échelo en otro cubo."
+    },
+    {
+      "slug": "sort_not_trash",
+      "text": "¡Oh no!, este artículo es reciclable. Échelo en otro cubo, por favor."
+    },
+    {
+      "slug": "sort_prompt",
+      "text": "Pulse cualquier elemento para empezar y arrástrelo al cubo de basura que crea adecuado."
+    },
+    {
+      "slug": "sort_prompt_alt",
+      "text": "Para iniciar, seleccione el material al que quisiera hacer seguimiento."
+    },
+    {
+      "slug": "sort_prompt_item",
+      "text": "Pase el cursor por encima de cada artículo para obtener pistas sobre dónde debe desecharse."
+    },
+    {
+      "slug": "sort_top",
+      "text": "Arrastre un artículo al contenedor correcto para empezar el recorrido."
+    },
+    {
+      "slug": "sort_wrong_recycle",
+      "text": "Ha colocado mal este artículo reciclable, un error muy fácil de cometer. Pruebe echarlo en otro cubo."
     },
     {
       "slug": "skip",
       "text": "Ir al contenido principal"
     },
     {
-      "slug": "aria_lang_switch",
-      "text": "Cambiar de idioma"
+      "slug": "tagline",
+      "text": "La historia cotidiana de sus residuos, contada por Strongest de Nueva York."
     },
     {
-      "slug": "aria_full_screen",
-      "text": "Cambiar a pantalla completa"
+      "slug": "title",
+      "text": "Siga sus desechos"
     },
     {
-      "slug": "aria_audio_menu",
-      "text": "Controles de doblaje"
+      "slug": "try_again",
+      "text": "Inténtalo de nuevo"
     },
     {
-      "slug": "aria_playback",
-      "text": "Jugar/pausar"
-    },
-    {
-      "slug": "aria_volume",
-      "text": "Cambiar a volumen"
-    },
-    {
-      "slug": "aria_progress_menu",
-      "text": "Controles de avance"
-    },
-    {
-      "slug": "aria_prev",
-      "text": "Anterior"
-    },
-    {
-      "slug": "aria_next",
-      "text": "Siguiente"
-    },
-    {
-      "slug": "locale",
-      "text": "Español"
+      "slug": "try_another",
+      "text": "Intente otra opción"
     }
   ]
 }

@@ -69,7 +69,7 @@ const FollowProgress = ({ stream, scenes, ...props }) => {
 					<Step key={i} disabled={false}>
 						<Tooltip
 							arrow
-							title={getText(locale, stream, scene.slug, 'label')}
+							// title={getText(locale, stream, scene.slug, 'label')}
 						>
 							<Box>
 								<StepButton

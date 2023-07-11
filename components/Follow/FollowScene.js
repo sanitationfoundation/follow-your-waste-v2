@@ -53,7 +53,7 @@ const FollowScene = forwardRef(
 
 		const sceneFacts = [1, 2, 3]
 			.map(i => getText(locale, stream, slug, `fact${i}`))
-			.filter(str => str.length > 0)
+			.filter(str => str && str.length > 0)
 
 		const handleClick = useCallback(
 			i => setOpenFact(i === openFact ? null : i),

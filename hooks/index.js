@@ -1,18 +1,12 @@
 import { create } from 'zustand'
 import {
-	EN,
-	ES,
-	ZH,
+	TEXT,
 	FILTER_OPTIONS_VAL,
 	FILTER_OPTIONS_DEM,
 } from 'constants'
 
 const initialState = {
-	text: {
-		en: EN,
-		es: ES,
-		zh: ZH,
-	},
+	text: { TEXT },
 	locale: 'en',
 	fullScreen: false,
 	showWelcome: true,

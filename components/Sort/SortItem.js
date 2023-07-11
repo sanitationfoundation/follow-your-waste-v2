@@ -118,16 +118,16 @@ const SortItem = ({ data, visible, ...props }) => {
 						transition: theme.transitions.create(['transform']),
 						'&:hover, &:focus': {
 							transform: !isDragging ? `scale(1.1)` : null,
+						},
+						'& img': {
+							width: '100%',
+							height: 'auto',
 						}
 					}}
 				>
 					<img
 						// ref={imgRef}
 						src={imgSrc}
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
 						alt=''
 					/>
 				</Box>

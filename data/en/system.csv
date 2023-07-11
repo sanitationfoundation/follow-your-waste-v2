@@ -1,59 +1,80 @@
 slug,text
-title,Follow Your Waste
-tagline,"The everyday story of your waste, as told by New York’s Strongest."
-loading,Loading...
-get_started,Get started!
-lets_go,Let's go!
-okay,Okay!
-im_ready,I'm ready!
-try_again,Try again
-try_another,Try another
-sort_intro,Can you successfully dispose of these common household items?
-sort_prompt,"To start, click on any item and drag it to the bin you think it belongs."
-sort_prompt_alt,"To start, select which material you would like to follow."
-sort_top,Drag and drop an item in the correct bin to begin the journey.
-sort_not_trash,Oh no! This item can be recycled! Please drop the item into a different bin.
-sort_wrong_recycle,You have misplaced this recyclable item—an easy mistake to make. Try dropping the item into a different bin.
-sort_not_recycle,This piece of trash is not currently recyclable in NYC. Drop the item into a different bin.
-sort_correct_bin,"You have placed this item in the correct bin! Now, learn from a NYC Sanitation Worker what happens next."
-follow_intro,Discover what happens to your household waste after you toss it in the bin.
-mgp,"Metal, Glass, Plastic, Cartons"
-metal,Metal
-glass,Glass
-plastic,Plastic
-paper,Paper
-landfill,Landfill
-organics,Organics
+aria_audio_menu,Voiceover controls
+aria_full_screen,Toggle full screen
+aria_lang_switch,Switch language
+aria_next,Next
+aria_playback,Toggle play/pause
+aria_prev,Previous
+aria_progress_menu,Progress controls
+aria_skip,Skip to main content
+aria_volume,Toggle volume
 ewaste,E-waste
+final_follow_body,"The story of this item may have ended but our fight to end waste hasn’t. Before our items even enter the bin, remember to reduce what you can and donate the rest. Small steps can make a big impact."
+final_follow_follow,Keep going! Click any item to learn where it goes after it’s thrown away
+final_follow_sort,Test your knowledge by sorting common items into the correct waste bins
+final_follow_sort_prompt,Play the sorting game
+final_follow_title,Journey complete!
+final_sort_body,"You successfully sorted the items into the correct bins. Before our items even enter the bin, remember to reduce what you can and donate the rest. Small steps can make a big impact."
+final_sort_follow,Click any item to learn where it goes after it’s thrown away
+final_sort_sort,Play again to test what you’ve learned
+final_sort_sort_prompt,Restart the game
+final_sort_title,Nice work!
+follow,Follow your waste
+follow_intro,Discover what happens to your household waste after you toss it in the bin.
+get_started,Get started!
+glass,Glass
+help_arrows,"Click these arrows, or use your arrow keys, to navigate through the journey."
+help_audio,Use these icons to control the sound.
+help_factoid,Look out for these tabs to learn extra facts and vocabulary words.
 help_progress,Use this progress bar to track your journey. You can also click the dots to jump between scenes.
 help_restart,Click the bins to go back and select another item.
-help_arrows,"Click these arrows, or use your arrow keys, to navigate through the journey."
-help_factoid,Look out for these tabs to learn extra facts and vocabulary words.
-help_audio,Use these icons to control the sound.
-final_follow_title,Thanks for playing!
-final_follow_desc,"Remember, the story of this item may have ended but our fight to end waste hasn’t. Before our items even enter the bin, reduce what you can and donate the rest. Small steps can make a big impact."
-final_sort_title,Nice work!
-final_sort_desc,You successfully sorted the items into the correct bins. Click any item to learn where it goes after it’s thrown away.
-resources_label,View additional resources
-resource_workers,Meet the Sanitation Workers
-resource_lessons,Lesson plans for teachers
-resource_about,About the project
-resource_quiz,Take the quiz
-resource_workers_url,https://www.sanitationfoundation.org/meet-the-workers
-resource_lessons_url,https://www.sanitationfoundation.org/lesson-plans
-resource_about_url,https://www.sanitationfoundation.org/follow-your-waste
-resource_quiz_url,https://docs.google.com/document/d/1Wa0EJHwT7V6kTGv_XlVonVZmtHpDauTgHb8DCBPGFeg/edit
-aria_skip,Skip to main content
-aria_lang_switch,Switch language
-aria_full_screen,Toggle full screen
-aria_audio_menu,Voiceover controls
-aria_playback,Toggle play/pause
-aria_volume,Toggle volume
-aria_progress_menu,Progress controls
-aria_prev,Previous
-aria_next,Next
-follow,Follow your waste
-sort,Sort your waste
+im_ready,I'm ready!
+landfill,Landfill
+lets_go,Let's go!
+loading,Loading...
 locale,English
+metal,Metal
+mgp,"Metal, Glass, Plastic, Cartons"
+okay,Okay!
+organics,Organics
+paper,Paper
+plastic,Plastic
+promp_sort,Test your knowledge by sorting common items into the correct waste bins. 
+prompt_follow,Learn what happens to your waste after it’s collected by a Sanitation Worker.
+resource_about_body,"After we toss our waste in the bin, we don’t often think about where it goes next. But, our choices can have a big impact on the cleanliness and health of our environment."
+resource_about_title,About the project
+resource_about_url,https://www.sanitationfoundation.org/follow-your-waste
+resource_activities_body,"We offer facilitated litter cleanups, waste audits, and assemblies to schools across NYC."
+resource_activities_title,In-school activities
+resource_activities_url,
+resource_apply_body,Apply for grants to support a waste diversion project in your school.
+resource_apply_title,Grants and contests
+resource_apply_url,
+resource_lessons_body,"A comprehensive waste education curriculum for elementary, middle, and high school students. Includes interactive activities about reducing, reusing, recycling, and composting that are easy for teachers to add to their existing lesson plans."
+resource_lessons_title,Lesson plans for teachers
+resource_lessons_url,https://www.sanitationfoundation.org/lesson-plans
+resource_quiz_body,Each quiz will test you on a different waste stream. Pass each one to prove you’re a waste-sorting expert.
+resource_quiz_title,Take the quizzes
+resource_quiz_url,https://docs.google.com/document/d/1Wa0EJHwT7V6kTGv_XlVonVZmtHpDauTgHb8DCBPGFeg/edit
+resource_workers_body,"The NYC Department of Sanitation employees are on the front lines every day, working tirelessly to keep our city healthy, safe, and clean."
+resource_workers_title,Meet the Sanitation workers
+resource_workers_url,https://www.sanitationfoundation.org/meet-the-workers
+resources_label,Additional resources
 score_right,Correct
 score_wrong,Incorrect
+sort,Play the sorting game
+sort_correct_bin,"You have placed this item in the correct bin! Now, learn from a NYC Sanitation Worker what happens next."
+sort_intro,Can you successfully dispose of these common household items?
+sort_not_recycle,This piece of trash is not currently recyclable in NYC. Drop the item into a different bin.
+sort_not_trash,Oh no! This item can be recycled! Please drop the item into a different bin.
+sort_prompt,"To start, click on any item and drag it to the bin you think it belongs."
+sort_prompt_alt,"To start, select which material you would like to follow."
+sort_prompt_item,Hover over each item for hints about where they should be placed.
+sort_top,Drag and drop an item in the correct bin to begin the journey.
+sort_wrong_recycle,You have misplaced this recyclable item—an easy mistake to make. Try dropping the item into a different bin.
+tagline,"The everyday story of your waste, as told by New York’s Strongest."
+title,Follow Your Waste
+try_again,Try again
+try_another,Try another
+,Select a bin to start.
+,Journey complete!

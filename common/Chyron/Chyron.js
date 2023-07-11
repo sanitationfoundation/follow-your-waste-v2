@@ -13,6 +13,7 @@ import PauseIcon from '@mui/icons-material/Pause'
 import ReplayIcon from '@mui/icons-material/Replay'
 
 import useStore from 'hooks'
+import { getText } from 'selectors'
 
 const PLAYBACK_ICON_SIZE = 20
 
@@ -179,7 +180,7 @@ const Chyron = forwardRef(({ open, caption, color, imgSrc, float, onClose, child
 									}
 								}}
 							>
-								Okay!
+								{getText(locale, 'system', 'okay')}
 							</Button>
 						</Stack>
 					: null}

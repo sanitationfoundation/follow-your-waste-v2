@@ -2,6 +2,7 @@ import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'rea
 import Image from 'next/image'
 import { alpha, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
 import Container from '@mui/material/Container'
 import Divider from '@mui/material/Divider'
 import List from '@mui/material/List'
@@ -15,79 +16,144 @@ import LaunchIcon from '@mui/icons-material/Launch'
 
 import useStore from 'hooks'
 import { getText, getStreamColor } from 'selectors'
+import FollowSelect from 'components/Follow/FollowSelect'
 
-const Final = ({ section, children, ...props }) => {
+const Final = ({ section, children, onPlayClick, sx, ...props }) => {
 	const { locale } = useStore()
 
-	const resources = ['workers', 'lessons', 'about', 'quiz']
+	const resources = ['quiz', 'lessons', 'activities', 'apply', 'workers',  'about']
+
+	const handleSortClick = () =>
+		onPlayClick ? onPlayClick() : false
 	
 	return (
-		<Container
-			maxWidth='sm'
+		<Stack
+			alignItems='center'
 			sx={{
-				my: 'auto'
+				width: '100%',
+				height: '100%',
+				zIndex: 40,
+				bgcolor: 'orange.main',
+				overflowY: 'scroll',
+				WebkitOverflowScrolling: 'touch',
+				...sx
 			}}
+			{...props}
 		>
-			<Box m='auto'>
-				<Typography
-					variant='h2'
-					component='h2'
-					mb={3}
-				>
-					{getText(locale, 'system', `final_${section}_title`)}
-				</Typography>
-				<Typography
-					variant='h4'
-				>
-					{getText(locale, 'system', `final_${section}_desc`)}
-				</Typography>
-
-				{children}
-
-				<Typography
-					variant='h4'
-					component='div'
-					mt={4}
-					mb={1}
-				>
-					{getText(locale, 'system', 'resources_label')}:
-				</Typography>
-
-				<Box
-					bgcolor='green.main'
-					borderRadius={3}
-				>
-					
-					<List
-						sx={{
-							py: 0
-						}}
+			<Container
+				maxWidth='sm'
+				sx={{
+					my: 'auto',
+					py: 12
+				}}
+			>
+				<Box m='auto'>
+					<Typography
+						variant='h2'
+						component='h2'
+						mb={3}
 					>
-						{resources.map((resource, i) =>
-							<Fragment key={i}>
-								{i !== 0 ?
-									<Divider
-										component='li'
-										aria-hidden={true}
-									/>
-								: null}
-								<ListItem disablePadding>
-									<ListItemButton
-										href={getText(locale, 'system', `resource_${resource}_url`)}
-										target='_blank'
-									>
-										<ListItemText primary={getText(locale, 'system', `resource_${resource}`)} />
-										<ListItemIcon>
-	                    					<LaunchIcon color='primary' />
-	                  					</ListItemIcon>
-									</ListItemButton>
-								</ListItem>
-							</Fragment>
-						)}
-					</List>
+						{getText(locale, 'system', `final_${section}_title`)}
+					</Typography>
+					<Typography
+						variant='h4'
+					>
+						{getText(locale, 'system', `final_${section}_body`)}
+					</Typography>
+
+					{children}
+
+					<FollowSelect
+						small={true}
+						text={getText(locale, 'system', `final_${section}_follow`)}
+					/>
+
+					<Box>
+						<Typography
+							variant='h4'
+							component='div'
+							mt={4}
+							mb={2}
+						>
+							{getText(locale, 'system', `final_${section}_sort`)}
+						</Typography>
+						<Button
+							variant='contained'
+							color='green'
+							onClick={handleSortClick}
+						>
+							{getText(locale, 'system', `final_${section}_sort_prompt`)}
+						</Button>
+					</Box>
+
+					<Box>
+						<Typography
+							variant='h4'
+							component='div'
+							mt={4}
+							mb={2}
+						>
+							{getText(locale, 'system', 'resources_label')}
+						</Typography>
+
+						<Box
+							bgcolor='green.main'
+							borderRadius={3}
+						>
+							
+							<List
+								sx={{
+									py: 0
+								}}
+							>
+								{resources.map((resource, i) =>
+									<Fragment key={i}>
+										{i !== 0 ?
+											<Divider
+												component='li'
+												aria-hidden={true}
+											/>
+										: null}
+										<ListItem disablePadding>
+											<ListItemButton
+												href={getText(locale, 'system', `resource_${resource}_url`)}
+												disabled={!getText(locale, 'system', `resource_${resource}_url`)}
+												target='_blank'
+												sx={{
+													'&.Mui-disabled': {
+														opacity: 1,
+														'& .MuiListItemIcon-root': {
+															opacity: 0
+														}
+													}
+												}}
+											>
+												<ListItemText
+													primary={getText(locale, 'system', `resource_${resource}_title`)}
+													secondary={getText(locale, 'system', `resource_${resource}_body`)}
+													secondaryTypographyProps={{
+														fontSize: 12,
+														color: 'main.dark'
+													}}
+												/>
+												<ListItemIcon>
+			                    					<LaunchIcon
+			                    						color='primary'
+			                    						sx={{
+			                    							ml: 'auto'
+			                    						}}
+			                    					/>
+			                  					</ListItemIcon>
+											</ListItemButton>
+										</ListItem>
+									</Fragment>
+								)}
+							</List>
+						</Box>
+					</Box>
 				</Box>
-			</Box>
-		</Container>
+			</Container>
+		</Stack>
 	)
 }
 
