@@ -20,21 +20,18 @@ import { Chyron } from 'common/Chyron'
 
 const FollowChyron = ({ stream, scenes, ...props }) => {
 	const theme = useTheme()
-	const {
-		locale,
-		currentScene,
-		nextScene,
-		prevScene,
-	} = useStore()
+	const { locale, currentScene, nextScene, prevScene } = useStore()
 	// const isCurrent = useCallback(scene => scenes.indexOf(scene) === currentScene, [currentScene])
 	const scene = scenes[currentScene]
-	const caption = scene ? getText(locale, stream, scene.slug, true)?.caption : null
+	const caption = scene
+		? getText(locale, stream, scene.slug, true)?.caption
+		: null
 	const color = getStreamColor(stream)
 	const imgScr = scene ? `/images/workers/${stream}.png` : null
 
 	return (
 		<>
-			{caption ?
+			{caption ? (
 				<Chyron
 					open
 					caption={caption}
@@ -44,16 +41,16 @@ const FollowChyron = ({ stream, scenes, ...props }) => {
 						width: {
 							xs: '100%',
 							sm: 500,
-							md: 700
+							md: 700,
 						},
 						borderRadius: {
-							xs: theme.spacing(5,5,0,0),
-							sm: 10
+							xs: theme.spacing(5, 5, 0, 0),
+							sm: 10,
 						},
 						borderBottomWidth: {
 							xs: 0,
-							sm: 3
-						}
+							sm: 3,
+						},
 					}}
 				>
 					<IconButton
@@ -83,7 +80,7 @@ const FollowChyron = ({ stream, scenes, ...props }) => {
 						<KeyboardArrowRightIcon fontSize='large' />
 					</IconButton>
 				</Chyron>
-			: null}
+			) : null}
 		</>
 	)
 }

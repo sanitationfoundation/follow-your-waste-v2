@@ -24,17 +24,13 @@ const SortBin = ({ data, ...props }) => {
 		},
 	})
 
-	useEffect(() =>
-		setIsOpening(data.slug === opening)
-	, [data.slug, opening])
+	useEffect(() => setIsOpening(data.slug === opening), [data.slug, opening])
 
 	useEffect(() => {
 		const lastSortedItem = sorted.slice(-1)[0]
 		const lastSortedStream = getItem(lastSortedItem)?.stream
 		const isCorrectBin = data.streams.includes(lastSortedStream)
-		setTimeout(() =>
-			setShowGlove(isCorrectBin && thumbsUp)
-		, thumbsUp ? 0 : 750)
+		setTimeout(() => setShowGlove(isCorrectBin && thumbsUp), thumbsUp ? 0 : 750)
 	}, [data, sorted, thumbsUp])
 
 	return (
@@ -43,7 +39,7 @@ const SortBin = ({ data, ...props }) => {
 			sx={{
 				width: {
 					xs: 100,
-					md: 200
+					md: 200,
 				},
 				height: 200,
 				position: 'relative',
@@ -51,13 +47,17 @@ const SortBin = ({ data, ...props }) => {
 					width: 100,
 					height: 'auto',
 					opacity: showGlove ? 1 : 0,
-					transform: `translateY(${showGlove ? '-100%' : 0}) scale(${showGlove ? 1.5 : 1})`,
-					transition: theme.transitions.create(['transform', 'opacity'], { duration: 500 }),
+					transform: `translateY(${showGlove ? '-100%' : 0}) scale(${
+						showGlove ? 1.5 : 1
+					})`,
+					transition: theme.transitions.create(['transform', 'opacity'], {
+						duration: 500,
+					}),
 				},
 				'& img.BinBack': {
 					width: {
 						xs: 100,
-						md: 200
+						md: 200,
 					},
 					height: 'auto',
 					position: 'absolute',
@@ -65,12 +65,12 @@ const SortBin = ({ data, ...props }) => {
 					top: {
 						xs: data.slug === 'ewaste' ? 133 : 122,
 						md: data.slug === 'ewaste' ? 66 : 42,
-					}
+					},
 				},
 				'& img.BinFront': {
 					width: {
 						xs: 100,
-						md: 200
+						md: 200,
 					},
 					height: 'auto',
 					position: 'absolute',
@@ -87,11 +87,10 @@ const SortBin = ({ data, ...props }) => {
 					left: data.slug === 'organics' ? 2 : 0,
 					top: {
 						xs: 110,
-						md: 20
+						md: 20,
 					},
 					zIndex: 40,
-					transformOrigin:
-						data.slug === 'organics' ? 'right bottom' : 'center',
+					transformOrigin: data.slug === 'organics' ? 'right bottom' : 'center',
 					transition: 'transform 300ms ease-in-out',
 					transform: isOpening
 						? data.slug === 'organics'
@@ -131,13 +130,13 @@ const SortBin = ({ data, ...props }) => {
 				alt=''
 				className='BinFront'
 			/>
-			{data.slug !== 'ewaste' ?
+			{data.slug !== 'ewaste' ? (
 				<img
 					alt=''
 					src={`/images/bins/lids/${data.slug}.png`}
 					className='BinLid'
 				/>
-			: null}
+			) : null}
 		</Box>
 	)
 }

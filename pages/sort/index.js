@@ -14,7 +14,7 @@ const Game = ({ ...props }) => {
 			<Box
 				sx={{
 					height: '100%',
-					position: 'relative'
+					position: 'relative',
 				}}
 			>
 				<Intro section='sort' />

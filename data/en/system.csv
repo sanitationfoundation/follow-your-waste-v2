@@ -70,11 +70,10 @@ sort_not_trash,Oh no! This item can be recycled! Please drop the item into a dif
 sort_prompt,"To start, click on any item and drag it to the bin you think it belongs."
 sort_prompt_alt,"To start, select which material you would like to follow."
 sort_prompt_item,Hover over each item for hints about where they should be placed.
+sort_score,Items sorted
 sort_top,Drag and drop an item in the correct bin to begin the journey.
 sort_wrong_recycle,You have misplaced this recyclable item—an easy mistake to make. Try dropping the item into a different bin.
 tagline,"The everyday story of your waste, as told by New York’s Strongest."
 title,Follow Your Waste
 try_again,Try again
 try_another,Try another
-,Select a bin to start.
-,Journey complete!

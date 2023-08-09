@@ -4,9 +4,8 @@ import { getSceneByIndex, getSceneSlugs } from 'selectors'
 import { Audio } from 'common/Audio'
 
 const Voices = ({ type, slugs, curr }) => {
-	const { currentScene, pauseVoice, replayVoice, setReplayVoice } =
-		useStore()
-	
+	const { currentScene, pauseVoice, replayVoice, setReplayVoice } = useStore()
+
 	const [prevVoice, setPrevVoice] = useState(null)
 	const [newVoice, setNewVoice] = useState(null)
 	const audios = useRef({})
@@ -22,11 +21,11 @@ const Voices = ({ type, slugs, curr }) => {
 	const playAudio = useCallback(
 		slug => {
 			const audioElem = audios.current[slug]
-				if (audioElem) {
-					audioElem.play().catch(err => {
-						console.warn(err)
-					})
-				}
+			if (audioElem) {
+				audioElem.play().catch(err => {
+					console.warn(err)
+				})
+			}
 			Object.keys(audios.current)
 				.filter(e => e !== slug)
 				.forEach(pauseAudio)
@@ -91,7 +90,7 @@ const Voices = ({ type, slugs, curr }) => {
 }
 
 Voices.defaultProps = {
-	slugs: []
+	slugs: [],
 }
 
 export default Voices

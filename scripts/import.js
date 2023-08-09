@@ -55,8 +55,7 @@ const getFilePaths = dir =>
 	fs
 		.readdirSync(dir, { withFileTypes: true })
 		.filter(
-			dirent =>
-				dirent.isDirectory() || path.extname(dirent.name) === '.csv',
+			dirent => dirent.isDirectory() || path.extname(dirent.name) === '.csv',
 		)
 		.map(dirent => {
 			const fileName = path.parse(dirent.name).name
@@ -86,13 +85,7 @@ const mergePairs = (keys, vals) =>
 
 // write JSON to lang.js
 const writeJson = (json, name) => {
-	const filePath = path.join(
-		__dirname,
-		'..',
-		'constants',
-		'data',
-		`${name}.js`,
-	)
+	const filePath = path.join(__dirname, '..', 'constants', 'data', `${name}.js`)
 	const fileContent = `export default ${JSON.stringify(json, null, 2)}`
 	fs.writeFile(filePath, fileContent, err => {
 		if (err) return console.log(err)

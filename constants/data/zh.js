@@ -80,7 +80,7 @@ export default {
     {
       "slug": "smartphone",
       "label": "Smartphone",
-      "caption": "对于所有无法重新利用的材料，",
+      "caption": "所有无法重新利用的材料将被拆开。",
       "vocab1": "",
       "fact1": "他们会将其拆解并小心地分离出电池，以防引发火灾。这些材料随后将被送往处理设施，从中提取出可用于制造电动汽车和可再生能源储存系统蓄电池的有用材料。",
       "vocab2": "",
@@ -148,11 +148,11 @@ export default {
     {
       "slug": "sims",
       "label": "Sims",
-      "caption": "在结束我们的收集路线后，我们直接开往泽西城的 Sims 材料回收设施 (Material Recovery Facility, MRF) 去卸载。DSNY 垃圾收集车将你们的 MGP 可回收物卸载到倾卸场。倾卸场是一个巨大的空间，可回收物在其中被卸载成几个大堆。",
+      "caption": "材料回收设施 (Materials Recovery Facility, MRF) 是负责将可回收材料处理为再次出售的新产品原材料的地方。",
       "vocab1": "Sims",
       "fact1": "Sims是一家在纽约市运营众多回收设施的公司。他们处理DSNY在其设施内收集的所有金属、玻璃和塑料。",
       "vocab2": "材料回收设施",
-      "fact2": "材料回收设施（Materials Recovery Facility，MRF）是负责将可回收材料处理为再次出售的新产品原的材料的地方。",
+      "fact2": "材料回收设施 (Materials Recovery Facility, MRF) 是负责将可回收材料处理为再次出售的新产品原材料的地方。",
       "vocab3": "",
       "fact3": "泽西市的Sims玻璃厂每月处理10-12000吨来自纽约和新泽西回收项目的玻璃瓶。"
     },
@@ -322,7 +322,7 @@ export default {
   ],
   "landfill": [
     {
-      "slug": "garage",
+      "slug": "garage-landfill",
       "label": "车库",
       "caption": "大家好，我是来自 Queens 的环卫工人 Tuhina。我们在我们当地的车库打卡上班，然后出发去收集你们的生活垃圾或可回收物。",
       "vocab1": "",
@@ -335,7 +335,7 @@ export default {
     {
       "slug": "curbside-landfill",
       "label": "路边拾集",
-      "caption": "当从人行道上收集完垃圾后，我们的环卫工人会前往 North Shore Marine 转运站。",
+      "caption": "当从人行道上收集完垃圾后，我们的环卫工人会前往 北岸海上中转站。",
       "vocab1": "",
       "fact1": "我们的 2006 年固体废物管理计划 (Solid Waste Management Plan) 通过大幅减少垃圾收集车的出行次数，每年减少了 6,000 万英里的垃圾收集车出行里程。",
       "vocab2": "海上中转站",
@@ -366,7 +366,7 @@ export default {
       "fact3": ""
     },
     {
-      "slug": "loading",
+      "slug": "loading-landfill",
       "label": "装料台",
       "caption": "DSNY 垃圾收集车里的垃圾将卸载到位于高架倾卸区下方的装载台上。两个前端装载机将垃圾推入一个可用的集装箱中，然后由挖掘机进行压缩。",
       "vocab1": "前端装载机",
@@ -379,7 +379,7 @@ export default {
     {
       "slug": "lidding",
       "label": "封盖间",
-      "caption": "集装箱填满后，封盖区的环卫工人会将集装箱密封。",
+      "caption": "集装箱填满后，封盖区的环卫工人会将集装箱密封。封盖区是将装满垃圾的集装箱进行密封以便运输的地方。",
       "vocab1": "封盖间",
       "fact1": "封盖间是将盖子固定在垃圾箱上的地方。",
       "vocab2": "",
@@ -460,7 +460,7 @@ export default {
       "label": "驳船",
       "caption": "该驳船由拖船引导至 Sims 落日公园材料回收设施 (Material Recovery Facility，MRF)。",
       "vocab1": "材料回收设施",
-      "fact1": "材料回收设施（Materials Recovery Facility，MRF）是负责将可回收材料处理为再次出售的新产品原的材料的地方。",
+      "fact1": "材料回收设施 (Materials Recovery Facility, MRF) 是负责将可回收材料处理为再次出售的新产品原材料的地方。",
       "vocab2": "",
       "fact2": "",
       "vocab3": "",
@@ -580,7 +580,7 @@ export default {
   "organics": [
     {
       "slug": "garage-organics",
-      "label": "Garage",
+      "label": "",
       "caption": "嗨，我是文职员工 Kevin，我的工作范围覆盖全市。环卫工人在当地的车库打卡上班，然后出发去拾集你们放在路边的食物和庭院垃圾。",
       "vocab1": "",
       "fact1": "",
@@ -591,7 +591,7 @@ export default {
     },
     {
       "slug": "curbside-organics",
-      "label": "Curbside Pickup",
+      "label": "",
       "caption": "环卫工人从学校和住宅收集可堆肥垃圾 — 食物垃圾、树叶和树枝。我们使用普通的垃圾回收卡车收集路边可堆肥垃圾。",
       "vocab1": "",
       "fact1": "",
@@ -602,7 +602,7 @@ export default {
     },
     {
       "slug": "pile",
-      "label": "N/A",
+      "label": "",
       "caption": "这些来自整个纽约市的食物和庭院垃圾被送往地区堆肥设施，在那里被制成成品堆肥。",
       "vocab1": "",
       "fact1": "您知道吗，纽约市扔掉的近 ⅓ 的垃圾都是可堆肥的？这意味着我们所有垃圾的 ⅓ 可转化为天然土壤改良剂或用于创造可再生能源！",
@@ -613,7 +613,7 @@ export default {
     },
     {
       "slug": "composting",
-      "label": "N/A",
+      "label": "",
       "caption": "一个专门的专家小组通过一种特殊的工艺将食物残渣、树叶、树枝和食物弄脏的纸转化为堆肥。首先，他们将食物残渣、庭院垃圾和其他有机物按正确比例混合在一起。“绿色”（富含氮的物品，如食物残渣）和“棕色”（富含碳的物品，如干树叶或木屑）的正确比例有助于确保所有物质充分分解和营养均衡。",
       "vocab1": "",
       "fact1": "什么是堆肥？就像食物在您的胃里分解成营养物质和矿物质一样，有机废物也是通过许多有机体和化学作用分解的！",
@@ -624,7 +624,7 @@ export default {
     },
     {
       "slug": "organisms",
-      "label": "N/A",
+      "label": "",
       "caption": "在几周的时间里，食物残渣、树叶和其他物质会分解成一种叫做堆肥的物质。在这个分解过程中，有机体会产生大量的热量。这种热量会破坏杂草种子和病原体。",
       "vocab1": "",
       "fact1": "工业堆肥堆温度可达到 160°F！堆肥堆不能长时间过热，否则会杀死进食所有蔬菜的微生物！",
@@ -635,7 +635,7 @@ export default {
     },
     {
       "slug": "curing",
-      "label": "N/A",
+      "label": "",
       "caption": "最终，食物和树叶会变成一堆看起来像疏松黑土的东西。在这个阶段，堆肥需要“固化”，以确保堆肥堆中的所有东西都已完全分解。",
       "vocab1": "",
       "fact1": "尽管外观相似，但堆肥和土壤不一样！更确切地说，堆肥是一种叫做土壤改良剂的东西 — 一种富含分解植物养分的天然肥料。在土壤中添加堆肥可帮助植物生长得更健康、更茁壮！",
@@ -646,8 +646,8 @@ export default {
     },
     {
       "slug": "garden",
-      "label": "N/A",
-      "caption": "完全固化后，您的有机废物已转化为营养丰富的堆肥！然后，将成品装入袋子，分发给学校、公园、城市农民、社区园丁，甚至纽约市民，他们可以利用堆肥自己在家里种植水果和\n蔬菜！",
+      "label": "",
+      "caption": "完全固化后，您的有机废物已转化为营养丰富的堆肥！然后，将成品装入袋子，分发给学校、公园、城市农民、社区园丁，甚至纽约市民，他们可以利用堆肥自己在家里种植水果和 蔬菜！",
       "vocab1": "",
       "fact1": "",
       "vocab2": "",
@@ -739,7 +739,7 @@ export default {
       "label": "碎纸机",
       "caption": "到达 Pratt 造纸厂后，可回收的纸张和纸板首先被倾倒进一个坑中，然后送入碎浆机。在碎浆机中，纸张与水混合形成纸浆。纸浆通过筛网以移除污染物。",
       "vocab1": "制浆机",
-      "fact1": "制浆机是一个装满水的大桶和一个搅拌器，它将纸板和纸张打碎成小块，最终成为纸浆纤维。纸浆会看起来像浓粥，或米饭布丁！",
+      "fact1": "碎浆机是一个装满水的大桶和一个搅拌器，它将纸板和纸张打碎成小块，最终成为纸浆纤维。纸浆会看起来像浓粥，或米饭布丁！",
       "vocab2": "",
       "fact2": "",
       "vocab3": "",
@@ -993,7 +993,7 @@ export default {
     },
     {
       "slug": "get_started",
-      "text": "开始吧！"
+      "text": "立即开始吧！"
     },
     {
       "slug": "glass",
@@ -1025,7 +1025,7 @@ export default {
     },
     {
       "slug": "landfill",
-      "text": "垃圾填埋场"
+      "text": "填埋垃圾"
     },
     {
       "slug": "lets_go",
@@ -1037,7 +1037,7 @@ export default {
     },
     {
       "slug": "locale",
-      "text": "中国人"
+      "text": "简体中文"
     },
     {
       "slug": "metal",
@@ -1089,7 +1089,7 @@ export default {
     },
     {
       "slug": "resource_activities_title",
-      "text": "我们为纽约市各学校提供垃圾清理、废弃物检查和集会活动。"
+      "text": "校内活动"
     },
     {
       "slug": "resource_activities_url",
@@ -1165,7 +1165,7 @@ export default {
     },
     {
       "slug": "sort_intro",
-      "text": "探索您把生活垃圾扔进垃圾箱后它会发生什么。"
+      "text": "你能正确处置这些常见的家庭废弃物吗？"
     },
     {
       "slug": "sort_not_recycle",
@@ -1192,12 +1192,16 @@ export default {
       "text": "将物品拖放到正确的垃圾箱中，开始旅程。"
     },
     {
+      "slug": "sort_score",
+      "text": "Items sorted"
+    },
+    {
       "slug": "sort_wrong_recycle",
       "text": "您将此可回收物放错了位置 — 这是很容易犯的错误。尝试将此物品放到其他垃圾箱里。您将此可回收物放错了位置 — 这是很容易犯的错误。尝试将此物品放到其他垃圾箱里。"
     },
     {
       "slug": "tagline",
-      "text": "纽约最坚强的故事讲述了您每天浪费的故事。"
+      "text": "由纽约环卫工人为您讲述您的垃圾的去向。"
     },
     {
       "slug": "title",

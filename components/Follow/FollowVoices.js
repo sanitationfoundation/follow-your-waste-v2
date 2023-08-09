@@ -7,13 +7,7 @@ const FollowVoices = ({ stream }) => {
 	const sceneSlugs = getSceneSlugs(stream)
 	const currVoice = getSceneByIndex(stream, currentScene)?.slug
 
-	return (
-		<Voices
-			type={stream}
-			slugs={sceneSlugs}
-			curr={currVoice}
-		/>
-	)
+	return <Voices type={stream} slugs={sceneSlugs} curr={currVoice} />
 }
 
 export default FollowVoices

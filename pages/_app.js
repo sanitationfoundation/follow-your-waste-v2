@@ -10,11 +10,7 @@ import useStore from '../hooks'
 
 const clientSideEmotionCache = createEmotionCache()
 
-function App({
-	Component,
-	pageProps,
-	emotionCache = clientSideEmotionCache,
-}) {
+function App({ Component, pageProps, emotionCache = clientSideEmotionCache }) {
 	const router = useRouter()
 	const { locale, setLocale } = useStore()
 

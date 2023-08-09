@@ -21,14 +21,11 @@ const FollowSelect = ({ stream, current, small, title, ...props }) => {
 				height: '100%',
 				overflowY: 'scroll',
 				display: 'flex',
-				flexDirection: 'column'
+				flexDirection: 'column',
 			}}
 		>
-			<Box
-				m='auto'
-				maxWidth={theme.spacing(80)}
-			>
-				{title ?
+			<Box m='auto' maxWidth={theme.spacing(80)}>
+				{title ? (
 					<Typography
 						flex={1}
 						variant={small ? 'h4' : 'h3'}
@@ -40,7 +37,7 @@ const FollowSelect = ({ stream, current, small, title, ...props }) => {
 					>
 						{title}
 					</Typography>
-				: null}
+				) : null}
 				<Stack
 					direction='row'
 					alignItems='center'
@@ -70,7 +67,7 @@ const FollowSelect = ({ stream, current, small, title, ...props }) => {
 									transition: theme.transitions.create(['transform']),
 									'&:hover, &:focus': {
 										transform: `scale(1.1)`,
-									}
+									},
 								}}
 							>
 								<img
@@ -83,7 +80,7 @@ const FollowSelect = ({ stream, current, small, title, ...props }) => {
 									alt=''
 								/>
 							</Box>
-							{!small ?
+							{!small ? (
 								<Typography
 									component='div'
 									variant='h3'
@@ -93,7 +90,7 @@ const FollowSelect = ({ stream, current, small, title, ...props }) => {
 								>
 									{getText(locale, 'system', stream)}
 								</Typography>
-							: null}
+							) : null}
 						</Link>
 					))}
 				</Stack>
@@ -102,8 +99,6 @@ const FollowSelect = ({ stream, current, small, title, ...props }) => {
 	)
 }
 
-FollowSelect.defaultProps = {
-
-}
+FollowSelect.defaultProps = {}
 
 export default FollowSelect

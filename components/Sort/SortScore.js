@@ -19,7 +19,7 @@ import { getText, getItems } from 'selectors'
 
 const SortScore = ({ sx, ...props }) => {
 	const theme = useTheme()
-	const { locale, score, sorted, thumbsUp } = useStore()	
+	const { locale, score, sorted, thumbsUp } = useStore()
 	const items = getItems()
 
 	return (
@@ -39,41 +39,37 @@ const SortScore = ({ sx, ...props }) => {
 				color: 'primary.main',
 				'& img': {
 					width: 20,
-					height: 'auto'
+					height: 'auto',
 				},
 				'& .MuiTypography-root': {
-					display: 'inline-block'
+					display: 'inline-block',
 				},
-				...sx
+				...sx,
 			}}
 			{...props}
 		>
-			<Image
-				width={500}
-				height={514}
-				src='/images/glove.png'
-				alt=''
-			/>
-			<Typography
-				fontSize={16}
-			>
+			<Image width={500} height={514} src='/images/glove.png' alt='' />
+			<Typography fontSize={16}>
 				<Typography
 					sx={{
 						display: {
 							xs: 'none',
-							md: 'inline-block'
-						}
+							md: 'inline-block',
+						},
 					}}
 				>
-					Items sorted:&nbsp;
+					{getText(locale, 'system', 'sort_score')}:&nbsp;
 				</Typography>
 				<Typography
 					component='span'
 					fontWeight={700}
 					sx={{
 						transform: `scale(${thumbsUp ? 1.25 : 1})`,
-						transition: theme.transitions.create(['transform'], { duration: 75 }),
-					}}>
+						transition: theme.transitions.create(['transform'], {
+							duration: 75,
+						}),
+					}}
+				>
 					{score}
 				</Typography>
 				/{items.length}

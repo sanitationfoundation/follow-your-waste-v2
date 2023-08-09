@@ -515,7 +515,7 @@ export default {
       "label": "Imanes",
       "caption": "Los reciclables pasan por debajo de un gran imán giratorio que recoge metales férricos o materiales magnéticos. Luego, una corriente en remolino (un imán invertido) repele cualquier metal que no sea férrico, como el aluminio.",
       "vocab1": "metales ferrosos",
-      "fact1": "Ferrous metals contain iron and are magnetic, such as stainless steel or cast iron. Non-ferrous metals do not contain iron, and are not magnetic. Common non-ferrous metals include aluminum, copper and tin.",
+      "fact1": "Los metales ferrosos contienen hierro y son magnéticos, como el acero inoxidable o el hierro fundido. Los metales no ferrosos no contienen hierro y no son magnéticos. Los metales no ferrosos más comunes son el aluminio, el cobre y el estaño.",
       "vocab2": "",
       "fact2": "",
       "vocab3": "",
@@ -580,7 +580,7 @@ export default {
   "organics": [
     {
       "slug": "garage-organics",
-      "label": "Garage",
+      "label": "",
       "caption": "Hola, soy el empleado civil Kevin y trabajo en toda la ciudad. Los trabajadores de sanidad comienzan su turno registrando su entrada en su garaje local y luego salen a recoger los desechos de alimentos y de jardín que usted coloca en la acera.",
       "vocab1": "",
       "fact1": "",
@@ -591,7 +591,7 @@ export default {
     },
     {
       "slug": "curbside-organics",
-      "label": "Curbside Pickup",
+      "label": "",
       "caption": "Los trabajadores de sanidad recogen los desechos que se pueden compostar (desechos de alimentos, hojas y ramas) de las escuelas y los hogares. Para la recogida de compost en la acera utilizamos los mismos camiones que para la basura normal o el material reciclable.",
       "vocab1": "",
       "fact1": "",
@@ -602,7 +602,7 @@ export default {
     },
     {
       "slug": "pile",
-      "label": "N/A",
+      "label": "",
       "caption": "Los desechos de alimentos y de jardín de toda la ciudad de Nueva York se llevan a las instalaciones regionales de compostaje, donde se convierten en compost terminado.",
       "vocab1": "",
       "fact1": "¿Sabía que casi ⅓ de todo lo que tiramos en Nueva York se puede compostar? Eso significa que ⅓ de todos nuestros desechos pueden convertirse en una enmienda natural de la tierra o utilizarse para generar energía renovable.",
@@ -613,7 +613,7 @@ export default {
     },
     {
       "slug": "composting",
-      "label": "N/A",
+      "label": "",
       "caption": "Equipos especiales de expertos transforman los restos de alimentos, las hojas, las ramas y el papel sucio de los alimentos en compost mediante un proceso especial. En primer lugar, mezclan la cantidad correcta de restos de alimentos, desechos de jardín y otra materia orgánica. El equilibrio adecuado de “material verde\" (elementos ricos en nitrógeno como restos de alimentos) y \"material marrón\" (elementos ricos en carbono como hojas secas o astillas de madera) garantiza que todo el material se descomponga por completo y tenga un contenido de nutrientes balanceado.",
       "vocab1": "",
       "fact1": "¿Qué es el compostaje? Al igual que los alimentos se descomponen en nutrientes y minerales en el estómago, los desechos orgánicos se descomponen gracias al trabajo de muchos organismos y procesos químicos.",
@@ -624,7 +624,7 @@ export default {
     },
     {
       "slug": "organisms",
-      "label": "N/A",
+      "label": "",
       "caption": "En el transcurso de unas semanas, los restos de alimentos, las hojas y otros materiales se descomponen y se convierten en un material llamado compost. Los organismos generan mucho calor durante este proceso de descomposición. Este calor destruye las semillas de las malas hierbas y los patógenos.",
       "vocab1": "",
       "fact1": "¡Las pilas de compost industriales pueden alcanzar hasta 160 °F! ¡No es deseable que la pila esté demasiado caliente durante demasiado tiempo o destruirá los microorganismos que se comen todas las verduras!",
@@ -635,7 +635,7 @@ export default {
     },
     {
       "slug": "curing",
-      "label": "N/A",
+      "label": "",
       "caption": "A la larga, los alimentos y las hojas se transformarán en una pila de un material de apariencia similar a tierra oscura y quebradiza. En esta etapa, el compost necesita \"curar\" para garantizar que todos los contenidos de la pila se hayan descompuesto por completo.",
       "vocab1": "",
       "fact1": "¡A pesar de su apariencia, el compost no es lo mismo que la tierra! Más bien, el compost es algo llamado enmienda de la tierra: un fertilizante natural lleno de nutrientes de plantas descompuestas. El compost se añade a la tierra para que las plantas crezcan más sanas y fuertes.",
@@ -646,7 +646,7 @@ export default {
     },
     {
       "slug": "garden",
-      "label": "N/A",
+      "label": "",
       "caption": "¡Enhorabuena! Una vez curados por completo, sus desechos orgánicos se han transformado en compost rico en nutrientes. El producto terminado luego se coloca en bolsas y se distribuye a escuelas, parques públicos, agricultores urbanos, jardineros comunitarios e incluso residentes de la ciudad de Nueva York, que pueden usarlo para cultivar sus propias frutas y verduras en casa.",
       "vocab1": "",
       "fact1": "",
@@ -1053,7 +1053,7 @@ export default {
     },
     {
       "slug": "organics",
-      "text": "Organicos"
+      "text": "Orgánicos"
     },
     {
       "slug": "paper",
@@ -1188,16 +1188,16 @@ export default {
       "text": "Pase el cursor por encima de cada artículo para obtener pistas sobre dónde debe desecharse."
     },
     {
+      "slug": "sort_score",
+      "text": "Artículos clasificados"
+    },
+    {
       "slug": "sort_top",
       "text": "Arrastre un artículo al contenedor correcto para empezar el recorrido."
     },
     {
       "slug": "sort_wrong_recycle",
       "text": "Ha colocado mal este artículo reciclable, un error muy fácil de cometer. Pruebe echarlo en otro cubo."
-    },
-    {
-      "slug": "skip",
-      "text": "Ir al contenido principal"
     },
     {
       "slug": "tagline",

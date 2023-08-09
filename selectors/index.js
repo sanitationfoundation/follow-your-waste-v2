@@ -8,8 +8,7 @@ export const getItemSize = item => CONST.ITEM_SIZES[item]
 // export const getStreams = () => Object.keys(getData('follow'))
 export const getStreams = () => CONST.STREAMS
 export const getStreamColor = stream => CONST.STREAM_COLORS[stream]
-export const getScenes = stream =>
-	stream ? getData('follow')[stream] : []
+export const getScenes = stream => (stream ? getData('follow')[stream] : [])
 export const getSceneSlugs = stream => getScenes(stream).map(s => s.slug)
 export const getSceneBySlug = (stream, scene) =>
 	getScenes(stream).find(s => s.slug === scene)

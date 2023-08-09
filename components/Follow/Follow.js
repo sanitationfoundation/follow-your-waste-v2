@@ -12,6 +12,7 @@ import { getText, getScenes, getSceneByIndex, getSceneSlugs } from 'selectors'
 import FollowProgress from './FollowProgress'
 import FollowScene from './FollowScene'
 import FollowChyron from './FollowChyron'
+import FollowFacts from './FollowFacts'
 import FollowFinal from './FollowFinal'
 import FollowEnvirons from './FollowEnvirons'
 import FollowVoices from './FollowVoices'
@@ -25,8 +26,7 @@ const Follow = ({ stream, ...props }) => {
 	const [emblaCurrentScene, setEmblaCurrentScene] = useState(0)
 	const [emblaSlides, setEmblaSlides] = useState([])
 	const [mouseDown, setMouseDown] = useState(null)
-	const { currentScene, setCurrentScene, nextScene, prevScene } =
-		useStore()
+	const { currentScene, setCurrentScene, nextScene, prevScene } = useStore()
 	const scenes = getScenes(stream)
 	const sceneSlugs = getSceneSlugs(stream)
 	const currVoice = getSceneByIndex(stream, currentScene)?.slug
@@ -53,17 +53,15 @@ const Follow = ({ stream, ...props }) => {
 	}, [emblaApi, scenes])
 
 	useEffect(() => {
-		if(currentScene <= -1) {
+		if (currentScene <= -1) {
 			router.push('/follow')
 			setCurrentScene(0)
-		} 
+		}
 	}, [currentScene])
 
 	useEffect(() => {
 		const handleKeyDown = ({ keyCode }) => {
-			if (
-				keyCode === KEY_CODE_ARROW_RIGHT && currentScene < scenes.length
-			)
+			if (keyCode === KEY_CODE_ARROW_RIGHT && currentScene < scenes.length)
 				nextScene()
 			if (keyCode === KEY_CODE_ARROW_LEFT && currentScene >= 0) prevScene()
 		}
@@ -72,8 +70,7 @@ const Follow = ({ stream, ...props }) => {
 	}, [currentScene, scenes])
 
 	useEffect(() => {
-		if (currentScene !== emblaCurrentScene)
-			setCurrentScene(emblaCurrentScene)
+		if (currentScene !== emblaCurrentScene) setCurrentScene(emblaCurrentScene)
 	}, [emblaCurrentScene, emblaScrolling])
 
 	useEffect(() => {
@@ -119,6 +116,7 @@ const Follow = ({ stream, ...props }) => {
 					<FollowFinal stream={stream} className='embla__slide' />
 				</Stack>
 			</Box>
+			<FollowFacts stream={stream} scenes={scenes} />
 			<FollowChyron stream={stream} scenes={scenes} />
 			<FollowEnvirons stream={stream} />
 			<FollowVoices stream={stream} />

@@ -1,9 +1,5 @@
 import { create } from 'zustand'
-import {
-	TEXT,
-	FILTER_OPTIONS_VAL,
-	FILTER_OPTIONS_DEM,
-} from 'constants'
+import { TEXT, FILTER_OPTIONS_VAL, FILTER_OPTIONS_DEM } from 'constants'
 
 const initialState = {
 	text: { TEXT },
@@ -41,10 +37,8 @@ const useStore = create((set, get) => ({
 		set(state => ({
 			sorted: [...state.sorted, item],
 		})),
-	resetSorted: () =>
-		set({ sorted: [] }),
-	addScore: () =>
-		set({ score: get().score + 1 }),
+	resetSorted: () => set({ sorted: [] }),
+	addScore: () => set({ score: get().score + 1 }),
 	setThumbsUp: thumbsUp => set({ thumbsUp }),
 	// addRight: () =>
 	// 	set(({ score }) => ({
@@ -54,8 +48,7 @@ const useStore = create((set, get) => ({
 	// 	set(({ score }) => ({
 	// 		score: { ...score, wrong: score.wrong + 1 },
 	// 	})),
-	resetScore: () =>
-		set({ score: 0 }),
+	resetScore: () => set({ score: 0 }),
 	resetAllSort: () =>
 		set({
 			dragging: null,

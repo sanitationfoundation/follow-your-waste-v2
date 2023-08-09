@@ -19,7 +19,7 @@ const Choose = ({ ...props }) => {
 		<Stack
 			alignItems='center'
 			sx={{
-				flex: 1
+				flex: 1,
 			}}
 		>
 			<Stack
@@ -28,7 +28,7 @@ const Choose = ({ ...props }) => {
 				spacing={6}
 				sx={{
 					// my: 'auto',
-					flex: 1
+					flex: 1,
 				}}
 			>
 				<Stack
@@ -66,11 +66,11 @@ const Choose = ({ ...props }) => {
 										transition: theme.transitions.create(['transform']),
 										maxWidth: {
 											xs: 200,
-											sm: '100%'
+											sm: '100%',
 										},
 										'&:hover, &:focus': {
 											transform: `scale(1.1)`,
-										}
+										},
 									}}
 								>
 									<Image
@@ -81,12 +81,7 @@ const Choose = ({ ...props }) => {
 										aria-hidden
 									/>
 								</Box>
-								<Typography
-									component='div'
-									variant='h3'
-									align='center'
-									mt={-1}
-								>
+								<Typography component='div' variant='h3' align='center' mt={-1}>
 									{getText(locale, 'system', section)}
 								</Typography>
 							</Box>

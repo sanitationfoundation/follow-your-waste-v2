@@ -36,7 +36,7 @@ locale,Español
 metal,Metal
 mgp,"Metal, Vidiro, Plástico, y Cartones"
 okay,De acuerdo
-organics,Organicos
+organics,Orgánicos
 paper,Papel
 plastic,Plástico
 promp_sort,Ponga a prueba sus conocimientos: arroje artículos comunes en los cubos de basura correctos para clasificarlos.
@@ -70,9 +70,9 @@ sort_not_trash,"¡Oh no!, este artículo es reciclable. Échelo en otro cubo, po
 sort_prompt,Pulse cualquier elemento para empezar y arrástrelo al cubo de basura que crea adecuado.
 sort_prompt_alt,"Para iniciar, seleccione el material al que quisiera hacer seguimiento."
 sort_prompt_item,Pase el cursor por encima de cada artículo para obtener pistas sobre dónde debe desecharse.
+sort_score,Artículos clasificados
 sort_top,Arrastre un artículo al contenedor correcto para empezar el recorrido.
 sort_wrong_recycle,"Ha colocado mal este artículo reciclable, un error muy fácil de cometer. Pruebe echarlo en otro cubo."
-skip,Ir al contenido principal
 tagline,"La historia cotidiana de sus residuos, contada por Strongest de Nueva York."
 title,Siga sus desechos
 try_again,Inténtalo de nuevo

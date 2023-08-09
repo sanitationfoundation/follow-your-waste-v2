@@ -31,7 +31,7 @@ const Sort = ({ ...props }) => {
 		setThumbsUp,
 		setDragging,
 		setOpening,
-		resetAllSort
+		resetAllSort,
 	} = useStore()
 	const items = getItems()
 	const bins = getBins()
@@ -85,7 +85,7 @@ const Sort = ({ ...props }) => {
 	}, [])
 
 	useEffect(() => {
-		if(sorted.length === 0 && packeryInst) {
+		if (sorted.length === 0 && packeryInst) {
 			packeryInst.layout()
 		}
 	}, [sorted, packeryInst])
@@ -96,9 +96,7 @@ const Sort = ({ ...props }) => {
 
 	useEffect(() => {
 		if (!packeryInst) return
-		setTimeout(() =>
-			setPackeryCompleted(true)
-		, 100)
+		setTimeout(() => setPackeryCompleted(true), 100)
 		// if (packeryInst.hasOwnProperty('reloadItems')) {
 		// 	packeryInst.reloadItems()
 		// }
@@ -122,7 +120,7 @@ const Sort = ({ ...props }) => {
 				height: '100%',
 				position: 'relative',
 				opacity: packeryCompleted ? 1 : 0,
-				transition: theme.transitions.create(['opacity'])
+				transition: theme.transitions.create(['opacity']),
 			}}
 		>
 			<DndContext
@@ -130,18 +128,12 @@ const Sort = ({ ...props }) => {
 				onDragOver={handleDragOver}
 				onDragEnd={handleDragEnd}
 			>
-				<Box
-					ref={packeryRef}
-				>
+				<Box ref={packeryRef}>
 					{items.map((item, i) => (
-						<SortItem
-							key={i}
-							data={item}
-							visible={packeryCompleted}
-						/>
+						<SortItem key={i} data={item} visible={packeryCompleted} />
 					))}
 				</Box>
-				
+
 				<Stack
 					direction='row'
 					justifyContent='center'
@@ -154,11 +146,7 @@ const Sort = ({ ...props }) => {
 					}}
 				>
 					{bins.map((bin, i) => (
-						<SortBin
-							key={i}
-							data={bin}
-							index={i}
-						/>
+						<SortBin key={i} data={bin} index={i} />
 					))}
 				</Stack>
 			</DndContext>

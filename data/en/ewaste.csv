@@ -1,17 +1,17 @@
 slug,label,caption,vocab1,fact1,vocab2,fact2,vocab3,fact3
 table,Outreach,"Hi, I am Civilian Employee Allie Gumas from the Department of Sanitation’s Bureau of Recycling and Sustainability (BRS). At BRS, we work citywide to help residents reduce, reuse, and recycle.",,,,,,
 apartment,Apartment Pickup,"E-waste (or electronic waste), such as cellphones, laptops, and televisions, is picked up from apartment buildings that are enrolled in DSNY’s electronics recycling program. DSNY works with a company called ERI, which takes care of picking up and transporting the e-waste.
-",,,,,,
-event,Drop-off Event,"If your apartment building does not have an ecycle bin, you can take your e-waste to a DSNY special waste drop-off site or to a SAFE disposal event. ",,,,,,
+",ERI,"ERI is a company that operates numerous certified e-waste processing facilities around the country. They are dedicated to reusing, recycling, repurposing, repairing or disposing of unwanted IT equipment in a safe and environmentally responsible way.",,,,
+event,Drop-off Event,"If your apartment building does not have an electronics recycling program bin, you can take your e-waste to a DSNY special waste drop-off site or to a SAFE disposal event. ",special waste drop-off site,Special Waste Drop-Off Sites are locations where New York City residents can drop off certain harmful products. The sites are open from 10 AM to 5 PM every Saturday and the last Friday of the month.,SAFE disposal event,"DSNY hosts SAFE Disposal events (Solvents, Automotive, Flammables, and Electronics) in all five boroughs each Spring and Fall.",,
 eri,ERI,"After your e-waste is collected, it is taken to ERI’s processing facility in Lincoln Park, New Jersey.",,,,,,
 sorting-ewaste,Sorting,"Once it arrives at ERI Lincoln Park, all electronic equipment is separated by type and weighed.
 ",,,,,,
 inspect,Inspecting,"Following weighing and registration, an ERI employee will grade the physical condition of the product to identify equipment that can be refurbished and resold.",,,,,,
 laptop,Testing Laptops,"Any materials that can be reused are evaluated, refurbished, and tested. They can then be sold on the reuse market and given a second life. All electronics that contain personal information, such as laptops and cellphones, are wiped of their data before being resold.",,,,,,
-smartphone,Smartphone,Any materials that cannot be reused are taken apart. ,,,,,,
+smartphone,Smartphone,Any materials that cannot be reused are taken apart.,,"Batteries are carefully separated so that they don't start a fire. They are then sent to processors, where they extract materials needed to support batteries used for electric vehicles and renewable energy storage systems.",,,,
 ernie,Shredding Material,"Flat-screen TVs and laptop screens are sent through ERI’s shredding system, also known as ERNIE (Electronic Recyclers Next Innovation Efficiency). ERNIE shreds the items and stores mercury and other toxic materials in an airtight container.
 ",,,,,,
-sam,Robotic Sorting,"ERI’s robotic system, SAM (Super Automated Machine), further sorts the materials based on commodity types, including circuit boards, which contain precious metals, such as copper, plastic, steel, and aluminum.
-",,,,,,
+sam,Robotic Sorting,"ERI’s robotic system, SAM (Super Automated Machine), further sorts the materials based on commodity types, including circuit boards, which contain precious metals, such as copper, steel, and aluminum.
+",precious metals,"The precious metals and coppers are sent to smelters where they recover gold, silver, palladium, and copper for use in new device manufacturing.","copper, steel, and aluminum",The aluminum and steel are sent to other smelters where they are recycled into new products.,,
 end-ewaste,Recycled!,"All of these materials end up in products sold on the market today.
 ",,,,,,

@@ -62,16 +62,10 @@ const SortItem = ({ data, visible, ...props }) => {
 						/>
 					}
 				>
-					{itemLabel ?
-						<Typography variant='h4'>
-							{itemLabel}
-						</Typography>
-					: null}
-					{itemDesc ?
-						<Typography variant='body1'>
-							{itemDesc}
-						</Typography>
-					: null}
+					{itemLabel ? <Typography variant='h4'>{itemLabel}</Typography> : null}
+					{itemDesc ? (
+						<Typography variant='body1'>{itemDesc}</Typography>
+					) : null}
 				</Stack>
 			}
 			open={open}
@@ -97,14 +91,14 @@ const SortItem = ({ data, visible, ...props }) => {
 					transition: isSorted
 						? 'all 800ms ease'
 						: !isDragging
-							? 'all 400ms ease'
-							: '',
+						? 'all 400ms ease'
+						: '',
 					transform: isSorted
 						? `translate3d(${lastX}px, 100%, 0)`
 						: transform
-							? `translate3d(${transform.x}px, ${transform.y}px, 0)`
-							: 'translate3d(0, 0, 0)',
-					zIndex: isDragging ? 20 : 10,					
+						? `translate3d(${transform.x}px, ${transform.y}px, 0)`
+						: 'translate3d(0, 0, 0)',
+					zIndex: isDragging ? 20 : 10,
 					...(isSorted ? { top: 999 } : {}),
 				}}
 				ref={setNodeRef}
@@ -122,7 +116,7 @@ const SortItem = ({ data, visible, ...props }) => {
 						'& img': {
 							width: '100%',
 							height: 'auto',
-						}
+						},
 					}}
 				>
 					<img

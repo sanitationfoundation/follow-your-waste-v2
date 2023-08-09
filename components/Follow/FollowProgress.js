@@ -21,7 +21,8 @@ import { getText } from 'selectors'
 
 const FollowProgress = ({ stream, scenes, ...props }) => {
 	const theme = useTheme()
-	const { locale, currentScene, nextScene, prevScene, setCurrentScene } = useStore()
+	const { locale, currentScene, nextScene, prevScene, setCurrentScene } =
+		useStore()
 
 	const handleStepClick = (e, index) => {
 		setCurrentScene(index)
@@ -39,8 +40,8 @@ const FollowProgress = ({ stream, scenes, ...props }) => {
 				backgroundColor: alpha(theme.palette.secondary.main, 0.15),
 				display: {
 					xs: 'none',
-					sm: 'flex'
-				}
+					sm: 'flex',
+				},
 			}}
 		>
 			<Button

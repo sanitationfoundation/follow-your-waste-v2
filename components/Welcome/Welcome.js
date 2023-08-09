@@ -40,8 +40,8 @@ const Welcome = ({ ...props }) => {
 					'& img': {
 						width: '100%',
 						maxWidth: 600,
-						height: 'auto'
-					}
+						height: 'auto',
+					},
 				}}
 			>
 				<Image
@@ -55,7 +55,6 @@ const Welcome = ({ ...props }) => {
 					{getText(locale, 'system', 'tagline')}
 				</Typography>
 
-
 				<Box
 					sx={{
 						position: 'fixed',
@@ -63,21 +62,22 @@ const Welcome = ({ ...props }) => {
 						left: 0,
 						transition: theme.transitions.create(['transform'], {
 							duration: 7000,
-							easing: 'linear'
+							easing: 'linear',
 						}),
 						'& img': {
 							width: 'auto',
 							height: {
 								xs: 50,
-								md: 100
+								md: 100,
 							},
-						}
+						},
 					}}
 					style={{
 						transform: drive
 							? 'translateX(calc(100vw + 100%))'
-							: 'translateX(-100%)'
-					}}>
+							: 'translateX(-100%)',
+					}}
+				>
 					<Image
 						width={300}
 						height={120}
@@ -91,9 +91,10 @@ const Welcome = ({ ...props }) => {
 					variant='contained'
 					color='green'
 					sx={{
-						mt: 2
+						mt: 2,
 					}}
-					onClick={onClose}>
+					onClick={onClose}
+				>
 					{getText(locale, 'system', 'get_started')}
 				</Button>
 			</Stack>

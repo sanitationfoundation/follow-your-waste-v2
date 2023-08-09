@@ -15,8 +15,8 @@ export default {
       "slug": "apartment",
       "label": "Apartment Pickup",
       "caption": "E-waste (or electronic waste), such as cellphones, laptops, and televisions, is picked up from apartment buildings that are enrolled in DSNY’s electronics recycling program. DSNY works with a company called ERI, which takes care of picking up and transporting the e-waste.\n",
-      "vocab1": "",
-      "fact1": "",
+      "vocab1": "ERI",
+      "fact1": "ERI is a company that operates numerous certified e-waste processing facilities around the country. They are dedicated to reusing, recycling, repurposing, repairing or disposing of unwanted IT equipment in a safe and environmentally responsible way.",
       "vocab2": "",
       "fact2": "",
       "vocab3": "",
@@ -25,11 +25,11 @@ export default {
     {
       "slug": "event",
       "label": "Drop-off Event",
-      "caption": "If your apartment building does not have an ecycle bin, you can take your e-waste to a DSNY special waste drop-off site or to a SAFE disposal event. ",
-      "vocab1": "",
-      "fact1": "",
-      "vocab2": "",
-      "fact2": "",
+      "caption": "If your apartment building does not have an electronics recycling program bin, you can take your e-waste to a DSNY special waste drop-off site or to a SAFE disposal event. ",
+      "vocab1": "special waste drop-off site",
+      "fact1": "Special Waste Drop-Off Sites are locations where New York City residents can drop off certain harmful products. The sites are open from 10 AM to 5 PM every Saturday and the last Friday of the month.",
+      "vocab2": "SAFE disposal event",
+      "fact2": "DSNY hosts SAFE Disposal events (Solvents, Automotive, Flammables, and Electronics) in all five boroughs each Spring and Fall.",
       "vocab3": "",
       "fact3": ""
     },
@@ -80,9 +80,9 @@ export default {
     {
       "slug": "smartphone",
       "label": "Smartphone",
-      "caption": "Any materials that cannot be reused are taken apart. ",
+      "caption": "Any materials that cannot be reused are taken apart.",
       "vocab1": "",
-      "fact1": "",
+      "fact1": "Batteries are carefully separated so that they don't start a fire. They are then sent to processors, where they extract materials needed to support batteries used for electric vehicles and renewable energy storage systems.",
       "vocab2": "",
       "fact2": "",
       "vocab3": "",
@@ -102,11 +102,11 @@ export default {
     {
       "slug": "sam",
       "label": "Robotic Sorting",
-      "caption": "ERI’s robotic system, SAM (Super Automated Machine), further sorts the materials based on commodity types, including circuit boards, which contain precious metals, such as copper, plastic, steel, and aluminum.\n",
-      "vocab1": "",
-      "fact1": "",
-      "vocab2": "",
-      "fact2": "",
+      "caption": "ERI’s robotic system, SAM (Super Automated Machine), further sorts the materials based on commodity types, including circuit boards, which contain precious metals, such as copper, steel, and aluminum.\n",
+      "vocab1": "precious metals",
+      "fact1": "The precious metals and coppers are sent to smelters where they recover gold, silver, palladium, and copper for use in new device manufacturing.",
+      "vocab2": "copper, steel, and aluminum",
+      "fact2": "The aluminum and steel are sent to other smelters where they are recycled into new products.",
       "vocab3": "",
       "fact3": ""
     },
@@ -148,13 +148,13 @@ export default {
     {
       "slug": "sims",
       "label": "Materials Recovery Facility",
-      "caption": "After completing our collection route, we drive directly to the Sims Material Recovery Facility (MRF) in Jersey City to unload. The DSNY collection truck unloads your MGP recyclables onto the tipping floor, a giant room where recyclables are unloaded into massive piles.",
-      "vocab1": "Sims",
-      "fact1": "Sims is a company that operates numerous recycling facilities throughout the city. They process 100% of the metal, glass and plastic collected by DSNY at their facilities.",
+      "caption": "After completing our collection route, we drive directly to the SMR Material Recovery Facility (MRF) in Jersey City to unload. The DSNY collection truck unloads your MGP recyclables onto the tipping floor, a giant room where recyclables are unloaded into massive piles.",
+      "vocab1": "SMR",
+      "fact1": "SMR is a company that operates numerous recycling facilities throughout the city. They process 100% of the metal, glass and plastic collected by DSNY at their facilities.",
       "vocab2": "Material Recovery Facility",
       "fact2": "A Materials Recovery Facility (MRF) is somewhere that processes recyclable materials to sell as raw materials for new products.",
       "vocab3": "",
-      "fact3": "The Sims Glass Plant in Jersey City processes 10-12,000 tons per month of glass bottles from NYC and New Jersey recycling programs."
+      "fact3": "The SMR Glass Plant in Jersey City processes 10-12,000 tons per month of glass bottles from NYC and New Jersey recycling programs."
     },
     {
       "slug": "sorting",
@@ -447,9 +447,9 @@ export default {
     {
       "slug": "tipping-barge-metal",
       "label": "Marine Transfer Station",
-      "caption": "After completing our collection route, our Sanitation Workers head to Sims Hunts Point where your recyclables are put on a barge.",
-      "vocab1": "Sims",
-      "fact1": "Sims is a company that operates numerous recycling facilities throughout the city. They process 100% of the metal, glass and plastic collected by DSNY at their facilities—the newest of which opened in Sunset Park, Brooklyn.",
+      "caption": "After completing our collection route, our Sanitation Workers head to SMR Hunts Point where your recyclables are put on a barge.",
+      "vocab1": "SMR",
+      "fact1": "SMR is a company that operates numerous recycling facilities throughout the city. They process 100% of the metal, glass and plastic collected by DSNY at their facilities—the newest of which opened in Sunset Park, Brooklyn.",
       "vocab2": "",
       "fact2": "",
       "vocab3": "",
@@ -458,7 +458,7 @@ export default {
     {
       "slug": "barge-metal",
       "label": "Barge",
-      "caption": "The barge is guided by a tugboat to the Sims Sunset Park Material Recovery Facility (MRF).",
+      "caption": "The barge is guided by a tugboat to the SMR Sunset Park Material Recovery Facility (MRF).",
       "vocab1": "Material Recovery Facility",
       "fact1": "A Materials Recovery Facility (MRF) is somewhere that processes recyclable materials to sell as raw materials for new products.",
       "vocab2": "",
@@ -469,7 +469,7 @@ export default {
     {
       "slug": "sims",
       "label": "Materials Recovery Facility",
-      "caption": "When the barge arrives at the Sims Material Recovery Facility in Sunset Park, Brooklyn, an operator steers a giant crane claw to scoop up your MGP recyclables from the barge to the tipping floor.",
+      "caption": "When the barge arrives at the SMR Material Recovery Facility in Sunset Park, Brooklyn, an operator steers a giant crane claw to scoop up your MGP recyclables from the barge to the tipping floor.",
       "vocab1": "",
       "fact1": "",
       "vocab2": "",
@@ -838,9 +838,9 @@ export default {
     {
       "slug": "sims",
       "label": "Materials Recovery Facility",
-      "caption": "After completing our collection route, we head to the Sims Sunset Park Material Recovery Facility (MRF). The DSNY collection truck unloads your MGP recyclables onto the tipping floor, a giant room where recyclables are unloaded into massive piles.",
-      "vocab1": "Sims",
-      "fact1": "Sims is a company that operates numerous recycling facilities throughout the city. They process 100% of the metal, glass and plastic collected by DSNY at their facilities.",
+      "caption": "After completing our collection route, we head to the SMR Sunset Park Material Recovery Facility (MRF). The DSNY collection truck unloads your MGP recyclables onto the tipping floor, a giant room where recyclables are unloaded into massive piles.",
+      "vocab1": "SMR",
+      "fact1": "SMR is a company that operates numerous recycling facilities throughout the city. They process 100% of the metal, glass and plastic collected by DSNY at their facilities.",
       "vocab2": "Material Recovery Facility (MRF)",
       "fact2": "A Materials Recovery Facility (MRF) is somewhere that processes recyclable materials to sell as raw materials for new products.",
       "vocab3": "",
@@ -1188,6 +1188,10 @@ export default {
       "text": "Hover over each item for hints about where they should be placed."
     },
     {
+      "slug": "sort_score",
+      "text": "Items sorted"
+    },
+    {
       "slug": "sort_top",
       "text": "Drag and drop an item in the correct bin to begin the journey."
     },
@@ -1210,14 +1214,6 @@ export default {
     {
       "slug": "try_another",
       "text": "Try another"
-    },
-    {
-      "slug": "",
-      "text": "Select a bin to start."
-    },
-    {
-      "slug": "",
-      "text": "Journey complete!"
     }
   ]
 }

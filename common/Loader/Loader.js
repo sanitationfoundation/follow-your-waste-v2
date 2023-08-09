@@ -4,8 +4,6 @@ import CircularProgress from '@mui/material/CircularProgress'
 // import useStore from 'hooks'
 
 const Loader = ({ ...props }) => {
-	
-
 	return (
 		<Box
 			sx={{
@@ -16,20 +14,18 @@ const Loader = ({ ...props }) => {
 				left: 0,
 				top: 0,
 				zIndex: 30,
-				bgcolor: 'orange.main'
+				bgcolor: 'orange.main',
 			}}
 		>
 			<CircularProgress
 				sx={{
-					m: 'auto'
+					m: 'auto',
 				}}
 			/>
 		</Box>
 	)
 }
 
-Loader.defaultProps = {
-
-}
+Loader.defaultProps = {}
 
 export default Loader

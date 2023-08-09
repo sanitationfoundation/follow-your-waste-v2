@@ -21,7 +21,7 @@ const Intro = ({ section, children, ...props }) => {
 	const handleChyronClose = e => {
 		setIsChyronOpen(false)
 	}
-	
+
 	return (
 		<Modal
 			open={isChyronOpen}
@@ -30,14 +30,14 @@ const Intro = ({ section, children, ...props }) => {
 			closeAfterTransition={true}
 			sx={{
 				display: 'flex',
-				justifyContent: 'center'
+				justifyContent: 'center',
 			}}
 			slotProps={{
 				backdrop: {
 					sx: {
 						bgcolor: alpha(theme.palette.orange.main, 0.5),
-					}
-				}
+					},
+				},
 			}}
 		>
 			<>
@@ -49,14 +49,10 @@ const Intro = ({ section, children, ...props }) => {
 					imgSrc={`/images/workers/chief.png`}
 					onClose={handleChyronClose}
 					sx={{
-						my: 'auto'
+						my: 'auto',
 					}}
 				/>
-				<Voices
-					type={section}
-					slugs={['intro']}
-					curr='intro'
-				/>
+				<Voices type={section} slugs={['intro']} curr='intro' />
 			</>
 		</Modal>
 	)

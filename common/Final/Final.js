@@ -1,4 +1,11 @@
-import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import {
+	Fragment,
+	useCallback,
+	useEffect,
+	useMemo,
+	useRef,
+	useState,
+} from 'react'
 import Image from 'next/image'
 import { alpha, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
@@ -21,11 +28,17 @@ import FollowSelect from 'components/Follow/FollowSelect'
 const Final = ({ section, children, onPlayClick, sx, ...props }) => {
 	const { locale } = useStore()
 
-	const resources = ['quiz', 'lessons', 'activities', 'apply', 'workers',  'about']
+	const resources = [
+		'quiz',
+		'lessons',
+		'activities',
+		'apply',
+		'workers',
+		'about',
+	]
 
-	const handleSortClick = () =>
-		onPlayClick ? onPlayClick() : false
-	
+	const handleSortClick = () => (onPlayClick ? onPlayClick() : false)
+
 	return (
 		<Stack
 			alignItems='center'
@@ -36,7 +49,7 @@ const Final = ({ section, children, onPlayClick, sx, ...props }) => {
 				bgcolor: 'orange.main',
 				overflowY: 'scroll',
 				WebkitOverflowScrolling: 'touch',
-				...sx
+				...sx,
 			}}
 			{...props}
 		>
@@ -44,20 +57,14 @@ const Final = ({ section, children, onPlayClick, sx, ...props }) => {
 				maxWidth='sm'
 				sx={{
 					my: 'auto',
-					py: 12
+					py: 12,
 				}}
 			>
 				<Box m='auto'>
-					<Typography
-						variant='h2'
-						component='h2'
-						mb={3}
-					>
+					<Typography variant='h2' component='h2' mb={3}>
 						{getText(locale, 'system', `final_${section}_title`)}
 					</Typography>
-					<Typography
-						variant='h4'
-					>
+					<Typography variant='h4'>
 						{getText(locale, 'system', `final_${section}_body`)}
 					</Typography>
 
@@ -69,85 +76,78 @@ const Final = ({ section, children, onPlayClick, sx, ...props }) => {
 					/>
 
 					<Box>
-						<Typography
-							variant='h4'
-							component='div'
-							mt={4}
-							mb={2}
-						>
+						<Typography variant='h4' component='div' mt={4} mb={2}>
 							{getText(locale, 'system', `final_${section}_sort`)}
 						</Typography>
-						<Button
-							variant='contained'
-							color='green'
-							onClick={handleSortClick}
-						>
+						<Button variant='contained' color='green' onClick={handleSortClick}>
 							{getText(locale, 'system', `final_${section}_sort_prompt`)}
 						</Button>
 					</Box>
 
 					<Box>
-						<Typography
-							variant='h4'
-							component='div'
-							mt={4}
-							mb={2}
-						>
+						<Typography variant='h4' component='div' mt={4} mb={2}>
 							{getText(locale, 'system', 'resources_label')}
 						</Typography>
 
-						<Box
-							bgcolor='green.main'
-							borderRadius={3}
-						>
-							
+						<Box bgcolor='green.main' borderRadius={3}>
 							<List
 								sx={{
-									py: 0
+									py: 0,
 								}}
 							>
-								{resources.map((resource, i) =>
+								{resources.map((resource, i) => (
 									<Fragment key={i}>
-										{i !== 0 ?
-											<Divider
-												component='li'
-												aria-hidden={true}
-											/>
-										: null}
+										{i !== 0 ? (
+											<Divider component='li' aria-hidden={true} />
+										) : null}
 										<ListItem disablePadding>
 											<ListItemButton
-												href={getText(locale, 'system', `resource_${resource}_url`)}
-												disabled={!getText(locale, 'system', `resource_${resource}_url`)}
+												href={getText(
+													locale,
+													'system',
+													`resource_${resource}_url`,
+												)}
+												disabled={
+													!getText(locale, 'system', `resource_${resource}_url`)
+												}
 												target='_blank'
 												sx={{
 													'&.Mui-disabled': {
 														opacity: 1,
 														'& .MuiListItemIcon-root': {
-															opacity: 0
-														}
-													}
+															opacity: 0,
+														},
+													},
 												}}
 											>
 												<ListItemText
-													primary={getText(locale, 'system', `resource_${resource}_title`)}
-													secondary={getText(locale, 'system', `resource_${resource}_body`)}
+													primary={getText(
+														locale,
+														'system',
+														`resource_${resource}_title`,
+													)}
+													secondary={getText(
+														locale,
+														'system',
+														`resource_${resource}_body`,
+													)}
 													secondaryTypographyProps={{
 														fontSize: 12,
-														color: 'main.dark'
+														color: 'main.dark',
 													}}
 												/>
 												<ListItemIcon>
-			                    					<LaunchIcon
-			                    						color='primary'
-			                    						sx={{
-			                    							ml: 'auto'
-			                    						}}
-			                    					/>
-			                  					</ListItemIcon>
+													<LaunchIcon
+														color='primary'
+														sx={{
+															ml: 'auto',
+														}}
+													/>
+												</ListItemIcon>
 											</ListItemButton>
 										</ListItem>
 									</Fragment>
-								)}
+								))}
 							</List>
 						</Box>
 					</Box>

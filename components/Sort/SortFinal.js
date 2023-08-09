@@ -18,7 +18,8 @@ import FollowSelect from 'components/Follow/FollowSelect'
 
 const SortFinal = ({ ...props }) => {
 	const theme = useTheme()
-	const { locale, score, sorted, resetSorted, resetScore, resetAllSort } = useStore()
+	const { locale, score, sorted, resetSorted, resetScore, resetAllSort } =
+		useStore()
 	const streams = getStreams()
 	const items = getItems()
 
@@ -26,16 +27,14 @@ const SortFinal = ({ ...props }) => {
 		resetAllSort()
 	}
 
-	const isEnd = useMemo(() =>
-		sorted.length === items.length
+	const isEnd = useMemo(
+		() => sorted.length === items.length,
 		// sorted.length === 1
-	, [sorted, items])
+		[sorted, items],
+	)
 
 	return (
-		<Fade
-			in={isEnd}
-			timeout={700}
-		>	
+		<Fade in={isEnd} timeout={700}>
 			<Box
 				// bgcolor='orange.main'
 				sx={{
@@ -45,16 +44,10 @@ const SortFinal = ({ ...props }) => {
 					left: 0,
 					top: 0,
 					zIndex: 50,
-					bgcolor: 'orange.main'
+					bgcolor: 'orange.main',
 				}}
 			>
-				<Final
-					section='sort'
-					onPlayClick={handleReset}
-					sx={{
-
-					}}
-				/>
+				<Final section='sort' onPlayClick={handleReset} sx={{}} />
 			</Box>
 		</Fade>
 	)

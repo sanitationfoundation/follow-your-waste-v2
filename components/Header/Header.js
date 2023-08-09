@@ -82,8 +82,8 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 						sx={{
 							display: {
 								xs: 'none',
-								md: 'block'
-							}
+								md: 'block',
+							},
 						}}
 					>
 						<Image
@@ -100,31 +100,29 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 					{subPage ? <HeaderBackButton /> : null}
 				</Stack>
 
-				{subPage && subPage.includes('sort') ?
+				{subPage && subPage.includes('sort') ? (
 					<SortScore
 						sx={{
 							display: {
 								xs: 'none',
-								sm: 'flex'
-							}
+								sm: 'flex',
+							},
 						}}
 					/>
-				: null}
+				) : null}
 
 				<Stack direction='row' alignItems='center' spacing={2}>
 					{/*pathname.includes('follow') ? <HeaderSortButton /> : null*/}
 					{/*pathname.includes('sort') ? <HeaderFollowButton /> : null*/}
-					{followStream ?
-						<HeaderFollowBackButton />
-					: null}
+					{followStream ? <HeaderFollowBackButton /> : null}
 					<HeaderLocaleSelector />
 					<Stack direction='row' alignItems='center'>
 						<HeaderFullScreen
 							sx={{
 								display: {
 									xs: 'none',
-									md: 'block'
-								}
+									md: 'block',
+								},
 							}}
 							onClick={onFullScreenClick}
 						/>

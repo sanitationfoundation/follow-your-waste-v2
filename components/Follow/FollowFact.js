@@ -13,7 +13,7 @@ import CloseIcon from '@mui/icons-material/Close'
 import useStore from 'hooks'
 import { getText, getStreamColor } from 'selectors'
 
-const FollowFact = ({ fact, color, open, current, onClick, ...props }) => {
+const FollowFact = ({ fact, color, open, onClick, sx, style, ...props }) => {
 	const theme = useTheme()
 	const tabSize = 50
 
@@ -39,9 +39,11 @@ const FollowFact = ({ fact, color, open, current, onClick, ...props }) => {
 				borderRightWidth: 0,
 				borderStyle: 'solid',
 				transition: theme => theme.transitions.create('transform'),
+				...sx,
 			}}
 			style={{
 				transform: open ? '' : `translateX(100%)`,
+				...style,
 			}}
 			onClick={onClick}
 		>

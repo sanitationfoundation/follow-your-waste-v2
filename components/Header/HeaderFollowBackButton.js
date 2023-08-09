@@ -8,8 +8,8 @@ const HeaderFollowBackButton = () => {
 			sx={{
 				display: {
 					xs: 'none',
-					sm: 'block'
-				}
+					sm: 'block',
+				},
 			}}
 		>
 			<Link href='/follow'>
@@ -18,7 +18,7 @@ const HeaderFollowBackButton = () => {
 					variant='contained'
 					color='green'
 					sx={{
-						mx: 'auto'
+						mx: 'auto',
 					}}
 				>
 					Choose another stream
