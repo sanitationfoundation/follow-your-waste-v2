@@ -37,6 +37,8 @@ const FollowEnd = ({ stream, current, ...props }) => {
 				maxWidth: '100vw',
 				maxHeight: '100vh',
 				flex: '0 0 100vw',
+				position: 'relative',
+				zIndex: 50,
 			}}
 		/>
 	)
