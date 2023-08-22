@@ -2,7 +2,7 @@ export default {
   "ewaste": [
     {
       "slug": "table",
-      "color": "blue",
+      "color": "teal",
       "orientation": "width",
       "animated": "FALSE",
       "looped": "FALSE",
@@ -10,7 +10,7 @@ export default {
     },
     {
       "slug": "apartment",
-      "color": "blue",
+      "color": "green",
       "orientation": "width",
       "animated": "FALSE",
       "looped": "FALSE",
@@ -18,7 +18,7 @@ export default {
     },
     {
       "slug": "event",
-      "color": "blue",
+      "color": "pink",
       "orientation": "width",
       "animated": "FALSE",
       "looped": "FALSE",
@@ -34,7 +34,7 @@ export default {
     },
     {
       "slug": "sorting-ewaste",
-      "color": "blue",
+      "color": "orange",
       "orientation": "width",
       "animated": "FALSE",
       "looped": "FALSE",
@@ -42,7 +42,7 @@ export default {
     },
     {
       "slug": "inspect",
-      "color": "blue",
+      "color": "lime",
       "orientation": "width",
       "animated": "FALSE",
       "looped": "FALSE",
@@ -50,7 +50,7 @@ export default {
     },
     {
       "slug": "laptop",
-      "color": "blue",
+      "color": "yellow",
       "orientation": "width",
       "animated": "FALSE",
       "looped": "FALSE",
@@ -58,7 +58,7 @@ export default {
     },
     {
       "slug": "smartphone",
-      "color": "blue",
+      "color": "black",
       "orientation": "width",
       "animated": "FALSE",
       "looped": "FALSE",
@@ -66,7 +66,7 @@ export default {
     },
     {
       "slug": "ernie",
-      "color": "blue",
+      "color": "green",
       "orientation": "width",
       "animated": "FALSE",
       "looped": "FALSE",
@@ -74,7 +74,7 @@ export default {
     },
     {
       "slug": "sam",
-      "color": "blue",
+      "color": "pink",
       "orientation": "width",
       "animated": "FALSE",
       "looped": "FALSE",
@@ -82,7 +82,7 @@ export default {
     },
     {
       "slug": "end-ewaste",
-      "color": "blue",
+      "color": "teal",
       "orientation": "width",
       "animated": "FALSE",
       "looped": "FALSE",

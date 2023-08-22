@@ -45,7 +45,6 @@ const FollowFact = ({ fact, color, open, onClick, sx, style, ...props }) => {
 				transform: open ? '' : `translateX(100%)`,
 				...style,
 			}}
-			onClick={onClick}
 		>
 			<Box
 				sx={{
@@ -75,11 +74,19 @@ const FollowFact = ({ fact, color, open, onClick, sx, style, ...props }) => {
 						mr: '-6px',
 						ml: 0,
 						transform: `rotate(${open ? 0 : 1485}deg)`,
+						pointerEvents: 'all',
 						transition: theme => theme.transitions.create('transform'),
 					}}
+					onClick={onClick}
 				/>
 			</Box>
-			<Box maxWidth={500} minHeight={tabSize + 25}>
+			<Box
+				maxWidth={500}
+				minHeight={tabSize + 25}
+				sx={{
+					pointerEvents: 'all',
+				}}
+			>
 				<Typography variant='body2' color='primary.main'>
 					{fact}
 				</Typography>

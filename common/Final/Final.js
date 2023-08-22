@@ -7,6 +7,7 @@ import {
 	useState,
 } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { alpha, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
@@ -26,7 +27,7 @@ import { getText, getStreamColor } from 'selectors'
 import FollowSelect from 'components/Follow/FollowSelect'
 
 const Final = ({ section, children, onPlayClick, sx, ...props }) => {
-	const { locale } = useStore()
+	const { locale, resetAllSort } = useStore()
 
 	const resources = [
 		'quiz',
@@ -37,7 +38,8 @@ const Final = ({ section, children, onPlayClick, sx, ...props }) => {
 		'about',
 	]
 
-	const handleSortClick = () => (onPlayClick ? onPlayClick() : false)
+	const handleSortClick = () =>
+		resetAllSort()
 
 	return (
 		<Stack
@@ -79,9 +81,16 @@ const Final = ({ section, children, onPlayClick, sx, ...props }) => {
 						<Typography variant='h4' component='div' mt={4} mb={2}>
 							{getText(locale, 'system', `final_${section}_sort`)}
 						</Typography>
-						<Button variant='contained' color='green' onClick={handleSortClick}>
-							{getText(locale, 'system', `final_${section}_sort_prompt`)}
-						</Button>
+						<Link
+							href={`/sort`}
+							passRef
+							locale={locale}
+							onClick={handleSortClick}
+						>
+							<Button variant='contained' color='green'>
+								{getText(locale, 'system', `final_${section}_sort_prompt`)}
+							</Button>
+						</Link>
 					</Box>
 
 					<Box>

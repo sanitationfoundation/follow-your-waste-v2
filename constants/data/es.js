@@ -992,6 +992,10 @@ export default {
       "text": "Descubra adónde va a parar la basura doméstica cuando la tira al contenedor."
     },
     {
+      "slug": "follow_choose",
+      "text": "Elija otra secuencia"
+    },
+    {
       "slug": "get_started",
       "text": "¡Empezar!"
     },
@@ -1129,7 +1133,7 @@ export default {
     },
     {
       "slug": "resource_quiz_url",
-      "text": "https://docs.google.com/document/d/1Wa0EJHwT7V6kTGv_XlVonVZmtHpDauTgHb8DCBPGFeg/edit"
+      "text": "https://drive.google.com/drive/u/0/folders/1OuV_CaKDDC7B7kjBGsQ4OUw9xGTmF-kv"
     },
     {
       "slug": "resource_workers_body",
@@ -1189,7 +1193,7 @@ export default {
     },
     {
       "slug": "sort_score",
-      "text": "Artículos clasificados"
+      "text": "Elementos clasificados"
     },
     {
       "slug": "sort_top",
@@ -1214,6 +1218,38 @@ export default {
     {
       "slug": "try_another",
       "text": "Intente otra opción"
+    },
+    {
+      "slug": "back",
+      "text": "Volver al inicio"
+    },
+    {
+      "slug": "sort_right",
+      "text": "¡Buen trabajo!"
+    },
+    {
+      "slug": "sort_wrong",
+      "text": "Vuelva a intentarlo"
+    },
+    {
+      "slug": "lang",
+      "text": "Cambiar idioma"
+    },
+    {
+      "slug": "full_enter",
+      "text": "Pantalla completa"
+    },
+    {
+      "slug": "full_exit",
+      "text": "Salir de la pantalla completa"
+    },
+    {
+      "slug": "audio_mute",
+      "text": "Silenciar el audio"
+    },
+    {
+      "slug": "audio_unmute",
+      "text": "Reactivar el audio"
     }
   ]
 }

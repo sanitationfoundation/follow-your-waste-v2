@@ -2,7 +2,12 @@ import Link from 'next/link'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 
+import useStore from 'hooks'
+import { getText } from 'selectors'
+
 const HeaderFollowBackButton = () => {
+	const { locale } = useStore()
+
 	return (
 		<Box
 			sx={{
@@ -21,7 +26,7 @@ const HeaderFollowBackButton = () => {
 						mx: 'auto',
 					}}
 				>
-					Choose another stream
+					{getText(locale, 'system', 'follow_choose')}
 				</Button>
 			</Link>
 		</Box>

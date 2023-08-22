@@ -21,6 +21,7 @@ final_sort_sort_prompt,Vuelva a empezar el juego
 final_sort_title,¡Buen trabajo!
 follow,Siga sus desechos
 follow_intro,Descubra adónde va a parar la basura doméstica cuando la tira al contenedor.
+follow_choose,Elija otra secuencia
 get_started,¡Empezar!
 glass,Vidrio
 help_arrows,Haga clic en las flechas o utilice las teclas de flecha para navegar en el recorrido.
@@ -55,7 +56,7 @@ resource_lessons_title,Planes de clases para docentes
 resource_lessons_url,https://www.sanitationfoundation.org/lesson-plans
 resource_quiz_body,Cada juego lo pondrá a prueba sobre un flujo de residuos diferente. Pase cada uno para demostrar que es un experto en la clasificación de residuos.
 resource_quiz_title,Juegue con todas las opciones
-resource_quiz_url,https://docs.google.com/document/d/1Wa0EJHwT7V6kTGv_XlVonVZmtHpDauTgHb8DCBPGFeg/edit
+resource_quiz_url,https://drive.google.com/drive/u/0/folders/1OuV_CaKDDC7B7kjBGsQ4OUw9xGTmF-kv
 resource_workers_body,"Los empleados del Departamento de Sanidad de la Ciudad de Nueva York están en la primera línea todos los días y trabajan incansablemente para mantener nuestra ciudad sana, segura y limpia."
 resource_workers_title,Conozca a los trabajadores de saneamiento
 resource_workers_url,https://www.sanitationfoundation.org/meet-the-workers
@@ -70,10 +71,18 @@ sort_not_trash,"¡Oh no!, este artículo es reciclable. Échelo en otro cubo, po
 sort_prompt,Pulse cualquier elemento para empezar y arrástrelo al cubo de basura que crea adecuado.
 sort_prompt_alt,"Para iniciar, seleccione el material al que quisiera hacer seguimiento."
 sort_prompt_item,Pase el cursor por encima de cada artículo para obtener pistas sobre dónde debe desecharse.
-sort_score,Artículos clasificados
+sort_score,Elementos clasificados
 sort_top,Arrastre un artículo al contenedor correcto para empezar el recorrido.
 sort_wrong_recycle,"Ha colocado mal este artículo reciclable, un error muy fácil de cometer. Pruebe echarlo en otro cubo."
 tagline,"La historia cotidiana de sus residuos, contada por Strongest de Nueva York."
 title,Siga sus desechos
 try_again,Inténtalo de nuevo
 try_another,Intente otra opción
+back,Volver al inicio
+sort_right,¡Buen trabajo!
+sort_wrong,Vuelva a intentarlo
+lang,Cambiar idioma
+full_enter,Pantalla completa
+full_exit,Salir de la pantalla completa
+audio_mute,Silenciar el audio
+audio_unmute,Reactivar el audio

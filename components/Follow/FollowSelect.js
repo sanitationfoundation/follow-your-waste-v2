@@ -13,7 +13,7 @@ import { getText, getStreams } from 'selectors'
 const FollowSelect = ({ stream, current, small, title, ...props }) => {
 	const theme = useTheme()
 	const streams = getStreams()
-	const { locale } = useStore()
+	const { locale, setCurrentScene } = useStore()
 
 	return (
 		<Box
@@ -58,7 +58,10 @@ const FollowSelect = ({ stream, current, small, title, ...props }) => {
 					{...props}
 				>
 					{streams.map((stream, i) => (
-						<Link key={i} href={`/follow/${stream}`}>
+						<a
+							key={i}
+							href={`/${locale}/follow/${stream}`}
+						>
 							<Box
 								sx={{
 									// pb: '100%',
@@ -91,7 +94,7 @@ const FollowSelect = ({ stream, current, small, title, ...props }) => {
 									{getText(locale, 'system', stream)}
 								</Typography>
 							) : null}
-						</Link>
+						</a>
 					))}
 				</Stack>
 			</Box>

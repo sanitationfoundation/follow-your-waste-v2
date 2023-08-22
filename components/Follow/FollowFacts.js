@@ -40,6 +40,7 @@ const FollowFacts = ({ stream, scenes, ...props }) => {
 				top: 0,
 				zIndex: 10,
 				overflow: 'hidden',
+				pointerEvents: 'none'
 			}}
 			{...props}
 		>

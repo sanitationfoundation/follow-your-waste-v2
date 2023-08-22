@@ -992,6 +992,10 @@ export default {
       "text": "Discover what happens to your household waste after you toss it in the bin."
     },
     {
+      "slug": "follow_choose",
+      "text": "Choose another stream"
+    },
+    {
       "slug": "get_started",
       "text": "Get started!"
     },
@@ -1129,7 +1133,7 @@ export default {
     },
     {
       "slug": "resource_quiz_url",
-      "text": "https://docs.google.com/document/d/1Wa0EJHwT7V6kTGv_XlVonVZmtHpDauTgHb8DCBPGFeg/edit"
+      "text": "https://drive.google.com/drive/u/0/folders/1OuV_CaKDDC7B7kjBGsQ4OUw9xGTmF-kv"
     },
     {
       "slug": "resource_workers_body",
@@ -1214,6 +1218,38 @@ export default {
     {
       "slug": "try_another",
       "text": "Try another"
+    },
+    {
+      "slug": "back",
+      "text": "Go back home"
+    },
+    {
+      "slug": "sort_right",
+      "text": "Good job!"
+    },
+    {
+      "slug": "sort_wrong",
+      "text": "Try again"
+    },
+    {
+      "slug": "lang",
+      "text": "Change language"
+    },
+    {
+      "slug": "full_enter",
+      "text": "Full screen"
+    },
+    {
+      "slug": "full_exit",
+      "text": "Exit full screen"
+    },
+    {
+      "slug": "audio_mute",
+      "text": "Mute audio"
+    },
+    {
+      "slug": "audio_unmute",
+      "text": "Unmute audio"
     }
   ]
 }

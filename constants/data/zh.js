@@ -992,6 +992,10 @@ export default {
       "text": "了解家庭垃圾被扔进垃圾桶之后会发生什么。"
     },
     {
+      "slug": "follow_choose",
+      "text": "选择其他类别"
+    },
+    {
       "slug": "get_started",
       "text": "立即开始吧！"
     },
@@ -1129,7 +1133,7 @@ export default {
     },
     {
       "slug": "resource_quiz_url",
-      "text": "https://docs.google.com/document/d/1Wa0EJHwT7V6kTGv_XlVonVZmtHpDauTgHb8DCBPGFeg/edit"
+      "text": "https://drive.google.com/drive/u/0/folders/1OuV_CaKDDC7B7kjBGsQ4OUw9xGTmF-kv"
     },
     {
       "slug": "resource_workers_body",
@@ -1214,6 +1218,38 @@ export default {
     {
       "slug": "try_another",
       "text": "尝试另一种废弃物"
+    },
+    {
+      "slug": "back",
+      "text": "返回主页"
+    },
+    {
+      "slug": "sort_right",
+      "text": "很好！"
+    },
+    {
+      "slug": "sort_wrong",
+      "text": "再试一次"
+    },
+    {
+      "slug": "lang",
+      "text": "更改语言"
+    },
+    {
+      "slug": "full_enter",
+      "text": "全屏"
+    },
+    {
+      "slug": "full_exit",
+      "text": "退出全屏"
+    },
+    {
+      "slug": "audio_mute",
+      "text": "静音"
+    },
+    {
+      "slug": "audio_unmute",
+      "text": "取消静音"
     }
   ]
 }

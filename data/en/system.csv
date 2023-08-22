@@ -21,6 +21,7 @@ final_sort_sort_prompt,Restart the game
 final_sort_title,Nice work!
 follow,Follow your waste
 follow_intro,Discover what happens to your household waste after you toss it in the bin.
+follow_choose,Choose another stream
 get_started,Get started!
 glass,Glass
 help_arrows,"Click these arrows, or use your arrow keys, to navigate through the journey."
@@ -55,7 +56,7 @@ resource_lessons_title,Lesson plans for teachers
 resource_lessons_url,https://www.sanitationfoundation.org/lesson-plans
 resource_quiz_body,Each quiz will test you on a different waste stream. Pass each one to prove you’re a waste-sorting expert.
 resource_quiz_title,Take the quizzes
-resource_quiz_url,https://docs.google.com/document/d/1Wa0EJHwT7V6kTGv_XlVonVZmtHpDauTgHb8DCBPGFeg/edit
+resource_quiz_url,https://drive.google.com/drive/u/0/folders/1OuV_CaKDDC7B7kjBGsQ4OUw9xGTmF-kv
 resource_workers_body,"The NYC Department of Sanitation employees are on the front lines every day, working tirelessly to keep our city healthy, safe, and clean."
 resource_workers_title,Meet the Sanitation workers
 resource_workers_url,https://www.sanitationfoundation.org/meet-the-workers
@@ -77,3 +78,11 @@ tagline,"The everyday story of your waste, as told by New York’s Strongest."
 title,Follow Your Waste
 try_again,Try again
 try_another,Try another
+back,Go back home
+sort_right,Good job!
+sort_wrong,Try again
+lang,Change language
+full_enter,Full screen
+full_exit,Exit full screen
+audio_mute,Mute audio
+audio_unmute,Unmute audio

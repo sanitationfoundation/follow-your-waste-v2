@@ -21,6 +21,7 @@ final_sort_sort_prompt,重新开始游戏
 final_sort_title,做得不错！
 follow,跟着废弃物去旅行
 follow_intro,了解家庭垃圾被扔进垃圾桶之后会发生什么。
+follow_choose,选择其他类别
 get_started,立即开始吧！
 glass,玻璃
 help_arrows,单击这些箭头，或使用方向键在旅程中导航。
@@ -55,7 +56,7 @@ resource_lessons_title,教师的课程计划
 resource_lessons_url,https://www.sanitationfoundation.org/lesson-plans
 resource_quiz_body,每个测验将测试不同的废弃物类别。每通过一个测验，都可证明你是相应类别废弃物的分类专家。
 resource_quiz_title,参加测验
-resource_quiz_url,https://docs.google.com/document/d/1Wa0EJHwT7V6kTGv_XlVonVZmtHpDauTgHb8DCBPGFeg/edit
+resource_quiz_url,https://drive.google.com/drive/u/0/folders/1OuV_CaKDDC7B7kjBGsQ4OUw9xGTmF-kv
 resource_workers_body,纽约市卫生局的工作人员每天都奋战在一线，竭尽所能地让我们这座城市保持健康、安全和整洁。
 resource_workers_title,走近环卫工人
 resource_workers_url,https://www.sanitationfoundation.org/meet-the-workers
@@ -77,3 +78,11 @@ tagline,由纽约环卫工人为您讲述您的垃圾的去向。
 title,跟着废弃物去旅行
 try_again,再试一次
 try_another,尝试另一种废弃物
+back,返回主页
+sort_right,很好！
+sort_wrong,再试一次
+lang,更改语言
+full_enter,全屏
+full_exit,退出全屏
+audio_mute,静音
+audio_unmute,取消静音
