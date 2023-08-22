@@ -14,6 +14,7 @@ const RED = '#B32618'
 const LIME = '#ADF940'
 const FOREST = '#036A47'
 const LIGHTGREEN = '#00AA64'
+const BLACK = '#000000'
 
 const BLUE_DARK = '#012E7F'
 const TEAL_DARK = '#01779E'
@@ -79,18 +80,15 @@ const theme = createTheme({
 		},
 		lime: {
 			main: LIME,
-			// dark: LIME_DARK,
-			// light: LIME_LIGHT,
 		},
 		forest: {
 			main: FOREST,
-			// dark: FOREST_DARK,
-			// light: FOREST_LIGHT,
 		},
 		lightgreen: {
 			main: LIGHTGREEN,
-			// dark: LIGHTGREEN_DARK,
-			// light: LIGHTGREEN_LIGHT,
+		},
+		black: {
+			main: BLACK,
 		},
 	},
 	typography: {
