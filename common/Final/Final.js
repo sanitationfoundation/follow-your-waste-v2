@@ -47,7 +47,6 @@ const Final = ({ section, children, onPlayClick, sx, ...props }) => {
 			sx={{
 				width: '100%',
 				height: '100%',
-				zIndex: 40,
 				bgcolor: 'orange.main',
 				overflowY: 'scroll',
 				WebkitOverflowScrolling: 'touch',

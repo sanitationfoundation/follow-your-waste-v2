@@ -38,7 +38,6 @@ const FollowFacts = ({ stream, scenes, ...props }) => {
 				position: 'absolute',
 				right: 0,
 				top: 0,
-				zIndex: 10,
 				overflow: 'hidden',
 				pointerEvents: 'none'
 			}}
