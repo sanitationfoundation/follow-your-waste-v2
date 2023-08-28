@@ -7,7 +7,10 @@ import Typography from '@mui/material/Typography'
 
 const Modal = ({ open, children, ...props }) => {
 	return (
-		<MuiModal open={open} {...props}>
+		<MuiModal
+			open={open}
+			{...props}
+		>
 			<Box>{children}</Box>
 		</MuiModal>
 	)

@@ -37,6 +37,7 @@ const FollowChyron = ({ stream, scenes, ...props }) => {
 					caption={caption}
 					color={color}
 					imgSrc={imgScr}
+					canMinimize={true}
 					sx={{
 						width: {
 							xs: '100%',

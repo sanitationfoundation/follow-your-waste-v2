@@ -25,7 +25,7 @@ export default {
     {
       "slug": "event",
       "label": "Drop-off Event",
-      "caption": "If your apartment building does not have an electronics recycling program bin, you can take your e-waste to a DSNY special waste drop-off site or to a SAFE disposal event. ",
+      "caption": "If your apartment building does not have an electronics recycling program, you can take your e-waste to a DSNY special waste drop-off site or to a SAFE disposal event. ",
       "vocab1": "special waste drop-off site",
       "fact1": "Special Waste Drop-Off Sites are locations where New York City residents can drop off certain harmful products. The sites are open from 10 AM to 5 PM every Saturday and the last Friday of the month.",
       "vocab2": "SAFE disposal event",

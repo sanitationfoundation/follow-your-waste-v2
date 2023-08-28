@@ -72,7 +72,7 @@ sort_prompt,点击任何物品并将其拖进您认为它属于的垃圾箱。
 sort_prompt_alt,要开始，请选择要跟随的材料。
 sort_prompt_item,将鼠标悬停在每个废弃物上，即可查看处置提示。
 sort_top,将物品拖放到正确的垃圾箱中，开始旅程。
-sort_score,Items sorted
+sort_score,已排序的项目
 sort_wrong_recycle,您将此可回收物放错了位置 — 这是很容易犯的错误。尝试将此物品放到其他垃圾箱里。您将此可回收物放错了位置 — 这是很容易犯的错误。尝试将此物品放到其他垃圾箱里。
 tagline,由纽约环卫工人为您讲述您的垃圾的去向。
 title,跟着废弃物去旅行

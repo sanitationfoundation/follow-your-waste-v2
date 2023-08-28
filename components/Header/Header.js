@@ -86,16 +86,21 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 							},
 						}}
 					>
-						<Image
-							width={128}
-							height={50}
-							src='/images/sf-logo.png'
-							style={{
-								width: 'auto',
-								height: 50,
-							}}
-							alt='Sanitation Foundation logo'
-						/>
+						<a
+							href='https://sanitationfoundation.org'
+							target='_blank'
+						>
+							<Image
+								width={128}
+								height={50}
+								src='/images/sf-logo.png'
+								style={{
+									width: 'auto',
+									height: 50,
+								}}
+								alt='Sanitation Foundation logo'
+							/>
+						</a>
 					</Box>
 					{subPage ? <HeaderBackButton /> : null}
 				</Stack>

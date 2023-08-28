@@ -1197,7 +1197,7 @@ export default {
     },
     {
       "slug": "sort_score",
-      "text": "Items sorted"
+      "text": "已排序的项目"
     },
     {
       "slug": "sort_wrong_recycle",

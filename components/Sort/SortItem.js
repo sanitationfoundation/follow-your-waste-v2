@@ -69,6 +69,7 @@ const SortItem = ({ data, visible, ...props }) => {
 				</Stack>
 			}
 			open={open}
+			disableTouchListener={true}
 			onClose={handleClose}
 			onOpen={handleOpen}
 		>

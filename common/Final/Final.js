@@ -38,6 +38,9 @@ const Final = ({ section, children, onPlayClick, sx, ...props }) => {
 		'about',
 	]
 
+	const getResourceUrl = resource =>
+		getText(locale, 'system', `resource_${resource}_url`)
+
 	const handleSortClick = () =>
 		resetAllSort()
 
@@ -82,7 +85,7 @@ const Final = ({ section, children, onPlayClick, sx, ...props }) => {
 						</Typography>
 						<Link
 							href={`/sort`}
-							passRef
+							// passRef
 							locale={locale}
 							onClick={handleSortClick}
 						>
@@ -103,18 +106,16 @@ const Final = ({ section, children, onPlayClick, sx, ...props }) => {
 									py: 0,
 								}}
 							>
-								{resources.map((resource, i) => (
+								{resources
+									.filter(r => getResourceUrl(r))
+									.map((resource, i) => (
 									<Fragment key={i}>
 										{i !== 0 ? (
 											<Divider component='li' aria-hidden={true} />
 										) : null}
 										<ListItem disablePadding>
 											<ListItemButton
-												href={getText(
-													locale,
-													'system',
-													`resource_${resource}_url`,
-												)}
+												href={getResourceUrl(resource)}
 												disabled={
 													!getText(locale, 'system', `resource_${resource}_url`)
 												}

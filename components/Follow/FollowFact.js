@@ -25,7 +25,7 @@ const FollowFact = ({ fact, color, open, onClick, sx, style, ...props }) => {
 				ml: 'auto !important',
 				visibility: 'visible !important',
 				position: 'relative',
-				zIndex: 10,
+				zIndex: 70,
 				color: 'primary.main',
 				backgroundColor: theme.palette[color].main,
 				borderBottomLeftRadius: 30,
@@ -35,6 +35,9 @@ const FollowFact = ({ fact, color, open, onClick, sx, style, ...props }) => {
 				borderRightWidth: 0,
 				borderStyle: 'solid',
 				transition: theme => theme.transitions.create('transform'),
+				[theme.breakpoints.down('sm')]: {
+					width: `calc(100% - ${tabSize + 4}px)`
+				},
 				...sx,
 			}}
 			style={{

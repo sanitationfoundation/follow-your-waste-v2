@@ -23,71 +23,63 @@ const Choose = ({ ...props }) => {
 			}}
 		>
 			<Stack
+				width='80%'
+				direction={{
+					sm: 'row',
+				}}
+				spacing={{
+					xs: 5,
+					sm: '20%',
+				}}
 				alignItems='center'
 				justifyContent='center'
-				spacing={6}
 				sx={{
-					// my: 'auto',
-					flex: 1,
+					m: 'auto',
+					'& > *': {
+						// width: '50%',
+						maxWidth: 350,
+						display: 'block',
+					},
+					'& .MuiTouchRipple-root': {
+						transform: `scale(${5})`,
+					},
+					'& img': {
+						mx: 'auto',
+						width: '100%',
+						height: 'auto',
+					},
 				}}
 			>
-				<Stack
-					direction={{
-						sm: 'row',
-					}}
-					spacing={{
-						xs: 5,
-						sm: '10%',
-					}}
-					alignItems='center'
-					justifyContent='center'
-					sx={{
-						'& > *': {
-							// width: '50%',
-							maxWidth: 300,
-							display: 'block',
-						},
-						'& .MuiTouchRipple-root': {
-							transform: `scale(${5})`,
-						},
-						'& img': {
-							mx: 'auto',
-							width: '100%',
-							height: 'auto',
-						},
-					}}
-				>
-					{getSections().map((section, i) => (
-						<Link key={i} href={`/${section}`}>
-							<Box>
-								<Box
-									sx={{
-										display: 'flex',
-										transition: theme.transitions.create(['transform']),
-										maxWidth: {
-											xs: 200,
-											sm: '100%',
-										},
-										'&:hover, &:focus': {
-											transform: `scale(1.1)`,
-										},
-									}}
-								>
-									<Image
-										alt=''
-										src={`/images/${section}.png`}
-										width={345}
-										height={345}
-										aria-hidden
-									/>
-								</Box>
-								<Typography component='div' variant='h3' align='center' mt={-1}>
-									{getText(locale, 'system', section)}
-								</Typography>
+				{getSections().map((section, i) => (
+					<Link key={i} href={`/${section}`}>
+						<Box>
+							<Box
+								sx={{
+									display: 'flex',
+									transition: theme.transitions.create(['transform']),
+									// maxWidth: {
+									// 	xs: 200,
+									// 	sm: '100%',
+									// },
+									'&:hover, &:focus': {
+										transform: `scale(1.1)`,
+									},
+								}}
+							>
+								<Image
+									alt=''
+									src={`/images/${section}.png`}
+									width={345}
+									height={345}
+									aria-hidden
+								/>
 							</Box>
-						</Link>
-					))}
-				</Stack>
+							<Typography component='div' variant='h3' align='center' mt={-1}>
+								{getText(locale, 'system', section)}
+							</Typography>
+						</Box>
+					</Link>
+				))}
 			</Stack>
 		</Stack>
 	)

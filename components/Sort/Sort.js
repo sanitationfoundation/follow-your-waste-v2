@@ -86,7 +86,9 @@ const Sort = ({ ...props }) => {
 
 	useEffect(() => {
 		if (sorted.length === 0 && packeryInst) {
-			packeryInst.layout()
+			setTimeout(() =>
+				packeryInst.layout()
+			, 100)
 		}
 	}, [sorted, packeryInst])
 
