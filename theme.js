@@ -23,6 +23,7 @@ const YELLOW_DARK = '#AC8118'
 const ORANGE_DARK = '#BE4216'
 const PINK_DARK = '#9E465F'
 const RED_DARK = '#861C11'
+const LIME_DARK = '#67AE00'
 
 const BLUE_LIGHT = '#AFCBFD'
 const TEAL_LIGHT = '#D5E7F1'
@@ -31,6 +32,7 @@ const YELLOW_LIGHT = '#FAE1A3'
 const ORANGE_LIGHT = '#FED3C3'
 const PINK_LIGHT = '#F5D1DB'
 const RED_LIGHT = '#F8D1CE'
+const LIME_LIGHT = '#E3FDC2'
 
 const theme = createTheme({
 	palette: {
@@ -80,6 +82,8 @@ const theme = createTheme({
 		},
 		lime: {
 			main: LIME,
+			dark: LIME_DARK,
+			light: LIME_LIGHT,
 		},
 		forest: {
 			main: FOREST,

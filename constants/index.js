@@ -15,13 +15,13 @@ export const TEXT = {
 }
 export const SECTIONS = ['follow', 'sort']
 export const STREAMS = [
-	'glass',
-	'landfill',
-	'metal',
 	'organics',
-	'paper',
-	'plastic',
 	'ewaste',
+	'metal',
+	'glass',
+	'plastic',
+	'paper',
+	'landfill',
 ]
 export const BINS = [
 	{ slug: 'ewaste', streams: ['ewaste'] },
@@ -40,7 +40,7 @@ export const STREAM_COLORS = {
 	paper: 'green',
 	plastic: 'red',
 	organics: 'teal',
-	ewaste: 'teal',
+	ewaste: 'lime',
 }
 export const SCENE_ENVIRONS = ['facility', 'traffic', 'water']
 export const ITEM_SIZES = {

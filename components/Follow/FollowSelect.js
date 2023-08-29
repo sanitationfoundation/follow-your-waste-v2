@@ -24,7 +24,7 @@ const FollowSelect = ({ stream, current, small, title, ...props }) => {
 				flexDirection: 'column',
 			}}
 		>
-			<Box m='auto' maxWidth={theme.spacing(80)}>
+			<Box m='auto' maxWidth={theme.spacing(100)}>
 				{title ? (
 					<Typography
 						flex={1}
