@@ -89,6 +89,7 @@ const Header = ({ onFullScreenClick, position, sx, ...props }) => {
 						<a
 							href='https://sanitationfoundation.org'
 							target='_blank'
+							rel='noreferrer'
 						>
 							<Image
 								width={128}
