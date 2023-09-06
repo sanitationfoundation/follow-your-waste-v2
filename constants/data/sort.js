@@ -62,7 +62,7 @@ export default {
     },
     {
       "slug": "vacuum",
-      "stream": "ewaste",
+      "stream": "plastic",
       "size": "15"
     },
     {
