@@ -57,7 +57,9 @@ const FollowScene = forwardRef(({ scene, stream, current, ...props }, ref) => {
 	// }, [current])
 
 	useEffect(() => {
-		if (current && lottieInstRef.current) lottieInstRef.current.play()
+		if (current && lottieInstRef.current) {
+			lottieInstRef.current.goToAndPlay(0)
+		}
 	}, [current, lottieInstRef])
 
 	// useEffect(() => {

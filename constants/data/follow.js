@@ -12,8 +12,8 @@ export default {
       "slug": "apartment",
       "color": "green",
       "orientation": "width",
-      "animated": "FALSE",
-      "looped": "FALSE",
+      "animated": "TRUE",
+      "looped": "TRUE",
       "environment": "traffic"
     },
     {
@@ -28,8 +28,8 @@ export default {
       "slug": "eri",
       "color": "blue",
       "orientation": "width",
-      "animated": "FALSE",
-      "looped": "FALSE",
+      "animated": "TRUE",
+      "looped": "TRUE",
       "environment": "traffic"
     },
     {
@@ -67,16 +67,16 @@ export default {
     {
       "slug": "ernie",
       "color": "green",
-      "orientation": "width",
-      "animated": "FALSE",
-      "looped": "FALSE",
+      "orientation": "height",
+      "animated": "TRUE",
+      "looped": "TRUE",
       "environment": "facility"
     },
     {
       "slug": "sam",
       "color": "pink",
-      "orientation": "width",
-      "animated": "FALSE",
+      "orientation": "height",
+      "animated": "TRUE",
       "looped": "FALSE",
       "environment": "facility"
     },

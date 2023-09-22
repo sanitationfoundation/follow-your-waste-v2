@@ -1,12 +1,12 @@
 slug,color,orientation,animated,looped,environment
 table,teal,width,FALSE,FALSE,
-apartment,green,width,FALSE,FALSE,traffic
+apartment,green,width,TRUE,TRUE,traffic
 event,pink,width,FALSE,FALSE,
-eri,blue,width,FALSE,FALSE,traffic
+eri,blue,width,TRUE,TRUE,traffic
 sorting-ewaste,orange,width,FALSE,FALSE,facility
 inspect,lime,width,FALSE,FALSE,facility
 laptop,yellow,width,FALSE,FALSE,facility
 smartphone,black,width,FALSE,FALSE,facility
-ernie,green,width,FALSE,FALSE,facility
-sam,pink,width,FALSE,FALSE,facility
+ernie,green,height,TRUE,TRUE,facility
+sam,pink,height,TRUE,FALSE,facility
 end-ewaste,teal,width,FALSE,FALSE,
