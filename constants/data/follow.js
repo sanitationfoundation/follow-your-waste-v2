@@ -13,7 +13,7 @@ export default {
       "color": "green",
       "orientation": "width",
       "animated": "TRUE",
-      "looped": "TRUE",
+      "looped": "FALSE",
       "environment": "traffic"
     },
     {
@@ -22,7 +22,7 @@ export default {
       "orientation": "width",
       "animated": "FALSE",
       "looped": "FALSE",
-      "environment": ""
+      "environment": "traffic"
     },
     {
       "slug": "eri",

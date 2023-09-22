@@ -1,7 +1,7 @@
 slug,color,orientation,animated,looped,environment
 table,teal,width,FALSE,FALSE,
-apartment,green,width,TRUE,TRUE,traffic
-event,pink,width,FALSE,FALSE,
+apartment,green,width,TRUE,FALSE,traffic
+event,pink,width,FALSE,FALSE,traffic
 eri,blue,width,TRUE,TRUE,traffic
 sorting-ewaste,orange,width,FALSE,FALSE,facility
 inspect,lime,width,FALSE,FALSE,facility
