@@ -6,9 +6,9 @@ weighing,blue,width,TRUE,TRUE,facility
 tipping-paper,orange,height,TRUE,TRUE,facility
 barge-paper,blue,height,TRUE,TRUE,water
 pratt,black,height,TRUE,TRUE,facility
-pulper,yellow,height,FALSE,FALSE,facility
-press,pink,width,FALSE,FALSE,facility
-winder,teal,height,FALSE,FALSE,facility
+pulper,yellow,height,TRUE,TRUE,facility
+press,pink,width,TRUE,TRUE,facility
+winder,teal,height,TRUE,TRUE,facility
 storage,forest,width,FALSE,FALSE,facility
 corrugator,lime,width,FALSE,FALSE,facility
 quality-paper,yellow,width,FALSE,FALSE,facility

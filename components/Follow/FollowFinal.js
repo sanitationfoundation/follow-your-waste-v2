@@ -25,10 +25,8 @@ import { getText, getStreamColor } from 'selectors'
 import { Final } from 'common/Final'
 
 const FollowEnd = ({ stream, current, ...props }) => {
-	const { locale } = useStore()
-
+	const { locale, currentScene } = useStore()
 	const resources = ['workers', 'lessons', 'about', 'quiz']
-
 	return (
 		<Final
 			open={true}
@@ -40,6 +38,9 @@ const FollowEnd = ({ stream, current, ...props }) => {
 				position: 'relative',
 				zIndex: 50,
 			}}
+			style={currentScene === 0 ? {
+				opacity: 0
+			} : null}
 		/>
 	)
 }

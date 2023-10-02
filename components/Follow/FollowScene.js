@@ -26,50 +26,37 @@ const FollowScene = forwardRef(({ scene, stream, current, ...props }, ref) => {
 		slug,
 		color,
 		orientation,
-		// TODO convert animated and looped to boolean early on in pipeline
 		animated,
 		looped,
 		environment,
 	} = scene
-	// const sceneAudio = new Audio(`/audio/environs/${environment}.wav`)
 
 	const animateScene = () => {
 		if (!sceneElemRef.current) return
-		// sceneElemRef.current.innerHtml = ''
 		lottieInstRef.current = lottie.loadAnimation({
 			container: sceneElemRef.current,
-			// renderer: 'canvas',
 			renderer: 'svg',
-			loop: looped === 'TRUE',
+			loop: looped,
 			autoplay: false,
 			path: `/scenes/animate/${slug}.json`,
 		})
 	}
 
 	useEffect(() => {
-		if (animated === 'TRUE') animateScene()
+		if (animated) animateScene()
 		return () =>
 			lottieInstRef.current ? lottieInstRef.current.destroy() : false
 	}, [])
 
-	// useEffect(() => {
-	// 	setOpenFact(false)
-	// }, [current])
-
 	useEffect(() => {
 		if (current && lottieInstRef.current) {
-			lottieInstRef.current.goToAndPlay(0)
+			if(lottieInstRef.current.isPaused) {
+				lottieInstRef.current.play()
+			} else {
+				lottieInstRef.current.goToAndPlay(0)
+			}
 		}
 	}, [current, lottieInstRef])
-
-	// useEffect(() => {
-	// 	if(current) {
-	// 		// console.log(sceneAudio)
-	// 		sceneAudio.play()
-	// 	} else {
-	// 		sceneAudio.pause()
-	// 	}
-	// }, [current, sceneAudio])
 
 	return (
 		<Box
@@ -112,7 +99,7 @@ const FollowScene = forwardRef(({ scene, stream, current, ...props }, ref) => {
 					},
 				}}
 			>
-				{animated === 'FALSE' ? (
+				{!animated ? (
 					<ReactSVG src={`/scenes/static/${slug}.svg`} />
 				) : null}
 			</Box>

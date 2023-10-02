@@ -38,8 +38,7 @@ const importData = () => {
 		const fileNames = filePaths.map(filePath => path.parse(filePath).name)
 		const fileContents = mergePairs(
 			fileNames,
-			filePaths.map(getFile).map(parseCsv),
-			// .map(arr => arr.reduce(parseSlug, {}))
+			filePaths.map(getFile).map(parseCsv).map(handleData),
 		)
 		writeJson(fileContents, dirName)
 	})
@@ -72,8 +71,16 @@ const getFile = filePath =>
 
 const parseCsv = data => Papa.parse(data, { header: true }).data
 
+const handleData = data =>
+	data.map(obj => {
+		if(obj.hasOwnProperty('animated'))
+			obj.animated = obj.animated === 'TRUE'
+		if(obj.hasOwnProperty('looped'))
+			obj.looped = obj.looped === 'TRUE'
+		return obj
+	})
+
 const parseSlug = (accum, prev) => {
-	console.log(prev)
 	return {
 		...accum,
 		[prev.slug]: prev,
@@ -89,7 +96,7 @@ const writeJson = (json, name) => {
 	const fileContent = `export default ${JSON.stringify(json, null, 2)}`
 	fs.writeFile(filePath, fileContent, err => {
 		if (err) return console.log(err)
-		console.log(`lang constants written to ${filePath}`)
+		console.log(`Constants written to ${filePath}`)
 	})
 }
 

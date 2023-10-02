@@ -4,6 +4,6 @@ curbside-plastic,forest,height,TRUE,TRUE,facility
 sims,teal,width,TRUE,TRUE,water
 sorting,yellow,width,TRUE,FALSE,facility
 liberator,black,width,TRUE,TRUE,facility
-optical-plastic,lime,width,FALSE,FALSE,facility
+optical-plastic,lime,width,TRUE,TRUE,facility
 quality-plastic,pink,width,FALSE,FALSE,facility
 end-plastic,blue,width,FALSE,FALSE,traffic

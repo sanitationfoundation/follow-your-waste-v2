@@ -5,8 +5,8 @@ event,pink,width,FALSE,FALSE,traffic
 eri,blue,width,TRUE,TRUE,traffic
 sorting-ewaste,orange,width,FALSE,FALSE,facility
 inspect,lime,width,FALSE,FALSE,facility
-laptop,yellow,width,FALSE,FALSE,facility
+laptop,yellow,width,TRUE,TRUE,facility
 smartphone,black,width,FALSE,FALSE,facility
 ernie,green,height,TRUE,TRUE,facility
-sam,pink,height,TRUE,FALSE,facility
+sam,pink,height,TRUE,TRUE,facility
 end-ewaste,teal,width,FALSE,FALSE,
