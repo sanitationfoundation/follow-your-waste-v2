@@ -318,6 +318,11 @@ export default {
       "slug": "tv",
       "label": "Television",
       "tooltip": "Some electronics, such as flat-screen TVs, contain mercury and other toxic materials."
+    },
+    {
+      "slug": "plastic-film",
+      "label": "Film plastics",
+      "tooltip": ""
     }
   ],
   "landfill": [

@@ -2,98 +2,83 @@ export default {
   "items": [
     {
       "slug": "aluminum-foil",
-      "stream": "metal",
-      "size": "6"
+      "stream": "metal"
     },
     {
       "slug": "broken-glass",
-      "stream": "landfill",
-      "size": "10"
+      "stream": "landfill"
     },
     {
       "slug": "cardboard",
-      "stream": "paper",
-      "size": "15"
+      "stream": "paper"
     },
     {
       "slug": "chip-bag",
-      "stream": "landfill",
-      "size": "8"
+      "stream": "landfill"
     },
     {
       "slug": "detergent-bottle",
-      "stream": "plastic",
-      "size": "9"
+      "stream": "plastic"
     },
     {
       "slug": "food-can",
-      "stream": "metal",
-      "size": "5"
+      "stream": "metal"
     },
     {
       "slug": "glass-bottles",
-      "stream": "glass",
-      "size": "9"
+      "stream": "glass"
     },
     {
       "slug": "smartphone",
-      "stream": "ewaste",
-      "size": "17"
+      "stream": "ewaste"
     },
     {
       "slug": "milk-carton",
-      "stream": "plastic",
-      "size": "8"
+      "stream": "plastic"
     },
     {
       "slug": "newspaper",
-      "stream": "paper",
-      "size": "13"
+      "stream": "paper"
     },
     {
       "slug": "plastic-bag",
-      "stream": "landfill",
-      "size": "12"
+      "stream": "landfill"
     },
     {
       "slug": "plastic-bottle",
-      "stream": "plastic",
-      "size": "6"
+      "stream": "plastic"
     },
     {
       "slug": "vacuum",
-      "stream": "plastic",
-      "size": "15"
+      "stream": "plastic"
     },
     {
       "slug": "tv",
-      "stream": "ewaste",
-      "size": "5"
+      "stream": "ewaste"
     },
     {
       "slug": "toothpaste",
-      "stream": "landfill",
-      "size": "10"
+      "stream": "landfill"
     },
     {
       "slug": "banana",
-      "stream": "organics",
-      "size": "10"
+      "stream": "organics"
     },
     {
       "slug": "soiled-paper",
-      "stream": "organics",
-      "size": "13"
+      "stream": "organics"
     },
     {
       "slug": "glass-jar",
-      "stream": "glass",
-      "size": "7"
+      "stream": "glass"
     },
     {
       "slug": "soda-can",
-      "stream": "metal",
-      "size": "4"
+      "stream": "metal"
+    },
+    {
+      "slug": "plastic-film",
+      "stream": "landfill"
     }
   ]
 }

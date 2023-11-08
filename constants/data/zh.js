@@ -318,6 +318,11 @@ export default {
       "slug": "tv",
       "label": "电视",
       "tooltip": "平板电视等电子产品含有汞和其他有毒物质。"
+    },
+    {
+      "slug": "plastic-film",
+      "label": "Film plastics",
+      "tooltip": ""
     }
   ],
   "landfill": [
