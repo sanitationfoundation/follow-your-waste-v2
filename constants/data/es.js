@@ -318,6 +318,11 @@ export default {
       "slug": "tv",
       "label": "Televisor",
       "tooltip": "Algunos dispositivos electrónicos, como los televisores de pantalla plana, contienen mercurio y otros materiales tóxicos."
+    },
+    {
+      "slug": "plastic-film",
+      "label": "Film plastics",
+      "tooltip": ""
     }
   ],
   "landfill": [

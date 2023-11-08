@@ -60,7 +60,8 @@ export const ITEM_SIZES = {
 	toothpaste: 10,
 	'soiled-paper': 10,
 	banana: 13,
-	tv: 13,
+	tv: 15,
 	smartphone: 5,
 	vacuum: 9,
+	'plastic-film': 16,
 }
