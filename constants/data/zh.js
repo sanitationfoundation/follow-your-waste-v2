@@ -321,8 +321,11 @@ export default {
     },
     {
       "slug": "plastic-film",
-      "label": "Film plastics",
-      "tooltip": ""
+      "label": "塑料薄膜",
+      "tooltip": "尽管塑胶薄膜上有回收标志，但它只能回收至专门的回收地点，例如杂货店。"
+    },
+    {
+      "slug": ""
     }
   ],
   "landfill": [

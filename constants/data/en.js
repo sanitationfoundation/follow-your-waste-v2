@@ -322,7 +322,10 @@ export default {
     {
       "slug": "plastic-film",
       "label": "Film plastics",
-      "tooltip": ""
+      "tooltip": "Despite the recycling label, plastic film can only be recycled at special drop-off sites, such as a grocery store."
+    },
+    {
+      "slug": ""
     }
   ],
   "landfill": [
