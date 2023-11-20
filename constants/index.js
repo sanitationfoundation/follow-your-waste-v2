@@ -63,5 +63,5 @@ export const ITEM_SIZES = {
 	tv: 15,
 	smartphone: 5,
 	vacuum: 9,
-	'plastic-film': 16,
+	'plastic-film': 14,
 }

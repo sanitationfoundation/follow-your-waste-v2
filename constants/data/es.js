@@ -321,8 +321,11 @@ export default {
     },
     {
       "slug": "plastic-film",
-      "label": "Film plastics",
-      "tooltip": ""
+      "label": "Películas plásticas",
+      "tooltip": "A pesar de la etiqueta de reciclaje, las películas plásticas sólo pueden reciclarse en sitios especiales, como una tienda de comestibles."
+    },
+    {
+      "slug": ""
     }
   ],
   "landfill": [
