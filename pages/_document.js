@@ -17,16 +17,19 @@ export default class CpalDocument extends Document {
 					<Main />
 					<NextScript />
 					<Script
+						id='ga1'
 						strategy='lazyOnload'
 						src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS}`}
 					/>
 
-					<Script strategy="lazyOnload">
+					<Script
+						id='ga2'
+						strategy='lazyOnload'
+					>
 						{`window.dataLayer = window.dataLayer || [];
 						function gtag(){dataLayer.push(arguments);}
 						gtag('js', new Date());
-						gtag('config', '${GOOGLE_ANALYTICS}', {
-						page_path: window.location.pathnameGOOGLE_ANALYTICS});`}
+						gtag('config', ${GOOGLE_ANALYTICS});`}
 					</Script>
 				</body>
 			</Html>
