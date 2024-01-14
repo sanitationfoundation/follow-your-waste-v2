@@ -1,8 +1,12 @@
 //Config from https://blog.logrocket.com/getting-started-with-mui-and-next-js/
 import * as React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
+// import { GoogleAnalytics } from '@next/third-parties/google'
 import createEmotionServer from '@emotion/server/create-instance'
 import createEmotionCache from '../createEmotionCache'
+
+const { GOOGLE_ANALYTICS } = process.env
 
 export default class CpalDocument extends Document {
 	render() {
@@ -12,6 +16,18 @@ export default class CpalDocument extends Document {
 				<body>
 					<Main />
 					<NextScript />
+					<Script
+						strategy='lazyOnload'
+						src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS}`}
+					/>
+
+					<Script strategy="lazyOnload">
+						{`window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', '${GOOGLE_ANALYTICS}', {
+						page_path: window.location.pathnameGOOGLE_ANALYTICS});`}
+					</Script>
 				</body>
 			</Html>
 		)
