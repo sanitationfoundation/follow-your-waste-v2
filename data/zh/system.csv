@@ -47,7 +47,7 @@ resource_about_title,关于该项目
 resource_about_url,https://www.sanitationfoundation.org/follow-your-waste
 resource_activities_body,我们为纽约市各学校提供垃圾清理、废弃物检查和集会活动。 
 resource_activities_title,校内活动
-resource_activities_url,
+resource_activities_url,https://www.sanitationfoundation.org/youth-education
 resource_apply_body,为学校的废弃物转移项目申请拨款支持。
 resource_apply_title,拨款和竞赛活动
 resource_apply_url,
@@ -60,6 +60,9 @@ resource_quiz_url,https://drive.google.com/drive/u/0/folders/1OuV_CaKDDC7B7kjBGs
 resource_workers_body,纽约市卫生局的工作人员每天都奋战在一线，竭尽所能地让我们这座城市保持健康、安全和整洁。
 resource_workers_title,走近环卫工人
 resource_workers_url,https://www.sanitationfoundation.org/meet-the-workers
+resource_newsletter_body,"Sign up for our monthly educator newsletter to receive the latest information about our waste and recycling education programs, including in-school activities, grant opportunities, and more!"
+resource_newsletter_title,NYC Educator Newsletter
+resource_newsletter_url,https://www.sanitationfoundation.org/educator-newsletter
 resources_label,其他资源：
 score_right,Correct
 score_wrong,Incorrect

@@ -47,7 +47,7 @@ resource_about_title,Acerca del proyecto
 resource_about_url,https://www.sanitationfoundation.org/follow-your-waste
 resource_activities_body,"Ofrecemos campañas de limpieza de basura asistidas, auditorías de residuos y asambleas en escuelas de toda la ciudad de Nueva York."
 resource_activities_title,Actividades escolares
-resource_activities_url,
+resource_activities_url,https://www.sanitationfoundation.org/educator-newsletter
 resource_apply_body,Solicite subvenciones para apoyar proyectos de separación de residuos en su escuela.
 resource_apply_title,Subvenciones y concursos
 resource_apply_url,
@@ -60,6 +60,9 @@ resource_quiz_url,https://drive.google.com/drive/u/0/folders/1OuV_CaKDDC7B7kjBGs
 resource_workers_body,"Los empleados del Departamento de Sanidad de la Ciudad de Nueva York están en la primera línea todos los días y trabajan incansablemente para mantener nuestra ciudad sana, segura y limpia."
 resource_workers_title,Conozca a los trabajadores de saneamiento
 resource_workers_url,https://www.sanitationfoundation.org/meet-the-workers
+resource_newsletter_body,"Sign up for our monthly educator newsletter to receive the latest information about our waste and recycling education programs, including in-school activities, grant opportunities, and more!"
+resource_newsletter_title,NYC Educator Newsletter
+resource_newsletter_url,https://www.sanitationfoundation.org/educator-newsletter
 resources_label,Recursos adicionales:
 score_right,Correct
 score_wrong,Incorrect

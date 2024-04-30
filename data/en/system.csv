@@ -45,9 +45,9 @@ prompt_follow,Learn what happens to your waste after it’s collected by a Sanit
 resource_about_body,"After we toss our waste in the bin, we don’t often think about where it goes next. But, our choices can have a big impact on the cleanliness and health of our environment."
 resource_about_title,About the project
 resource_about_url,https://www.sanitationfoundation.org/follow-your-waste
-resource_activities_body,"We offer facilitated litter cleanups, waste audits, and assemblies to schools across NYC."
+resource_activities_body,We offer a full suite of waste education programs for NYC schools. Click here to learn more. 
 resource_activities_title,In-school activities
-resource_activities_url,
+resource_activities_url,https://www.sanitationfoundation.org/youth-education
 resource_apply_body,Apply for grants to support a waste diversion project in your school.
 resource_apply_title,Grants and contests
 resource_apply_url,
@@ -60,6 +60,9 @@ resource_quiz_url,https://drive.google.com/drive/u/0/folders/1OuV_CaKDDC7B7kjBGs
 resource_workers_body,"The NYC Department of Sanitation employees are on the front lines every day, working tirelessly to keep our city healthy, safe, and clean."
 resource_workers_title,Meet the Sanitation workers
 resource_workers_url,https://www.sanitationfoundation.org/meet-the-workers
+resource_newsletter_body,"Sign up for our monthly educator newsletter to receive the latest information about our waste and recycling education programs, including in-school activities, grant opportunities, and more!"
+resource_newsletter_title,NYC Educator Newsletter
+resource_newsletter_url,https://www.sanitationfoundation.org/educator-newsletter
 resources_label,Additional resources
 score_right,Correct
 score_wrong,Incorrect

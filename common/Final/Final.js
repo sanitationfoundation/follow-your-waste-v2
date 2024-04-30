@@ -30,12 +30,13 @@ const Final = ({ section, children, onPlayClick, sx, ...props }) => {
 	const { locale, resetAllSort } = useStore()
 
 	const resources = [
-		'quiz',
-		'lessons',
+		'newsletter',
 		'activities',
-		'apply',
+		'lessons',
+		'quiz',
 		'workers',
-		'about',
+		// 'apply',
+		// 'about',
 	]
 
 	const getResourceUrl = resource =>
