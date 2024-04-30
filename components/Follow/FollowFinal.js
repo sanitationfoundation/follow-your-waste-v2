@@ -26,7 +26,6 @@ import { Final } from 'common/Final'
 
 const FollowEnd = ({ stream, current, ...props }) => {
 	const { locale, currentScene } = useStore()
-	const resources = ['workers', 'lessons', 'about', 'quiz']
 	return (
 		<Final
 			open={true}

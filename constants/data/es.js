@@ -1105,7 +1105,7 @@ export default {
     },
     {
       "slug": "resource_activities_url",
-      "text": ""
+      "text": "https://www.sanitationfoundation.org/educator-newsletter"
     },
     {
       "slug": "resource_apply_body",
@@ -1154,6 +1154,18 @@ export default {
     {
       "slug": "resource_workers_url",
       "text": "https://www.sanitationfoundation.org/meet-the-workers"
+    },
+    {
+      "slug": "resource_newsletter_body",
+      "text": "Sign up for our monthly educator newsletter to receive the latest information about our waste and recycling education programs, including in-school activities, grant opportunities, and more!"
+    },
+    {
+      "slug": "resource_newsletter_title",
+      "text": "NYC Educator Newsletter"
+    },
+    {
+      "slug": "resource_newsletter_url",
+      "text": "https://www.sanitationfoundation.org/educator-newsletter"
     },
     {
       "slug": "resources_label",
