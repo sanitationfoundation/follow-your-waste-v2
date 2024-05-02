@@ -1161,7 +1161,7 @@ export default {
     },
     {
       "slug": "resource_newsletter_title",
-      "text": "NYC Educator Newsletter"
+      "text": "Boletín para educadores de NYC"
     },
     {
       "slug": "resource_newsletter_url",
@@ -1173,11 +1173,11 @@ export default {
     },
     {
       "slug": "score_right",
-      "text": "Correct"
+      "text": "Correcto"
     },
     {
       "slug": "score_wrong",
-      "text": "Incorrect"
+      "text": "Incorrecto"
     },
     {
       "slug": "sort",

@@ -1086,7 +1086,7 @@ export default {
     },
     {
       "slug": "resource_about_title",
-      "text": "About the project"
+      "text": "About the Project"
     },
     {
       "slug": "resource_about_url",
@@ -1098,7 +1098,7 @@ export default {
     },
     {
       "slug": "resource_activities_title",
-      "text": "In-school activities"
+      "text": "In-school Activities"
     },
     {
       "slug": "resource_activities_url",
@@ -1110,7 +1110,7 @@ export default {
     },
     {
       "slug": "resource_apply_title",
-      "text": "Grants and contests"
+      "text": "Grants and Contests"
     },
     {
       "slug": "resource_apply_url",
@@ -1122,7 +1122,7 @@ export default {
     },
     {
       "slug": "resource_lessons_title",
-      "text": "Lesson plans for teachers"
+      "text": "Lesson Plans for Teachers"
     },
     {
       "slug": "resource_lessons_url",
@@ -1134,7 +1134,7 @@ export default {
     },
     {
       "slug": "resource_quiz_title",
-      "text": "Take the quizzes"
+      "text": "Take the Quizzes"
     },
     {
       "slug": "resource_quiz_url",
@@ -1146,7 +1146,7 @@ export default {
     },
     {
       "slug": "resource_workers_title",
-      "text": "Meet the Sanitation workers"
+      "text": "Meet the Sanitation Workers"
     },
     {
       "slug": "resource_workers_url",
