@@ -8,6 +8,7 @@ import { useTheme } from '@mui/material/styles'
 
   gtag('config', 'G-HSK5H29H11');
 </script>
+
 import { Layout } from 'common'
 import useStore from 'hooks'
 import { getText } from 'selectors'
