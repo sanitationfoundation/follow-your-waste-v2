@@ -2,35 +2,20 @@
 import * as React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import Script from 'next/script'
-// import { GoogleAnalytics } from '@next/third-parties/google'
 import createEmotionServer from '@emotion/server/create-instance'
 import createEmotionCache from '../createEmotionCache'
 
-const { GOOGLE_ANALYTICS } = process.env
 
 export default class CpalDocument extends Document {
 	render() {
 		return (
 			<Html lang='en'>
-				<Head>{this.props.emotionStyleTags}</Head>
+				<Head>
+					{this.props.emotionStyleTags}
+				</Head>
 				<body>
 					<Main />
 					<NextScript />
-					<Script
-						id='ga1'
-						strategy='lazyOnload'
-						src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS}`}
-					/>
-
-					<Script
-						id='ga2'
-						strategy='lazyOnload'
-					>
-						{`window.dataLayer = window.dataLayer || [];
-						function gtag(){dataLayer.push(arguments);}
-						gtag('js', new Date());
-						gtag('config', ${GOOGLE_ANALYTICS});`}
-					</Script>
 				</body>
 			</Html>
 		)
