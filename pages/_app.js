@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { ThemeProvider } from '@mui/material'
 import CssBaseline from '@mui/material/CssBaseline'
 import { CacheProvider } from '@emotion/react'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { default as theme } from '../theme'
 import createEmotionCache from '../createEmotionCache'
 import '../styles/globals.css'
@@ -23,6 +24,9 @@ function App({ Component, pageProps, emotionCache = clientSideEmotionCache }) {
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
 				<Component {...pageProps} />
+				<GoogleAnalytics
+					gaId={process.env.NEXT_PUBLIC_GA_ID}
+				/>
 			</ThemeProvider>
 		</CacheProvider>
 	)
