@@ -6,21 +6,22 @@ import {
 	useState,
 	forwardRef,
 } from 'react'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { alpha, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 import { ReactSVG } from 'react-svg'
-import lottie from 'lottie-web'
+// import lottie from 'lottie-web'
 
 import useStore from 'hooks'
 import { getText, getStreamColor } from 'selectors'
 
-// const Packery = async () => (await import('lottie-web')).then((m) => m.default)
 const FollowScene = forwardRef(({ scene, stream, current, ...props }, ref) => {
-	const sceneElemRef = useRef(null)
+	const lottieRef = useRef(null)
 	const lottieInstRef = useRef(null)
+	const sceneElemRef = useRef(null)
 	const { locale } = useStore()
 	const {
 		slug,
@@ -31,18 +32,19 @@ const FollowScene = forwardRef(({ scene, stream, current, ...props }, ref) => {
 		environment,
 	} = scene
 
-	const animateScene = () => {
-		if (!sceneElemRef.current) return
-		lottieInstRef.current = lottie.loadAnimation({
-			container: sceneElemRef.current,
-			renderer: 'svg',
-			loop: looped,
-			autoplay: false,
-			path: `/scenes/animate/${slug}.json`,
-		})
-	}
-
 	useEffect(() => {
+		const animateScene = async () => {
+			const Lottie = await import('lottie-web')
+			if (!sceneElemRef.current || !Lottie || lottieInstRef.current) return
+			lottieInstRef.current = Lottie.loadAnimation({
+				container: sceneElemRef.current,
+				renderer: 'svg',
+				loop: looped,
+				autoplay: false,
+				path: `/scenes/animate/${slug}.json`,
+			})
+		}
+
 		if (animated) animateScene()
 		return () =>
 			lottieInstRef.current ? lottieInstRef.current.destroy() : false
